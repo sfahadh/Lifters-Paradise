@@ -31,4 +31,11 @@ Routine Page             |  Description
 
 ------------------------------------------------------------------------------------------------------------------------
 
+<!-- 
+## Entity Relationship Diagram (ERD)
+<img src="wireframes-charts/Lifters-Paradise-ERD.jpg" width="1400">
+
+
+## Component Hierarchy Model
+<img src="wireframes-charts/Lifters-Paradise-Hierarchy.jpg" width="1400"> -->
 
