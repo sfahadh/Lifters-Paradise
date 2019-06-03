@@ -35,9 +35,45 @@ Routine Page             |  Description
 ## Entity Relationship Diagram (ERD)
 <img src="wireframes-charts/Lifters-Paradise-ERD.jpg" width="1400">
 Both the user and exercises will have a one to many relationship with Workload. So each users and exercises can have many Workload. The Workload will fill in the Create, Read, Update, and Delete (CRUD) functionalities. So for each exercise a user wants to add to his/her routine, he/she must fill out a form on how many sets, reps, and weights he/she did as well as input their RPE. That workload will be shown under the added exercise. The user can then decide wether to delete that workload, add another one, or update the current ones. 
+
+### CRUD	
+* CREATE - User will be able to create a workload
+* READ - Users will be able to view all the workload, as well as exerices
+* UPDATE - will be able to update a workload
+* DELETE - will be able to delete a workload
+
 ------------------------------------------------------------------------------------------------------------------------
 
 ## Component Hierarchy Model
 <img src="wireframes-charts/Lifters-Paradise-Component-Hierarchy.jpg" width="1400">
 The component heirarchy starts off with the navbar and routes from the App.js. The navbar will remain on each page as different components render, which is why it is under the App.js. The routes significate the number of different links the webpage goes to. Under each links will be components, which will represent the outlook for that page. 
+
+## Technologies Used
+- Rails
+- React 
+- PostgreSQL
+- JavaScript
+- HTML5
+- CSS3
+
+## Deployment
+Link will be provided once project is completed: 
+
+If however you fork and/or clone the repo, this is the process to run it:
+
+*Must have rails installed in system*
+
+**Must be done in the root folder:**
+```
+    rails db:create           
+    rails db:seed             
+    rails server  
+```            
+
+**Must be done in the client folder:**
+```
+    npm install axios
+    npm start
+```
+
 
