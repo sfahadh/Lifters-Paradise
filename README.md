@@ -1,6 +1,11 @@
 # Lifter's Paradise
 A full stack application on logging exercises to track progression
 
+## About the App
+The purpose of this app is to look through a list of exercises that are available in the webpage and add any of them to your routine. When adding the exercise to the routine, the user must fill out the workload completed for the exercise, which includes the number of reps, sets, and weights he/she did. This way the user can keep track of the amount of work he/she did for the given exercise. 
+
+In essence, this is an app in which user's log their workout. Other information will be provided such as a page on nutrition to further optimize the goals of the user if they want to learn more about health and fitness and continuously making progression. 
+
 
 ## Wireframes
 ### First Page of Wireframe
@@ -47,6 +52,21 @@ Both the user and exercises will have a one to many relationship with Workload. 
 ## Component Hierarchy Model
 <img src="wireframes-charts/Lifters-Paradise-Component-Hierarchy.jpg" width="1400">
 The component heirarchy starts off with the navbar and routes from the App.js. The navbar will remain on each page as different components render, which is why it is under the App.js. The routes significate the number of different links the webpage goes to. Under each links will be components, which will represent the outlook for that page. 
+
+### MVP
+* Meet CRUD functionality
+* Incorporate auth
+* Allow users to add exercises from exercise page
+* Display user's workout routine
+* Style to beautify webpage
+
+### Post MVP
+* Add confirm password when signing up for an account
+* Add more style
+* Make webpage responsive
+* Allow users to add exercise
+* Allow users to delete or update any added exercises
+* Allow users to upload an image
 
 ## Technologies Used
 - Rails
