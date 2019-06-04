@@ -1,38 +1,42 @@
-
- body{
+body {
     background: #e9eaea;
     font-family: roboto;
     user-select: none;
-  }
+}
   
-  .container{
+.container {
     width: 450px;
     margin: 30px auto;
-  }
-  
-  .signup,
-  .login{
-    width: 50%;
     background: #fff;
-    float: left;
+}
+
+.login-register {
+    display: flex;
+    justify-content: center;
+}
+
+.register, .login {
+    margin-top: 10%;
+    width: 44%;
+    border: 1px solid rgba(128, 128, 128, 0.329);
+    background: #fff;
     height: 60px;
     line-height: 60px;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
-  }
+}
   
-  .signup-form,
-  .login-form{
+.register-form, .login-form {
     background: #fff;
     padding: 40px;
     clear: both;
     width: 100%;
     box-sizing: border-box;
     height: 400px;
-  }
+}
   
-  .input{
+.input {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -42,13 +46,13 @@
     font-size: 14px;
     outline: none;
     transform: all 0.5s ease;
-  }
+}
   
-  .input:focus{
+.input:focus {
     border: 2px solid #34b3a0;
-  }
+}
   
-  .btn{
+.btn {
     width: 100%;
     background: #34b3a0;
     height: 60px;
@@ -60,9 +64,4 @@
     letter-spacing: 1px;
     cursor: pointer;
     margin-bottom: 30px;
-  }
-  
-  span a{
-    text-decoration: none;
-    color: #000;
-  }
+}

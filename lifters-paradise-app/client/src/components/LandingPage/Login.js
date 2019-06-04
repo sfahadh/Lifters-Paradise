@@ -1,8 +1,9 @@
 import React from 'react';
 import { Redirect } from "react-router-dom"
 import './LandingPage.css'
+import Register from './Register'
 
-class SignIn extends React.Component {
+class Login extends React.Component {
     constructor() {
         super()
 
@@ -14,11 +15,13 @@ class SignIn extends React.Component {
             isUsername: false,
             isPassword: false,
             open: true,
-            isLoggedIn: false
+            isLoggedIn: false,
+            login: true
         }
         this.validatePassword = this.validatePassword.bind(this);
         this.validateUsername = this.validateUsername.bind(this);
         this.validateCredentials = this.validateCredentials.bind(this);
+        this.showRegisterForm = this.showRegisterForm.bind(this);
     }
 
     validateUsername(e) {
@@ -51,35 +54,39 @@ class SignIn extends React.Component {
         e.preventDefault();
     }
 
+    showRegisterForm() {
+        this.setState({
+            login: false
+        })
+    }
+
     render() {
-        if(this.state.isLoggedIn) {
+        const { isLoggedIn, login } = this.state
+        if(isLoggedIn) {
             return <Redirect to="/home"/>
         }
+
+        if(!login) return <Redirect to="/register"/>
 
         return (
             <div className='App'>
                 <div className="wrapper">
-                    <div className="container">    
-                        <div className="login">Log In</div>              
-                        <div className="signup">Sign Up</div>
+                    <div className="container"> 
+                        <div className="login-register"> 
+                            <div className="login">Log In</div>            
+                            <div className="register" onClick={this.showRegisterForm}>Register</div>
+                        </div>  
 
                         <div className="login-form">
-                            <input type="text" placeholder="Email or Username" className="input" />
-                            <input type="password" placeholder="Password" className="input" />
-                            <div className="btn">log in</div>
+                            <input type="text" placeholder="Username" className="input" onChange={this.validateUsername}/>
+                            <input type="password" placeholder="Password" className="input" onChange={this.validatePassword}/>
+                            <div className="btn" onClick={this.validateCredentials}>log in</div>
                         </div>   
-                        
-                        <div className="signup-form">
-                            <input type="text" placeholder="Your Email Address" className="input"/>
-                            <input type="text" placeholder="Choose a Username" className="input"/>
-                            <input type="password" placeholder="Choose a Password" className="input"/>
-                            <div className="btn">Create account</div>
-                        </div>     
                     </div>
-                </div>
+                </div>          
             </div>
         );
     }
 }
 
-export default SignIn
+export default Login
