@@ -21,8 +21,8 @@ squat = Exercise.create({
     plane_of_motion: 'Sagittal Plane',
     joint_action: 'Hip Extension, Knee Extension, & Plantarflexion',
     muscles_involved: 'Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius',
-    start_image: '',
-    end_image: '',
+    start_image: 'https://i.imgur.com/X3N9QvR.jpg',
+    end_image: 'https://i.imgur.com/X3N9QvR.jpg',
     type_of_exercise: 'Free Weight'
 })
 

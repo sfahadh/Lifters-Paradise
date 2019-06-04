@@ -1,0 +1,16 @@
+.exercise-row {
+    display: flex;
+    border: 2px solid red;
+}
+.exercise-images {
+    margin-left: 6%;
+    flex: 0.7;
+}
+
+.exercise-images img{
+    padding: 3%;
+}
+
+.exercise-info {
+    text-align: left;
+}

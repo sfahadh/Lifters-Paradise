@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
+import './Exercises.css'
 
 const url = 'http://localhost:3000'
 class Exercises extends React.Component {
@@ -23,23 +24,26 @@ class Exercises extends React.Component {
         const { exercises } = this.state
         const showExercises = exercises.map((exercise, i) => {
           return <div key={i}>
-            <h1>{exercise.name}</h1>
-            <h3>{exercise.plane_of_motion}</h3>
-            <h3>{exercise.joint_action}</h3>
-            <h3>{exercise.muscles_involved}</h3>
-            <h3>{exercise.type_of_exercise}</h3>
+               <div className="exercise-row">
+                    <div className="exercise-images">
+                        <img src={exercise.start_image} />
+                        <img src={exercise.end_image} />
+                    </div>
+                    <div className="exercise-info">
+                        <h1><span>Exercise:</span> {exercise.name}</h1>
+                        <h3><span>Plane of Motion:</span> {exercise.plane_of_motion}</h3>
+                        <h3><span>Joint Action:</span> {exercise.joint_action}</h3>
+                        <h3><span>Muscles Involved:</span> {exercise.muscles_involved}</h3>
+                        <h3><span>Type of Exercise:</span> {exercise.type_of_exercise}</h3>
+                        <button>ADD TO ROUTINE</button>
+                    </div>
+                </div>
           </div>
         })
         return (
             <div className="App">
                 <Navbar />
                 {showExercises}
-                <div className="exercise-row">
-                    <div className="exercise-images">
-                        <img className="exercise-images" src={require("./Exercise-Images/squat-start.jpg")} alt="squat-start"></img>
-                        <img className="exercise-images" src={require("./Exercise-Images/squat-end.jpg")} alt="squat-end"></img>
-                    </div>
-                </div>
             </div>
         );
     }
