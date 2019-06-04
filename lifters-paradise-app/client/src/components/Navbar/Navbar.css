@@ -1,0 +1,10 @@
+.side-drawer {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(10, 101, 153, 0.918);
+    overflow-x: hidden;
+    z-index: 1;
+} 

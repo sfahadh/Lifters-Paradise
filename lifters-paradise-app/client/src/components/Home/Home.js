@@ -1,11 +1,15 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar'
+import './Home.css'
 
 function Home() {
     return (
         <div className="App">
             <Navbar />
-            <h1>This is the home page</h1>
+            <div id="intro">
+                <h1>Online Exercise Tracker and Programming (Prototype)</h1>
+                <button>START NOW</button>
+            </div>
         </div>
     );
 }
