@@ -14,7 +14,6 @@ class Login extends React.Component {
             myPassword: "idk",
             isUsername: false,
             isPassword: false,
-            open: true,
             isLoggedIn: false,
             login: true
         }
