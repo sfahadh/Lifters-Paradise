@@ -1,7 +1,11 @@
 .exercise-row {
     display: flex;
-    border: 2px solid red;
 }
+
+.exercise-row h1, .exercise-row h3 {
+    margin-top: 4%;
+}
+
 .exercise-images {
     margin-left: 6%;
     flex: 0.7;
@@ -17,5 +21,4 @@
 
 .modal-form {
     width: 20vw;
-    border: 2px solid red;
 }

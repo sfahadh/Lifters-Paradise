@@ -11,6 +11,8 @@ class Routine extends React.Component {
         this.state = {
             routines: [],
         }
+    this.handleChanges = this.handleChanges.bind(this)
+    this.RenderWorkload = this.RenderWorkload.bind(this)
     }
 
     async componentDidMount() {
@@ -19,11 +21,15 @@ class Routine extends React.Component {
         this.setState({ routines: routines })
     }
 
-    handleChanges = (event) => {
-        const element = event.target
+    handleChanges(e) {
+        const element = e.target
         const name = element.name
         const value = element.value
         this.setState({[name]: value})
+    }
+
+    RenderWorkload() {
+        console.log('clicked')
     }
 
     render() {
@@ -42,7 +48,7 @@ class Routine extends React.Component {
                     <Segment>
                     <Grid columns={2} relaxed='very'>
                         <Grid.Column>
-                        <Form >
+                        <Form onSubmit={this.RenderWorkload}>
                             <Form.Field required>
                                 <label>Exercise Name</label>
                                 <input onChange={this.handleChanges} name="exercise" placeholder='Enter Exercise?' />
