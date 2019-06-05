@@ -5,9 +5,9 @@ class WorkloadsController < ApplicationController
         render json: @workloads, include: :routine, status: :ok
     end
 
-    # def show
-    #     @routines = Routine.find(params[:id])
-    #     @workloads = @routines.workloads.find(params[:id])
-    #     render json: @workloads, status: :ok
-    # end
+    def show
+        @routines = Routine.find(params[:id])
+        @workloads = @routines.workloads.find(params[:id])
+        render json: @workloads, status: :ok
+    end
 end

@@ -6815,3 +6815,1502 @@ FOREIGN KEY ("routine_id")
   ↳ db/seeds.rb:43
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
   ↳ db/seeds.rb:43
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 10:58:03 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WorkloadsController#index as HTML
+  Parameters: {"routine"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 43ms (Views: 3.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-05 10:59:07 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-05 10:59:08 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 14:59:38.746027"], ["updated_at", "2019-06-05 14:59:38.746027"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 14:59:38.751054"], ["updated_at", "2019-06-05 14:59:38.751054"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 14:59:38.753556"], ["updated_at", "2019-06-05 14:59:38.753556"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.6ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 14:59:38.767121"], ["updated_at", "2019-06-05 14:59:38.767121"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+Started GET "/exercises" for ::1 at 2019-06-05 10:59:53 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 4.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.7ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:08:04.402781"], ["updated_at", "2019-06-05 15:08:04.402781"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:08:04.407704"], ["updated_at", "2019-06-05 15:08:04.407704"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:08:04.409946"], ["updated_at", "2019-06-05 15:08:04.409946"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.6ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:08:04.421176"], ["updated_at", "2019-06-05 15:08:04.421176"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (176.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (209.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (402.1ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (424.0ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:08:29.583495"], ["updated_at", "2019-06-05 15:08:29.583495"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:08:29.704889"], ["updated_at", "2019-06-05 15:08:29.704889"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 15:08:29.711609"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.8ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:08:29.758837"], ["updated_at", "2019-06-05 15:08:29.758837"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:08:29.761804"], ["updated_at", "2019-06-05 15:08:29.761804"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:08:29.763688"], ["updated_at", "2019-06-05 15:08:29.763688"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.8ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:08:29.775051"], ["updated_at", "2019-06-05 15:08:29.775051"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (214.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (238.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (418.1ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (426.6ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:11:13.523124"], ["updated_at", "2019-06-05 15:11:13.523124"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:11:13.674348"], ["updated_at", "2019-06-05 15:11:13.674348"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 15:11:13.678206"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.9ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:11:13.730689"], ["updated_at", "2019-06-05 15:11:13.730689"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:11:13.733858"], ["updated_at", "2019-06-05 15:11:13.733858"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:11:13.736367"], ["updated_at", "2019-06-05 15:11:13.736367"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (1.0ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:11:13.749986"], ["updated_at", "2019-06-05 15:11:13.749986"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (208.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (194.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (420.6ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (428.0ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:12:15.107834"], ["updated_at", "2019-06-05 15:12:15.107834"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:12:15.251565"], ["updated_at", "2019-06-05 15:12:15.251565"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 15:12:15.256319"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (1.0ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:12:15.306903"], ["updated_at", "2019-06-05 15:12:15.306903"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:12:15.309894"], ["updated_at", "2019-06-05 15:12:15.309894"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:12:15.311584"], ["updated_at", "2019-06-05 15:12:15.311584"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.8ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:12:15.331026"], ["updated_at", "2019-06-05 15:12:15.331026"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (46.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (5.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-06-05 15:13:09.514086"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 15:13:09.517663"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (1.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:13:09.569582"], ["updated_at", "2019-06-05 15:13:09.569582"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:13:09.574051"], ["updated_at", "2019-06-05 15:13:09.574051"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:13:09.576189"], ["updated_at", "2019-06-05 15:13:09.576189"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (1.7ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:13:09.588009"], ["updated_at", "2019-06-05 15:13:09.588009"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.7ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:13:19.233882"], ["updated_at", "2019-06-05 15:13:19.233882"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:13:19.237170"], ["updated_at", "2019-06-05 15:13:19.237170"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:13:19.239222"], ["updated_at", "2019-06-05 15:13:19.239222"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.6ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:13:19.250560"], ["updated_at", "2019-06-05 15:13:19.250560"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.6ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:15:43.648252"], ["updated_at", "2019-06-05 15:15:43.648252"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:15:43.651258"], ["updated_at", "2019-06-05 15:15:43.651258"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:15:43.652929"], ["updated_at", "2019-06-05 15:15:43.652929"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.8ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:15:43.663399"], ["updated_at", "2019-06-05 15:15:43.663399"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (8261.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (209.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (191.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (427.7ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (439.3ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:17:44.035935"], ["updated_at", "2019-06-05 15:17:44.035935"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:17:44.179527"], ["updated_at", "2019-06-05 15:17:44.179527"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 15:17:44.183367"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (1.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:17:44.234423"], ["updated_at", "2019-06-05 15:17:44.234423"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:17:44.238831"], ["updated_at", "2019-06-05 15:17:44.238831"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:17:44.240850"], ["updated_at", "2019-06-05 15:17:44.240850"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.8ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:17:44.263744"], ["updated_at", "2019-06-05 15:17:44.263744"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:35
+  [1m[36mWorkload Load (0.9ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (208.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (193.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (348.5ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (413.5ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:26:52.545289"], ["updated_at", "2019-06-05 15:26:52.545289"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190604163207)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190604084732),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 15:26:52.689459"], ["updated_at", "2019-06-05 15:26:52.689459"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 15:26:52.693192"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.8ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:26:52.745038"], ["updated_at", "2019-06-05 15:26:52.745038"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:26:52.747966"], ["updated_at", "2019-06-05 15:26:52.747966"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-05 15:26:52.749843"], ["updated_at", "2019-06-05 15:26:52.749843"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.9ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-05 15:26:52.762525"], ["updated_at", "2019-06-05 15:26:52.762525"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mWorkload Create (1.1ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["weight", 505], ["sets", 3], ["reps", 5], ["rpe", 8], ["created_at", "2019-06-05 15:26:52.801156"], ["updated_at", "2019-06-05 15:26:52.801156"], ["routine_id", 1], ["exercise_id", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:27:24 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WorkloadsController#index as HTML
+  Parameters: {"routine"=>"1"}
+  [1m[36mRoutine Load (0.6ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.7ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 61ms (Views: 16.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/routines/1/workloads/1" for ::1 at 2019-06-05 11:29:21 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for WorkloadsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:29:48 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"routine"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.6ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 37ms (Views: 11.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/routines/1/workloads/1" for ::1 at 2019-06-05 11:29:50 -0400
+Processing by WorkloadsController#show as HTML
+  Parameters: {"routine"=>"1", "id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:9
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:30:10 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"routine"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 41ms (Views: 11.5ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/routines/1/workloads/1" for ::1 at 2019-06-05 11:30:12 -0400
+Processing by WorkloadsController#show as HTML
+  Parameters: {"routine"=>"1", "id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:9
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-05 11:33:48 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 11:33:50 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:34:01 -0400
+Processing by WorkloadsController#index as */*
+  Parameters: {"routine"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/routines/1/workloads/1" for ::1 at 2019-06-05 11:34:04 -0400
+Processing by WorkloadsController#show as */*
+  Parameters: {"routine"=>"1", "id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:9
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
