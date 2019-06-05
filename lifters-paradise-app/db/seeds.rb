@@ -21,8 +21,8 @@ squat = Exercise.create({
     plane_of_motion: 'Sagittal Plane',
     joint_action: 'Hip Extension, Knee Extension, & Plantarflexion',
     muscles_involved: 'Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius',
-    start_image: 'https://i.imgur.com/6vUjLPi.jpg',
-    end_image: 'https://i.imgur.com/X3N9QvR.jpg',
+    start_image: 'https://i.imgur.com/X3N9QvR.jpg',
+    end_image: 'https://i.imgur.com/6vUjLPi.jpg',
     type_of_exercise: 'Free Weight'
 })
 
@@ -33,9 +33,16 @@ lat_pulldown = Exercise.create({
     muscles_involved: 'Front Deltoids, Medial Deltoids, & Triceps Brachii',
     start_image: 'https://i.imgur.com/bdYDyih.jpg',
     end_image: 'https://i.imgur.com/9RIhfGW.jpg',
-    type_of_exercise: 'Machine'
+    type_of_exercise: 'Free Weight'
 })
 
 first_routine = Routine.create({
     name: 'My First Program'
+})
+
+first_workload = Workload.create({
+    weight: 505,
+    sets: 3,
+    reps: 5,
+    rpe: 8
 })

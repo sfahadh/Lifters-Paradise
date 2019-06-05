@@ -1,10 +1,11 @@
 class RoutinesController < ApplicationController
     def index
         @routines = Routine.all
-        render json: @routines, status: :ok
+        render json: @routines
     end
 
     def show 
-        render json: @routine
+        @routines = Routine.find(params[:id])
+        render json: @routines, status: :ok
     end
 end

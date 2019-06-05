@@ -14,7 +14,7 @@ class WorkloadForm extends React.Component {
         return (
             <div className="App">
                 <div className="modal-form">
-                    <form onClick={props.openModal}>
+                    <form>
                         <h3>Sets</h3>
                         <input/>
                         <h3>Reps</h3>
