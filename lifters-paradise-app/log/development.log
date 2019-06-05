@@ -8456,3 +8456,224 @@ Processing by WorkloadsController#create as */*
 Completed 201 Created in 18ms (Views: 0.5ms | ActiveRecord: 6.7ms)
 
 
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:53:20 -0400
+Processing by WorkloadsController#index as */*
+  Parameters: {"weight"=>500, "sets"=>500, "reps"=>500, "rpe"=>500, "routine_id"=>1, "exercise_id"=>1, "id"=>"1", "workload"=>{"weight"=>500, "sets"=>500, "reps"=>500, "rpe"=>500, "routine_id"=>1, "exercise_id"=>1}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 3.6ms)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/workloads_controller.rb:3:in `index'
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:53:31 -0400
+Processing by WorkloadsController#index as */*
+  Parameters: {"weight"=>500, "sets"=>500, "reps"=>500, "rpe"=>500, "routine_id"=>1, "exercise_id"=>1, "id"=>"1", "workload"=>{"weight"=>500, "sets"=>500, "reps"=>500, "rpe"=>500, "routine_id"=>1, "exercise_id"=>1}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/workloads_controller.rb:3:in `index'
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 11:53:39 -0400
+Processing by WorkloadsController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 23ms (Views: 11.2ms | ActiveRecord: 4.5ms)
+
+
+Started DELETE "/routines/1/workloads" for ::1 at 2019-06-05 11:53:47 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/routines/1/workloads"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/routines/1/workloads/2" for ::1 at 2019-06-05 11:53:55 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/workloads_controller.rb:26:in `destroy'
+Started DELETE "/routines/1/workloads/2" for ::1 at 2019-06-05 11:54:28 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (2.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND (2) LIMIT $2[0m  [["routine_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 6.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of AND must be type boolean, not type integer
+LINE 1: ...rkloads" WHERE "workloads"."routine_id" = $1 AND (2) LIMIT $...
+                                                             ^
+: SELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND (2) LIMIT $2):
+  
+app/controllers/workloads_controller.rb:25:in `destroy'
+Started DELETE "/routines/1/workloads/2" for ::1 at 2019-06-05 11:54:48 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.2ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/workloads_controller.rb:26:in `destroy'
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-05 11:54:58 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (0.7ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/workloads_controller.rb:26:in `destroy'
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-05 11:56:08 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND (1) LIMIT $2[0m  [["routine_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 5.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of AND must be type boolean, not type integer
+LINE 1: ...rkloads" WHERE "workloads"."routine_id" = $1 AND (1) LIMIT $...
+                                                             ^
+: SELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND (1) LIMIT $2):
+  
+app/controllers/workloads_controller.rb:25:in `destroy'
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-05 11:56:44 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.8ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/workloads_controller.rb:26:in `destroy'
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-05 11:59:02 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" IS NULL AND "workloads"."id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 404 Not Found in 10ms (ActiveRecord: 3.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Workload with 'id'=1 [WHERE "workloads"."routine_id" IS NULL AND "workloads"."id" = $1]):
+  
+app/controllers/workloads_controller.rb:25:in `destroy'
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-05 11:59:30 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" IS NULL AND "workloads"."id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 404 Not Found in 9ms (ActiveRecord: 3.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Workload with 'id'=1 [WHERE "workloads"."routine_id" IS NULL AND "workloads"."id" = $1]):
+  
+app/controllers/workloads_controller.rb:25:in `destroy'
+Started DELETE "/routines/1/workloads/2" for ::1 at 2019-06-05 11:59:42 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" IS NULL AND "workloads"."id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Workload with 'id'=2 [WHERE "workloads"."routine_id" IS NULL AND "workloads"."id" = $1]):
+  
+app/controllers/workloads_controller.rb:25:in `destroy'
+Started DELETE "/routines/1/workloads/2" for ::1 at 2019-06-05 12:04:41 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:25
+  [1m[36mWorkload Destroy (0.3ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/workloads_controller.rb:25
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 204 No Content in 19ms (ActiveRecord: 5.8ms)
+
+
+Started DELETE "/routines/1/workloads/2" for ::1 at 2019-06-05 12:05:09 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+Completed 404 Not Found in 8ms (ActiveRecord: 3.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Workload with 'id'=2):
+  
+app/controllers/workloads_controller.rb:24:in `destroy'
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-05 12:05:12 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:25
+  [1m[36mWorkload Destroy (0.3ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:25
+Completed 200 OK in 24ms (Views: 1.5ms | ActiveRecord: 2.9ms)
+
+

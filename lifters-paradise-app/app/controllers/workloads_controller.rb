@@ -12,7 +12,6 @@ class WorkloadsController < ApplicationController
     end
 
     def create
-        # @routine = Routine.find(params[:routine_id])
         @workload = Workload.new(workload_params)
         if @workload.save 
             render json: @workload, status: :created
@@ -20,6 +19,12 @@ class WorkloadsController < ApplicationController
             render json: { errors: @workload.errors }, status: :unprocessable_entity
         end
     end
+
+    def destroy
+        @workload = Workload.find(params[:id])
+        @workload.destroy
+        render json: @workload, status: :ok
+      end
 
     private 
 
