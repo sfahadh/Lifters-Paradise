@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :routines
   
-  scope '/routines/:routine' do
+  scope '/routines/:id' do
     resources :workloads
   end
 end
