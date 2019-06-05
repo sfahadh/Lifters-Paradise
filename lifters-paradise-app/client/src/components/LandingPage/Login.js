@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect } from "react-router-dom"
 import './LandingPage.css'
-import Register from './Register'
 
 class Login extends React.Component {
     constructor() {

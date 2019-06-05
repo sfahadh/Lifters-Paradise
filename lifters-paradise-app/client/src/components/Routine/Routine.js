@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
+import { Button, Modal, Form, Grid, Segment } from 'semantic-ui-react'
 
 const url = 'http://localhost:3000'
 class Routine extends React.Component {
@@ -9,23 +10,20 @@ class Routine extends React.Component {
 
         this.state = {
             routines: [],
-            modalPop: false
         }
-    this.revealModal = this.revealModal.bind(this)
-    }
-
-    revealModal() {
-        this.setState({
-            modalPop: true
-        })
-        console.log("clicked")
     }
 
     async componentDidMount() {
         const resp = await axios.get(`${url}/routines`)
         let routines = resp.data
-        console.log(routines)
         this.setState({ routines: routines })
+    }
+
+    handleChanges = (event) => {
+        const element = event.target
+        const name = element.name
+        const value = element.value
+        this.setState({[name]: value})
     }
 
     render() {
@@ -36,9 +34,47 @@ class Routine extends React.Component {
         return (
             <div className="App">
                 <Navbar />
-                <button onClick={this.revealModal}>Add Exercise</button>
                 {showRoutines}
 
+                <div className ="button-modal">
+                <Modal trigger={<Button color="blue" size="huge" className ="add-button">Add Exercise</Button>}>
+                    <h1 className="modal-style">Add To Your Exercise Routine</h1>
+                    <Segment>
+                    <Grid columns={2} relaxed='very'>
+                        <Grid.Column>
+                        <Form >
+                            <Form.Field required>
+                                <label>Exercise Name</label>
+                                <input onChange={this.handleChanges} name="exercise" placeholder='Enter Exercise?' />
+                            </Form.Field>
+
+                            <Form.Field required>
+                                <label>Sets</label>
+                                <input onChange={this.handleChanges} type="number" name='sets' placeholder='Enter Number of Sets' />
+                            </Form.Field>
+
+                            <Form.Field required>
+                                <label>Repetition</label>
+                                <input onChange={this.handleChanges} type="number" name="reps" placeholder='Enter Number of Reps'/>
+                            </Form.Field>
+
+                            <Form.Field required>
+                                <label>Weights</label>
+                                <input onChange={this.handleChanges} type="number" name="weights" placeholder='Enter Weight lifted'/>
+                            </Form.Field>
+
+                            <Form.Field required>
+                                <label>Rate of Percieved Exertion</label>
+                                <input onChange={this.handleChanges} type="number" name="rpe" placeholder='From 1-10 Difficulty'/>
+                            </Form.Field>
+
+                            <Button inverted color="blue" type='submit'>Submit</Button>
+                        </Form>
+                        </Grid.Column>
+                    </Grid>
+                    </Segment>
+                </Modal>
+                </div>
             </div>
         );
     }

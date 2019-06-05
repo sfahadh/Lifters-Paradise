@@ -10,8 +10,6 @@ class Exercises extends React.Component {
 
         this.state = {
             exercises: [],
-            openModal: false,
-            addBtn: false
         }
     }
 
@@ -22,15 +20,6 @@ class Exercises extends React.Component {
         this.setState({ exercises: exercises })
     }
 
-    toogleModal(e) {
-        e.preventDefault()
-        this.setState((prevState) => {
-            return {
-                openModal: !prevState.openModal
-            }
-        })
-    }
-
     // showForm = (e) => {
     //     e.preventDefault()
     //     console.log(e.target.getAttribute('button-key'))
@@ -39,15 +28,15 @@ class Exercises extends React.Component {
     // }
 
     render() {
-        const { exercises, openModal, addBtn } = this.state
+        const { exercises } = this.state
         // const checkBtn = addBtn ? <h1>Form</h1> : null
 
         const showExercises = exercises.map((exercise, i) => {
           return <div key={i}>
                <div className="exercise-row">
                     <div className="exercise-images">
-                        <img src={exercise.start_image} />
-                        <img src={exercise.end_image} />
+                        <img src={exercise.start_image} alt='exercise-start'/>
+                        <img src={exercise.end_image} alt='exercise-end'/>
                     </div>
                     <div className="exercise-info">
                         <h1><span>Exercise:</span> {exercise.name}</h1>
