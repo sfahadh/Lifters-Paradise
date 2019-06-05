@@ -11,16 +11,32 @@ class Routine extends React.Component {
 
         this.state = {
             routines: [],
-            isLoaded: false
+            isLoaded: false,
+            workloads: []
         }
     this.handleChanges = this.handleChanges.bind(this)
     this.RenderWorkload = this.RenderWorkload.bind(this)
     this.getAllRoutines = this.getAllRoutines.bind(this)
+    this.renderWorkload = this.renderWorkload.bind(this)
     }
 
     componentDidMount() {
         this.getAllRoutines()
+        this.renderWorkload()
     }
+
+    async renderWorkload() {
+        const resp = await axios.get(`${url}/routines`)
+        let routines = resp.data
+        console.log(routines)
+        for(let i = 0; i < routines.length; i++) {
+          const res = await axios.get(`${url}/routines/${routines[i].id}/workloads`)
+          const workloads = res.data
+          console.log(workloads)
+          routines[i].workloads = workloads
+        }
+        // this.setState({ workloads: workloads })
+      }
 
     async getAllRoutines() {
         try {
