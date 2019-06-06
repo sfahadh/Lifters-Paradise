@@ -10,7 +10,7 @@ class WorkloadForm extends React.Component {
         }
     }
 
-    render(props) {
+    render() {
   
         return (
             <div className="App">
@@ -20,7 +20,7 @@ class WorkloadForm extends React.Component {
                         <Segment>
                         <Grid columns={2} relaxed='very'>
                             <Grid.Column>
-                            <Form onSubmit={this.props.submitWorkload}>
+                            <Form onSubmit={this.props.createWorkload}>
                                 <Form.Field required>
                                     <label>Sets</label>
                                     <input onChange={this.props.handleChanges} type="number" name='sets' placeholder='Enter Number of Sets' />
@@ -40,7 +40,6 @@ class WorkloadForm extends React.Component {
                                     <label>Rate of Percieved Exertion</label>
                                     <input onChange={this.props.handleChanges} type="number" name="rpe" placeholder='From 1-10 Difficulty'/>
                                 </Form.Field>
-
                                 <Button inverted color="blue" type='submit'>Submit</Button>
                             </Form>
                             </Grid.Column>

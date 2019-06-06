@@ -11,18 +11,14 @@ class Routine extends React.Component {
 
         this.state = {
             routines: [],
-            isLoaded: false
+            isLoaded: false,
         }
     this.handleChanges = this.handleChanges.bind(this)
-    this.submitWorkload = this.submitWorkload.bind(this)
+    this.createWorkload = this.createWorkload.bind(this)
     }
 
     componentDidMount() {
         this.renderWorkload()
-    }
-
-    submitWorkload() {
-        console.log("clicked")
     }
 
     async renderWorkload() {
@@ -34,6 +30,28 @@ class Routine extends React.Component {
             routines[i].workloads = workloads
         } 
         this.setState({ routines: routines })
+    }
+
+    async createWorkload() {
+        
+        let { createForm } = this.state
+        // for(let i = 0; i < routines.length; i++) {
+        //     const res = await axios.post(`${url}/routines/${routines[i].id}/workloads`, { createForm })
+        //     console.log(res)
+        //     const workloads = res.data
+        //     routines[i].workloads = workloads
+        // } 
+        const res = await axios.post(
+            `${url}/routines/1/workloads`, 
+            { createForm: 
+                {
+                    weight: 0,
+                    sets: 0,
+                    reps: 0,
+                    rpe: 0
+                } 
+            })
+        console.log(res.data)
     }
 
     handleChanges(e) {
@@ -50,7 +68,6 @@ class Routine extends React.Component {
         return (
             <div className="App">
                 <Navbar />
-                {/* {showRoutines} */}
                 
                 <div id="whole-table">
                     <div className="column-load table-headers">
@@ -60,21 +77,25 @@ class Routine extends React.Component {
                         <div className="section rpe">RPE</div>
                     </div>
                     <div>
-                    {this.state.routines && this.state.routines.map((routine, i) => { return ( 
-                        <div key={i} className="workload-data">
-                            {/* <h1 key={routine.id}>{routine.name}</h1>  */}
-                            {routine.workloads.map(workload => 
-                                <div key={workload.id} className="table-headers workload-header">
-                                    <div className="section weight workload-weight">{workload.weight}</div>
-                                    <div className="section set workload-set">{workload.sets}</div>
-                                    <div className="section rep workload-rep">{workload.reps}</div>
-                                    <div className="section rpe workload-rpe">{workload.rpe}</div>
-                                </div>)}
-                        </div>)})
-                    }
+                        {this.state.routines && this.state.routines.map((routine, i) => { return ( 
+                            <div key={i} className="workload-data">
+                                {/* <h1 key={routine.id}>{routine.name}</h1>  */}
+                                {routine.workloads.map(workload => 
+                                    <div key={workload.id} className="table-headers workload-header">
+                                        <div className="section weight workload-weight">{workload.weight}</div>
+                                        <div className="section set workload-set">{workload.sets}</div>
+                                        <div className="section rep workload-rep">{workload.reps}</div>
+                                        <div className="section rpe workload-rpe">{workload.rpe}</div>
+                                    </div>)}
+                            </div>
+                        )})}
                     </div>
                 </div>
-                <WorkloadForm handleChanges={this.handleChanges} submitWorkload={this.submitWorkload} />
+                <WorkloadForm 
+                    handleChanges={this.handleChanges} 
+                    submitWorkload={this.submitWorkload} 
+                    createWorkload={this.createWorkload}
+                />
             </div>
         );
     }

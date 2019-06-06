@@ -1,6 +1,6 @@
 class WorkloadsController < ApplicationController
     def index 
-        @routine = Routine.find_by(params[:routine_id])
+        @routine = Routine.find(params[:id])
         @workloads = @routine.workloads.all
         render json: @workloads, include: :routine, status: :ok
     end
@@ -12,7 +12,7 @@ class WorkloadsController < ApplicationController
     end
 
     def create
-        @workload = Workload.new(workload_params)
+        @workload = Workload.create(workload_params)
         if @workload.save 
             render json: @workload, status: :created
         else
@@ -24,7 +24,14 @@ class WorkloadsController < ApplicationController
         @workload = Workload.find(params[:id])
         @workload.destroy
         render json: @workload, status: :ok
-      end
+    end
+
+    def update 
+        @routine = Routine.find(params[:id])
+        @workload = @routine.workloads.find(params[:id])
+        @workload.update_attributes(workload_params)
+        render json: @workload, status: :ok
+    end
 
     private 
 
