@@ -2,54 +2,42 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
 import './Routine.css'
-import { Button, Modal, Form, Grid, Segment } from 'semantic-ui-react'
+// import WorkloadForm from '../Exercises/WorkloadForm'
+// import WorkloadForm from '../Exercises/WorkloadForm'
 
 const url = 'http://localhost:3000'
 class Routine extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             routines: [],
-            isLoaded: false,
-            workloads: []
+            isLoaded: false
         }
     this.handleChanges = this.handleChanges.bind(this)
-    this.RenderWorkload = this.RenderWorkload.bind(this)
-    this.getAllRoutines = this.getAllRoutines.bind(this)
+    // this.getAllRoutines = this.getAllRoutines.bind(this)
     this.renderWorkload = this.renderWorkload.bind(this)
     }
 
     componentDidMount() {
-        this.getAllRoutines()
-        this.renderWorkload()
+        // this.setState({ 
+            // routines: await 
+            this.renderWorkload()
+        // })
     }
 
     async renderWorkload() {
         const resp = await axios.get(`${url}/routines`)
         let routines = resp.data
-        console.log(routines)
         for(let i = 0; i < routines.length; i++) {
-          const res = await axios.get(`${url}/routines/${routines[i].id}/workloads`)
-          const workloads = res.data
-          console.log(workloads)
-          routines[i].workloads = workloads
-        }
-        // this.setState({ workloads: workloads })
-      }
-
-    async getAllRoutines() {
-        try {
-            const resp = await axios.get(`${url}/routines`)
-            let routines = resp.data
-            this.setState({ 
-                routines: routines,
-                isLoaded: true
-            })
-        } catch (err) {
-            console.log('Fetch Error:',err.message);
-        }
+            const res = await axios.get(`${url}/routines/${routines[i].id}/workloads`)
+            const workloads = res.data
+            routines[i].workloads = workloads
+        } 
+        // return routines;
+        this.setState({ routines: routines })
     }
+
 
     handleChanges(e) {
         const element = e.target
@@ -58,20 +46,39 @@ class Routine extends React.Component {
         this.setState({[name]: value})
     }
 
-    RenderWorkload() {
-        console.log('clicked')
-    }
 
     render() {
-        const { routines, isLoaded } = this.state
-        const showRoutines = isLoaded ? routines.map((routine, i) => {
-            return <h1 key={i}>{routine.name}</h1>
-        }) : <h1>Loading...</h1>
+        console.log(this.state.routines,'my routine state')
+        const { routines, isLoaded, rendered } = this.state
+        // console.log(routines)
+        // if(rendered) {
+        //     const showRoutines = isLoaded ? routines.map((routine, i) => {
+        //         return <h1 key={i}>{routine[i].workloads}</h1>
+        //     }) : <h1>Loading...</h1>
+        // } else {
+        //     console.log("did it work?")
+        // }
+
+        // let show = renderWorkload ? (
+        //     <div className="modal-form">
+        //         <form>
+        //             <h3>Sets</h3>
+        //             <input/>
+        //             <h3>Reps</h3>
+        //             <input/>
+        //             <h3>Weight</h3>
+        //             <input/>
+        //             <h3>RPE</h3>
+        //             <input/>
+        //         </form>
+        //     </div>
+        // ) : null
+
 
         return (
             <div className="App">
                 <Navbar />
-                {showRoutines}
+                {/* {showRoutines} */}
                 
                 <div id="whole-table">
                     <div className="column-load table-headers">
@@ -80,42 +87,22 @@ class Routine extends React.Component {
                         <div className="section rep">Repetitions</div>
                         <div className="section rpe">RPE</div>
                     </div>
+                    <div>
+                    {this.state.routines && this.state.routines.map((routine, i) => { return ( 
+                        <div key={i}>
+                            {/* <h1 key={routine.id}>{routine.name}</h1>  */}
+                            {routine.workloads.map(workload => 
+                                <ul key={workload.id}>
+                                    <li>{workload.weight}</li>
+                                    <li>{workload.sets}</li>
+                                    <li>{workload.reps}</li>
+                                    <li>{workload.rpe}</li>
+                                </ul>)}
+                        </div>)})
+                    }
+                    </div>
                 </div>
-
-                <div className ="button-modal">
-                    <Modal trigger={<Button color="blue" size="huge" className ="add-button">Add Workload</Button>}>
-                        <h1 className="modal-style">Add To Your Exercise Routine</h1>
-                        <Segment>
-                        <Grid columns={2} relaxed='very'>
-                            <Grid.Column>
-                            <Form onSubmit={this.RenderWorkload}>
-                                <Form.Field required>
-                                    <label>Sets</label>
-                                    <input onChange={this.handleChanges} type="number" name='sets' placeholder='Enter Number of Sets' />
-                                </Form.Field>
-
-                                <Form.Field required>
-                                    <label>Repetition</label>
-                                    <input onChange={this.handleChanges} type="number" name="reps" placeholder='Enter Number of Reps'/>
-                                </Form.Field>
-
-                                <Form.Field required>
-                                    <label>Weights</label>
-                                    <input onChange={this.handleChanges} type="number" name="weights" placeholder='Enter Weight lifted'/>
-                                </Form.Field>
-
-                                <Form.Field required>
-                                    <label>Rate of Percieved Exertion</label>
-                                    <input onChange={this.handleChanges} type="number" name="rpe" placeholder='From 1-10 Difficulty'/>
-                                </Form.Field>
-
-                                <Button inverted color="blue" type='submit'>Submit</Button>
-                            </Form>
-                            </Grid.Column>
-                        </Grid>
-                        </Segment>
-                    </Modal>
-                </div>
+                {/* <WorkloadForm /> */}
             </div>
         );
     }
