@@ -51,8 +51,8 @@ class Routine extends React.Component {
 
     async updateWorkload(id) {
         const { workload } = this.state
-        const res = await axios.put(`${url}/workloads/${id}`, workload)
-        console.log(res)
+        const res = await axios.put(`${url}/routines/1/workloads/${id}`, workload)
+        this.renderWorkload() 
     }
 
     async deleteWorkload(id) {
@@ -73,7 +73,6 @@ class Routine extends React.Component {
 
     render() {
         const { routines } = this.state
-        console.log(routines)
         return (
             <div className="App">
                 <Navbar />
