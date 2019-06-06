@@ -25,6 +25,7 @@ class Routine extends React.Component {
     this.handleChanges = this.handleChanges.bind(this)
     this.createWorkload = this.createWorkload.bind(this)
     this.updateWorkload = this.updateWorkload.bind(this)
+    this.deleteWorkload = this.deleteWorkload.bind(this)
     }
 
     componentDidMount() {
@@ -45,13 +46,18 @@ class Routine extends React.Component {
     async createWorkload() {
         const { workload } = this.state
         await axios.post(`${url}/routines/1/workloads`, workload)
+        this.renderWorkload() 
     }
 
     async updateWorkload(id) {
-        // const { workload } = this.state
-        // const res = await axios.put(`${url}/routines/1/workloads/${id}`, workload)
-        // console.log(res)
-        console.log(id)
+        const { workload } = this.state
+        const res = await axios.put(`${url}/workloads/${id}`, workload)
+        console.log(res)
+    }
+
+    async deleteWorkload(id) {
+        await axios.delete(`${url}/workloads/${id}`)
+        this.renderWorkload()
     }
 
     async handleChanges(e) {
@@ -65,8 +71,9 @@ class Routine extends React.Component {
         })
     }
 
-
     render() {
+        const { routines } = this.state
+        console.log(routines)
         return (
             <div className="App">
                 <Navbar />
@@ -78,23 +85,26 @@ class Routine extends React.Component {
                         <div className="section rep">Repetitions</div>
                         <div className="section rpe">RPE</div>
                     </div>
+
                     <div>
-                        {this.state.routines && this.state.routines.map((routine, i) => { return ( 
+                        {routines && routines.map((routine, i) => { 
+                            return ( 
                             <div key={i} className="workload-data">
-                                {/* <h1 key={routine.id}>{routine.name}</h1>  */}
-                                {routine.workloads.map(workload => 
+                                {routine.workloads.map(workload =>                              
                                     <div key={workload.id} className="table-headers workload-header">
                                         <div className="section weight workload-weight">{workload.weight}</div>
                                         <div className="section set workload-set">{workload.sets}</div>
                                         <div className="section rep workload-rep">{workload.reps}</div>
                                         <div className="section rpe workload-rpe">{workload.rpe}</div>
+                                        <button onClick={() => this.deleteWorkload(workload.id)}>delete</button>
+                                        <UpdateForm handleChanges={this.handleChanges} updateWorkload={()=> this.updateWorkload(workload.id)}/>
                                     </div>)}
                             </div>
                         )})}
                     </div>
                 </div>
                 <CreateForm handleChanges={this.handleChanges} createWorkload={this.createWorkload}/>
-                <UpdateForm handleChanges={this.handleChanges} updateWorkload={this.updateWorkload}/>
+                {/* <UpdateForm handleChanges={this.handleChanges} updateWorkload={this.updateWorkload}/> */}
             </div>
         );
     }

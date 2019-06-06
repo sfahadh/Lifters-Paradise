@@ -12,7 +12,7 @@ class WorkloadsController < ApplicationController
     end
 
     def create
-        @workload = Workload.new(workload_params)
+        @workload = Workload.create(workload_params)
         if @workload.save 
             render json: @workload, status: :created
         else
@@ -21,8 +21,9 @@ class WorkloadsController < ApplicationController
     end
 
     def destroy
-        @routine = Routine.find(params[:id])
-        @workload = @routine.workloads.find(params[:id])
+        # @routine = Routine.find(params[:id])
+        # @workload = @routine.workloads.find(params[:id])
+        @workload = Workload.find(params[:id])
         @workload.destroy
         render json: @workload, status: :ok
     end

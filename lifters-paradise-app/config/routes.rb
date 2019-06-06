@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :routines
   
   scope '/routines/:id' do
-    resources :workloads
+    resources :workloads 
   end
+  resources :workloads, only: [:destroy]
 end

@@ -10,8 +10,7 @@ class WorkloadForm extends React.Component {
     }
 
     render() {
-        const { updateWorkload, handleChanges, routines } = this.props
-        console.log(routines)
+        const { updateWorkload, handleChanges } = this.props
         return (
             <div className="App">
              <div className ="button-modal">
