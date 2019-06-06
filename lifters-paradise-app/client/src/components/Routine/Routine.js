@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
 import './Routine.css'
-import WorkloadForm from './WorkloadForm'
+import CreateForm from './CreateForm'
+import UpdateForm from './UpdateForm'
 
 const url = 'http://localhost:3000'
 class Routine extends React.Component {
@@ -11,7 +12,6 @@ class Routine extends React.Component {
 
         this.state = {
             routines: [],
-            isLoaded: false,
             workload: 
             {
                 weight: 0,
@@ -47,8 +47,11 @@ class Routine extends React.Component {
         await axios.post(`${url}/routines/1/workloads`, workload)
     }
 
-    async updateWorkload() {
-        console.log("clicked")
+    async updateWorkload(id) {
+        // const { workload } = this.state
+        // const res = await axios.put(`${url}/routines/1/workloads/${id}`, workload)
+        // console.log(res)
+        console.log(id)
     }
 
     async handleChanges(e) {
@@ -60,12 +63,10 @@ class Routine extends React.Component {
                 [name]: value
             }
         })
-        console.log('set', this.state.workload)
     }
 
 
     render() {
-
         return (
             <div className="App">
                 <Navbar />
@@ -91,13 +92,9 @@ class Routine extends React.Component {
                             </div>
                         )})}
                     </div>
-                    <button onClick={this.updateWorkload}>Update</button>
                 </div>
-                <WorkloadForm 
-                    handleChanges={this.handleChanges} 
-                    submitWorkload={this.submitWorkload} 
-                    createWorkload={this.createWorkload}
-                />
+                <CreateForm handleChanges={this.handleChanges} createWorkload={this.createWorkload}/>
+                <UpdateForm handleChanges={this.handleChanges} updateWorkload={this.updateWorkload}/>
             </div>
         );
     }
