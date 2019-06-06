@@ -103,7 +103,6 @@ class Routine extends React.Component {
                     </div>
                 </div>
                 <CreateForm handleChanges={this.handleChanges} createWorkload={this.createWorkload}/>
-                {/* <UpdateForm handleChanges={this.handleChanges} updateWorkload={this.updateWorkload}/> */}
             </div>
         );
     }

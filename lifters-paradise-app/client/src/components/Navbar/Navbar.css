@@ -6,3 +6,9 @@
     right: 0;
     background-color: rgba(10, 101, 153, 0.918);
 } 
+
+h4 {
+    /* border: 2px solid red; */
+    padding: 5px;
+    width: 100%;
+}
