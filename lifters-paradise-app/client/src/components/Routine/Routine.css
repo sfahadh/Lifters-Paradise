@@ -1,13 +1,14 @@
 .table-headers {
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     justify-content: space-around;
-    width: 40vw;
+    width: 50vw;
     margin: 0 auto;
+    background-color: gray;
 }
 
 .section {
-    border: 2px solid gray;
+    border: 2px solid black;
     width: 100%;
     padding: 10px;
     font-size: 1.4em;
@@ -16,4 +17,8 @@
 
 .weight, .set, .rep {
     border-right: none;
+}
+
+.workload-header {
+    background-color: white;
 }
