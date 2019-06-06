@@ -12,9 +12,19 @@ class Routine extends React.Component {
         this.state = {
             routines: [],
             isLoaded: false,
+            workload: 
+            {
+                weight: 0,
+                sets: 0,
+                reps: 0,
+                rpe: 0,
+                exercise_id: 1,
+                routine_id: 1
+            } 
         }
     this.handleChanges = this.handleChanges.bind(this)
     this.createWorkload = this.createWorkload.bind(this)
+    this.updateWorkload = this.updateWorkload.bind(this)
     }
 
     componentDidMount() {
@@ -33,36 +43,24 @@ class Routine extends React.Component {
     }
 
     async createWorkload() {
-        
-        let { createForm } = this.state
-        // for(let i = 0; i < routines.length; i++) {
-        //     const res = await axios.post(`${url}/routines/${routines[i].id}/workloads`, { createForm })
-        //     console.log(res)
-        //     const workloads = res.data
-        //     routines[i].workloads = workloads
-        // } 
-        
-        const res = await axios.post(
-            `${url}/routines/1/workloads`, 
-            { workload: 
-                {
-                    weight: 0,
-                    sets: 0,
-                    reps: 0,
-                    rpe: 0,
-                    exercise_id: 1,
-                    routine_id: 1
-                } 
-            })
-        console.log(res.data)
+        const { workload } = this.state
+        await axios.post(`${url}/routines/1/workloads`, workload)
     }
 
-    handleChanges(e) {
-        const element = e.target
-        const name = element.name
-        const value = element.value
-        this.setState({[name]: value})
-        console.log(value)
+    async updateWorkload() {
+        console.log("clicked")
+    }
+
+    async handleChanges(e) {
+        const name = e.target.name
+        const value = e.target.value
+        await this.setState({
+            workload: {
+                ...this.state.workload,
+                [name]: value
+            }
+        })
+        console.log('set', this.state.workload)
     }
 
 
@@ -93,7 +91,7 @@ class Routine extends React.Component {
                             </div>
                         )})}
                     </div>
-                    <button onClick={this.createWorkload}>CREATE</button>
+                    <button onClick={this.updateWorkload}>Update</button>
                 </div>
                 <WorkloadForm 
                     handleChanges={this.handleChanges} 

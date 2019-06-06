@@ -33,7 +33,7 @@ class WorkloadForm extends React.Component {
 
                                 <Form.Field required>
                                     <label>Weights</label>
-                                    <input onChange={this.props.handleChanges} type="number" name="weights" placeholder='Enter Weight lifted'/>
+                                    <input onChange={this.props.handleChanges} type="number" name="weight" placeholder='Enter Weight lifted'/>
                                 </Form.Field>
 
                                 <Form.Field required>
