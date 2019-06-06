@@ -16192,3 +16192,36 @@ Processing by WorkloadsController#index as HTML
 Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 2.4ms)
 
 
+Started DELETE "/routines/1/workloads/1" for ::1 at 2019-06-06 10:40:40 -0400
+Processing by WorkloadsController#destroy as */*
+  Parameters: {"weight"=>900, "sets"=>10, "reps"=>5, "rpe"=>2, "routine_id"=>1, "exercise_id"=>1, "id"=>"1", "workload"=>{"weight"=>900, "sets"=>10, "reps"=>5, "rpe"=>2, "routine_id"=>1, "exercise_id"=>1}}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:24
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1 AND "workloads"."id" = $2 LIMIT $3[0m  [["routine_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:26
+  [1m[36mWorkload Destroy (0.5ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/workloads_controller.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:26
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-06 10:40:44 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-06 10:40:44 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
