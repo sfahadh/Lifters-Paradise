@@ -41,14 +41,17 @@ class Routine extends React.Component {
         //     const workloads = res.data
         //     routines[i].workloads = workloads
         // } 
+        
         const res = await axios.post(
             `${url}/routines/1/workloads`, 
-            { createForm: 
+            { workload: 
                 {
                     weight: 0,
                     sets: 0,
                     reps: 0,
-                    rpe: 0
+                    rpe: 0,
+                    exercise_id: 1,
+                    routine_id: 1
                 } 
             })
         console.log(res.data)
@@ -90,6 +93,7 @@ class Routine extends React.Component {
                             </div>
                         )})}
                     </div>
+                    <button onClick={this.createWorkload}>CREATE</button>
                 </div>
                 <WorkloadForm 
                     handleChanges={this.handleChanges} 

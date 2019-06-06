@@ -12,7 +12,7 @@ class WorkloadsController < ApplicationController
     end
 
     def create
-        @workload = Workload.create(workload_params)
+        @workload = Workload.new(workload_params)
         if @workload.save 
             render json: @workload, status: :created
         else
