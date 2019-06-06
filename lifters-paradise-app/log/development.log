@@ -12005,3 +12005,428 @@ Processing by WorkloadsController#index as HTML
 Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/routines" for ::1 at 2019-06-05 23:15:52 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:15:52 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (2.0ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (4.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:16:52 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:16:52 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:17:30 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:17:30 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (1.0ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (4.0ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:18:27 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:18:27 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.6ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:18:40 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:18:40 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (3.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (2.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:19:04 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:19:04 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (4.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:19:31 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (2.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:19:31 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.9ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:20:14 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:20:14 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:20:43 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:20:43 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.9ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:20:45 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:20:45 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:20:46 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:20:46 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:20:46 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:20:46 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:20:48 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:20:48 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:21:18 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:21:18 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:21:40 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:21:40 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:21:40 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:21:40 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:21:41 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:21:41 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:21:41 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:21:41 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:21:42 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:21:42 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:22:01 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:22:01 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:22:02 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:22:02 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:22:03 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:22:03 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:22:03 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:22:03 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:23:09 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:23:09 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2019-06-05 23:23:13 -0400
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/controllers/routines_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routines/1/workloads" for ::1 at 2019-06-05 23:23:13 -0400
+Processing by WorkloadsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (1.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:3
+  [1m[36mWorkload Load (3.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads" WHERE "workloads"."routine_id" = $1[0m  [["routine_id", 1]]
+  ↳ app/controllers/workloads_controller.rb:5
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 4.8ms)
+
+

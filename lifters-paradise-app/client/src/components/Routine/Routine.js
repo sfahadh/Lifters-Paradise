@@ -2,8 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
 import './Routine.css'
-// import WorkloadForm from '../Exercises/WorkloadForm'
-// import WorkloadForm from '../Exercises/WorkloadForm'
+import WorkloadForm from './WorkloadForm'
 
 const url = 'http://localhost:3000'
 class Routine extends React.Component {
@@ -16,7 +15,7 @@ class Routine extends React.Component {
         }
     this.handleChanges = this.handleChanges.bind(this)
     // this.getAllRoutines = this.getAllRoutines.bind(this)
-    this.renderWorkload = this.renderWorkload.bind(this)
+    this.submitWorkload = this.submitWorkload.bind(this)
     }
 
     componentDidMount() {
@@ -24,6 +23,10 @@ class Routine extends React.Component {
             // routines: await 
             this.renderWorkload()
         // })
+    }
+
+    submitWorkload() {
+        console.log("clicked")
     }
 
     async renderWorkload() {
@@ -44,11 +47,12 @@ class Routine extends React.Component {
         const name = element.name
         const value = element.value
         this.setState({[name]: value})
+        console.log(value)
     }
 
 
     render() {
-        console.log(this.state.routines,'my routine state')
+        // console.log(this.state.routines,'my routine state')
         const { routines, isLoaded, rendered } = this.state
         // console.log(routines)
         // if(rendered) {
@@ -102,7 +106,7 @@ class Routine extends React.Component {
                     }
                     </div>
                 </div>
-                {/* <WorkloadForm /> */}
+                <WorkloadForm handleChanges={this.handleChanges} submitWorkload={this.submitWorkload} />
             </div>
         );
     }

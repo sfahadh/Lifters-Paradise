@@ -20,25 +20,25 @@ class WorkloadForm extends React.Component {
                         <Segment>
                         <Grid columns={2} relaxed='very'>
                             <Grid.Column>
-                            <Form >
+                            <Form onSubmit={this.props.submitWorkload}>
                                 <Form.Field required>
                                     <label>Sets</label>
-                                    <input onChange={props.handleChanges} type="number" name='sets' placeholder='Enter Number of Sets' />
+                                    <input onChange={this.props.handleChanges} type="number" name='sets' placeholder='Enter Number of Sets' />
                                 </Form.Field>
 
                                 <Form.Field required>
                                     <label>Repetition</label>
-                                    <input onChange={props.handleChanges} type="number" name="reps" placeholder='Enter Number of Reps'/>
+                                    <input onChange={this.props.handleChanges} type="number" name="reps" placeholder='Enter Number of Reps'/>
                                 </Form.Field>
 
                                 <Form.Field required>
                                     <label>Weights</label>
-                                    <input onChange={props.handleChanges} type="number" name="weights" placeholder='Enter Weight lifted'/>
+                                    <input onChange={this.props.handleChanges} type="number" name="weights" placeholder='Enter Weight lifted'/>
                                 </Form.Field>
 
                                 <Form.Field required>
                                     <label>Rate of Percieved Exertion</label>
-                                    <input onChange={props.handleChanges} type="number" name="rpe" placeholder='From 1-10 Difficulty'/>
+                                    <input onChange={this.props.handleChanges} type="number" name="rpe" placeholder='From 1-10 Difficulty'/>
                                 </Form.Field>
 
                                 <Button inverted color="blue" type='submit'>Submit</Button>
@@ -53,4 +53,4 @@ class WorkloadForm extends React.Component {
     }
 }
 
-export default WorkLoadForm
+export default WorkloadForm
