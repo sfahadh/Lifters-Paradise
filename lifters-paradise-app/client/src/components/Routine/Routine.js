@@ -13,7 +13,8 @@ class Routine extends React.Component {
         super(props)
 
         this.state = {
-            routines: [],
+            workloads: [],
+            exercise: 'Bench Press',
             workload: 
             {
                 weight: 0,
@@ -36,19 +37,14 @@ class Routine extends React.Component {
     }
 
     async renderWorkload() {
-        const resp = await axios.get(`${url}/routines`)
-        let routines = resp.data
-        for(let i = 0; i < routines.length; i++) {
-            const res = await axios.get(`${url}/routines/${routines[i].id}/workloads`)
-            const workloads = res.data
-            routines[i].workloads = workloads
-        } 
-        this.setState({ routines: routines })
+        const resp = await axios.get(`${url}/workloads`)
+        let workloads = resp.data
+        this.setState({ workloads: workloads })
     }
 
     async createWorkload() {
         const { workload } = this.state
-        await axios.post(`${url}/routines/1/workloads`, workload)
+        await axios.post(`${url}/workloads`, workload)
         this.renderWorkload() 
     }
 
@@ -68,21 +64,15 @@ class Routine extends React.Component {
         const name = e.target.name
         const value = e.target.value
         await this.setState({
-            exercise: value,
             workload: {
                 ...this.state.workload,
                 [name]: value
             }
         })
-        console.log('set', this.state.exercise)
     }
 
-    // async handleExercise(e) {
- 
-    // }
-
     render() {
-        const { routines, exercise } = this.state
+        const { workloads, exercise } = this.state
         return (
             <div className="App">
                 <Navbar />
@@ -99,23 +89,18 @@ class Routine extends React.Component {
                     </div>
 
                     <div>
-                        {routines && routines.map((routine, i) => { 
-                            return ( 
-                            <div key={i} className="workload-data">
-                                {routine.workloads.map(workload =>                              
-                                    <div key={workload.id} className="table-headers workload-header">
-                                        <div className="section weight workload-exercise">{exercise}</div>
-                                        <div className="section weight workload-weight">{workload.weight}</div>
-                                        <div className="section set workload-set">{workload.sets}</div>
-                                        <div className="section rep workload-rep">{workload.reps}</div>
-                                        <div className="section rpe workload-rpe">{workload.rpe}</div>
-                                        <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
-                                            <Icon id="trash-icon" disabled name='trash alternate'/>
-                                        </button>
-                                        <UpdateForm handleChanges={this.handleChanges} updateWorkload={()=> this.updateWorkload(workload.id)}/>
-                                    </div>)}
-                            </div>
-                        )})}
+                        {workloads.map(workload =>                              
+                            <div key={workload.id} className="table-headers workload-header">
+                                <div className="section weight workload-exercise">{exercise}</div>
+                                <div className="section weight workload-weight">{workload.weight}</div>
+                                <div className="section set workload-set">{workload.sets}</div>
+                                <div className="section rep workload-rep">{workload.reps}</div>
+                                <div className="section rpe workload-rpe">{workload.rpe}</div>
+                                <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
+                                    <Icon id="trash-icon" disabled name='trash alternate'/>
+                                </button>
+                                <UpdateForm handleChanges={this.handleChanges} updateWorkload={()=> this.updateWorkload(workload.id)}/>
+                            </div>)}
                     </div>
                 </div>
                 <CreateForm handleChanges={this.handleChanges} createWorkload={this.createWorkload}/>
