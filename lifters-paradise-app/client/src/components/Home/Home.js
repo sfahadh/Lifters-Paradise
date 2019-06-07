@@ -19,7 +19,7 @@ class Home extends React.Component {
     render() {
         if(this.state.redirect) { return <Redirect to='routine'/>}
         return (
-            <div className="App">
+            <div className="home-background">
                 <Navbar />
                 <div id="intro">
                     <h1>Online Exercise Tracker and Programming (Prototype)</h1>
