@@ -23,7 +23,7 @@ class Routine extends React.Component {
                 exercise_id: 1,
                 routine_id: 1
             },
-            exercise: ''
+            
         }
     this.handleChanges = this.handleChanges.bind(this)
     this.createWorkload = this.createWorkload.bind(this)
@@ -74,8 +74,12 @@ class Routine extends React.Component {
                 [name]: value
             }
         })
-        console.log('set', this.state.workload)
+        console.log('set', this.state.exercise)
     }
+
+    // async handleExercise(e) {
+ 
+    // }
 
     render() {
         const { routines, exercise } = this.state

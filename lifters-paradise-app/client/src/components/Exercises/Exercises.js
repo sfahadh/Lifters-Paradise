@@ -31,7 +31,7 @@ class Exercises extends React.Component {
                         <img src={exercise.end_image} alt='exercise-end'/>
                     </div>
                     <div className="exercise-info">
-                        <h1><span>Exercise:</span> {exercise.name}</h1>
+                        <h1>{exercise.name}</h1>
                         <h3><span>Plane of Motion:</span> {exercise.plane_of_motion}</h3>
                         <h3><span>Joint Action:</span> {exercise.joint_action}</h3>
                         <h3><span>Muscles Involved:</span> {exercise.muscles_involved}</h3>

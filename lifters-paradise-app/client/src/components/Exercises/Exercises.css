@@ -32,3 +32,8 @@
     font-size: 4em;
     margin: 3%;
 }
+
+.exercise-info span {
+    font-weight: 800;
+    color: rgba(10, 101, 153, 0.918);
+}
