@@ -23,7 +23,7 @@ class WorkloadForm extends React.Component {
                             <Form onSubmit={createWorkload}>
                                 {/* <Form.Field className="form-field">
                                     <label>Exercise</label>
-                                    <input onChange={handleExercise} type="text" name="exercise" placeholder='Enter Name of Exercise' />
+                                    <input onChange={handleChanges} type="number" name="exercise_id" placeholder='Enter Name of Exercise' />
                                 </Form.Field> */}
 
                                 <Form.Field required className="form-field">

@@ -14,20 +14,18 @@ class Routine extends React.Component {
 
         this.state = {
             workloads: [],
-            exercise: 'Bench Press',
             workload: 
             {
-                weight: 0,
-                sets: 0,
-                reps: 0,
-                rpe: 0,
+                weight: null,
+                sets: null,
+                reps: null,
+                rpe: null,
                 exercise_id: 1,
                 routine_id: 1
             },
             isThereWorkload: true
         }
     this.handleChanges = this.handleChanges.bind(this)
-    this.handleExercise = this.handleExercise.bind(this)
     this.createWorkload = this.createWorkload.bind(this)
     this.updateWorkload = this.updateWorkload.bind(this)
     this.deleteWorkload = this.deleteWorkload.bind(this)
@@ -72,11 +70,6 @@ class Routine extends React.Component {
         })
     }
 
-    async handleExercise(e) {
-        console.log(e.target.value)
-        await this.setState({ exercise: e.target.value })
-    }
-
     async showMessage() {
         this.setState({
             isThereWorkload: false
@@ -84,9 +77,10 @@ class Routine extends React.Component {
     }
 
     render() {
-        const { workloads, exercise } = this.state
+        const { workloads } = this.state
         let message = workloads.length === 0 ? 
         <div id="workload-message"></div> : null
+
         return (
             <div className="App">
                 <Navbar />
@@ -105,7 +99,13 @@ class Routine extends React.Component {
                     <div>
                         {workloads.map(workload =>                              
                             <div key={workload.id} className="table-headers workload-header">
-                                <div className="section weight workload-exercise">{exercise}</div>
+                                <div className="section weight workload-exercise">
+                                    Bench Press
+                                    {/* {workload.exercise_id} */}
+                                    {/* {workload.exercise_id === 1 ? 'Bench Press' : 
+                                    workload.exercise_id === 2 ? 'Squat' : 
+                                    workload.exercise_id === 3 ? 'DB Shoulder Press' : 'invalid'} */}
+                                </div>
                                 <div className="section weight workload-weight">{workload.weight}</div>
                                 <div className="section set workload-set">{workload.sets}</div>
                                 <div className="section rep workload-rep">{workload.reps}</div>
@@ -113,9 +113,9 @@ class Routine extends React.Component {
                                 <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
                                     <Icon id="trash-icon" disabled name='trash alternate'/>
                                 </button>
+                            
                                 <UpdateForm 
                                     handleChanges={ this.handleChanges } 
-                                    handleExercise={ this.handleExercise } 
                                     updateWorkload={() => this.updateWorkload(workload.id)}
                                 />
                             </div>)}
@@ -123,7 +123,6 @@ class Routine extends React.Component {
                 </div>
                 <CreateForm 
                     handleChanges={ this.handleChanges } 
-                    handleExercise={ this.handleExercise } 
                     createWorkload={ this.createWorkload }
                 />
                 {message}

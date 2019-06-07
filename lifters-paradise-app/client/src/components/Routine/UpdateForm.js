@@ -26,7 +26,7 @@ class WorkloadForm extends React.Component {
                             <Form onSubmit={updateWorkload}>
                                 {/* <Form.Field>
                                     <label>Exercise</label>
-                                    <input onChange={handleExercise} type="text" name="exercise" placeholder='Enter Name of Exercise' />
+                                    <input onChange={handleChanges} type="number" name="exercise_id" placeholder='Enter Name of Exercise' />
                                 </Form.Field> */}
 
                                 <Form.Field required>
