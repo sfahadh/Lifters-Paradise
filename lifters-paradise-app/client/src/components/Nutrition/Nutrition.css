@@ -1,0 +1,45 @@
+#home {
+    border: 2px solid black;
+    height: 100vh;
+    background-image: url("./meEating.png");
+    background-size: 100% 100%;
+}
+
+#intro {
+    text-align: center;
+    margin: 10% auto;
+    padding: 3vw;
+    width: 40%;
+    background-color: rgba(65, 165, 34, 0.6);
+}
+  
+#intro > h1 {
+    font-size: 4.3vw;
+    color: orange;
+    text-shadow: 2px 2px black;
+}
+  
+#intro > h3 {
+    font-size: 1.7vw;
+    color: orange;
+    text-shadow: 2px 2px black;
+}
+
+#credit {
+    position: fixed;
+    bottom: 15px;
+    left: 180px;
+    font-size: 1.5vw;
+    color: green;
+    text-shadow: 1px 1px orange;
+}
+
+#intro button {
+    background-color: gray;
+    color: white;
+    border: 3px solid orange;
+}
+
+#intro a {
+    color: orange;
+}
