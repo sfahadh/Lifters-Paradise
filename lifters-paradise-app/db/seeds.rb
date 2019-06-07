@@ -32,11 +32,3 @@ first_routine = Routine.create({
     name: 'My First Program'
 })
 
-first_workload = Workload.create({
-    weight: 505,
-    sets: 3,
-    reps: 5,
-    rpe: 8,
-    routine_id: 1,
-    exercise_id: 1
-})

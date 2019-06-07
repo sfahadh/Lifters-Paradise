@@ -1,16 +1,10 @@
 class WorkloadsController < ApplicationController
     def index 
-        # @routine = Routine.find(params[:id])
-        # @workloads = @routine.workloads.all
-        # render json: @workloads, include: :routine, status: :ok
         @workloads = Workload.all
         render json: @workloads, status: :ok
     end
 
     def show
-        # @routines = Routine.find(params[:id])
-        # @workloads = @routines.workloads.find(params[:id])
-        # render json: @workloads, status: :ok
         @workloads = Workload.find(params[:id])
         render json: @workloads, status: :ok
     end

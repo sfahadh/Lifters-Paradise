@@ -4,9 +4,5 @@ Rails.application.routes.draw do
   resources :exercises, only: [:index, :show]
 
   resources :routines
-  
-  # scope '/routines/:id' do
-  #   resources :workloads 
-  # end
   resources :workloads
 end

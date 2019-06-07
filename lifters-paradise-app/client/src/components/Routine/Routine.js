@@ -24,9 +24,10 @@ class Routine extends React.Component {
                 exercise_id: 1,
                 routine_id: 1
             },
-            
+            isThereWorkload: true
         }
     this.handleChanges = this.handleChanges.bind(this)
+    this.handleExercise = this.handleExercise.bind(this)
     this.createWorkload = this.createWorkload.bind(this)
     this.updateWorkload = this.updateWorkload.bind(this)
     this.deleteWorkload = this.deleteWorkload.bind(this)
@@ -71,8 +72,21 @@ class Routine extends React.Component {
         })
     }
 
+    async handleExercise(e) {
+        console.log(e.target.value)
+        await this.setState({ exercise: e.target.value })
+    }
+
+    async showMessage() {
+        this.setState({
+            isThereWorkload: false
+        })
+    }
+
     render() {
         const { workloads, exercise } = this.state
+        let message = workloads.length === 0 ? 
+        <div id="workload-message"></div> : null
         return (
             <div className="App">
                 <Navbar />
@@ -99,11 +113,20 @@ class Routine extends React.Component {
                                 <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
                                     <Icon id="trash-icon" disabled name='trash alternate'/>
                                 </button>
-                                <UpdateForm handleChanges={this.handleChanges} updateWorkload={()=> this.updateWorkload(workload.id)}/>
+                                <UpdateForm 
+                                    handleChanges={ this.handleChanges } 
+                                    handleExercise={ this.handleExercise } 
+                                    updateWorkload={() => this.updateWorkload(workload.id)}
+                                />
                             </div>)}
                     </div>
                 </div>
-                <CreateForm handleChanges={this.handleChanges} createWorkload={this.createWorkload}/>
+                <CreateForm 
+                    handleChanges={ this.handleChanges } 
+                    handleExercise={ this.handleExercise } 
+                    createWorkload={ this.createWorkload }
+                />
+                {message}
             </div>
         );
     }

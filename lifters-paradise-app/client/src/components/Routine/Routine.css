@@ -80,4 +80,10 @@ h1 {
     text-align: center;
 }
 
-
+#workload-message {
+    border: 2px solid black;
+    width: 31vw;
+    height: 500px;
+    margin: 2% auto;
+    background-image: url('./do-you-even-lift.png');
+}

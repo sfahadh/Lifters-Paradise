@@ -21,10 +21,10 @@ class WorkloadForm extends React.Component {
                         <Grid columns={2} relaxed='very'>
                             <Grid.Column>
                             <Form onSubmit={createWorkload}>
-                                <Form.Field className="form-field">
+                                {/* <Form.Field className="form-field">
                                     <label>Exercise</label>
-                                    <input onChange={handleChanges} type="text" placeholder='Enter Name of Exercise' />
-                                </Form.Field>
+                                    <input onChange={handleExercise} type="text" name="exercise" placeholder='Enter Name of Exercise' />
+                                </Form.Field> */}
 
                                 <Form.Field required className="form-field">
                                     <label>Weights</label>
