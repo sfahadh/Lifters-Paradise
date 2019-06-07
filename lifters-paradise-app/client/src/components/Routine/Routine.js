@@ -20,6 +20,7 @@ class Routine extends React.Component {
                 sets: null,
                 reps: null,
                 rpe: null,
+                lift: null,
                 exercise_id: 1,
                 routine_id: 1
             },
@@ -50,8 +51,8 @@ class Routine extends React.Component {
     async updateWorkload(id) {
         const { workload } = this.state
         const res = await axios.put(`${url}/workloads/${id}`, workload)
-        console.log(res)
         this.renderWorkload() 
+        console.log(id)
     }
 
     async deleteWorkload(id) {
@@ -99,13 +100,7 @@ class Routine extends React.Component {
                     <div>
                         {workloads.map(workload =>                              
                             <div key={workload.id} className="table-headers workload-header">
-                                <div className="section weight workload-exercise">
-                                    Bench Press
-                                    {/* {workload.exercise_id} */}
-                                    {/* {workload.exercise_id === 1 ? 'Bench Press' : 
-                                    workload.exercise_id === 2 ? 'Squat' : 
-                                    workload.exercise_id === 3 ? 'DB Shoulder Press' : 'invalid'} */}
-                                </div>
+                                <div className="section weight workload-exercise">{workload.lift}</div>
                                 <div className="section weight workload-weight">{workload.weight}</div>
                                 <div className="section set workload-set">{workload.sets}</div>
                                 <div className="section rep workload-rep">{workload.reps}</div>

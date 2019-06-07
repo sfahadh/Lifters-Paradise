@@ -33,6 +33,6 @@ class WorkloadsController < ApplicationController
     private 
 
     def workload_params
-        params.require(:workload).permit(:weight, :sets, :reps, :rpe, :routine_id, :exercise_id)
+        params.require(:workload).permit(:weight, :sets, :reps, :rpe, :lift, :routine_id, :exercise_id)
     end
 end
