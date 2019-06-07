@@ -4,6 +4,8 @@ import axios from 'axios'
 import './Routine.css'
 import CreateForm from './CreateForm'
 import UpdateForm from './UpdateForm'
+import { Icon } from 'semantic-ui-react'
+
 
 const url = 'http://localhost:3000'
 class Routine extends React.Component {
@@ -76,7 +78,7 @@ class Routine extends React.Component {
         return (
             <div className="App">
                 <Navbar />
-                
+                <h1>My Workout Routine</h1>
                 <div id="whole-table">
                     <div className="column-load table-headers">
                         <div className="section weight">Weights</div>
@@ -97,7 +99,9 @@ class Routine extends React.Component {
                                         <div className="section set workload-set">{workload.sets}</div>
                                         <div className="section rep workload-rep">{workload.reps}</div>
                                         <div className="section rpe workload-rpe">{workload.rpe}</div>
-                                        <button onClick={() => this.deleteWorkload(workload.id)}>delete</button>
+                                        <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
+                                            <Icon id="trash-icon" disabled name='trash alternate'/>
+                                        </button>
                                         <UpdateForm handleChanges={this.handleChanges} updateWorkload={()=> this.updateWorkload(workload.id)}/>
                                     </div>)}
                             </div>

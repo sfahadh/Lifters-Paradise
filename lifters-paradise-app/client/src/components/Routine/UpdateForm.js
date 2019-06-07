@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal, Form, Grid, Segment } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 
 class WorkloadForm extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class WorkloadForm extends React.Component {
         return (
             <div className="App">
              <div className ="button-modal">
-                    <Modal trigger={<Button color="blue" size="huge" className ="add-button">Update Workload</Button>}>
+                    <Modal trigger={<Button color="blue" size="huge" id ="add-button"><Icon disabled name='write'/></Button>}>
                         <h1 className="modal-style">"Update Your Workout Routine"</h1>
                         <Segment>
                         <Grid columns={2} relaxed='very'>
