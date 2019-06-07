@@ -21,8 +21,6 @@ class WorkloadsController < ApplicationController
     end
 
     def destroy
-        # @routine = Routine.find(params[:id])
-        # @workload = @routine.workloads.find(params[:id])
         @workload = Workload.find(params[:id])
         @workload.destroy
         render json: @workload, status: :ok

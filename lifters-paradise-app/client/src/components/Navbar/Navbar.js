@@ -7,28 +7,23 @@ function Navbar() {
     return (
         <div className="App">
             <nav className="side-drawer">
-                <ul className='nav-links'>
-                    <h4><Link to="home">Home</Link></h4>
-                    <h4><Link to="exercises">Exercises</Link></h4>
-                    <h4><Link to="nutrition">Nutrition</Link></h4>
-                    <h4><Link to="routine">Routine</Link></h4>
-                </ul>
+                <img id="logo-image" src={require("./logo.png")} alt="profile"></img>
             </nav> 
-            
+
             <Sidebar as={Menu} animation='overlay' icon='labeled' inverted vertical visible width='thin'>
-                <Menu.Item as='a'>
+                <Menu.Item className="link-box" as='a'>
                     <h4><Link to="home">Home</Link></h4>
                 </Menu.Item>
 
-                <Menu.Item as='a'>
+                <Menu.Item className="link-box" as='a'>
                     <h4><Link to="exercises">Exercises</Link></h4>
                 </Menu.Item>
 
-                <Menu.Item as='a'>
+                <Menu.Item className="link-box" as='a'>
                     <h4><Link to="nutrition">Nutrition</Link></h4>
                 </Menu.Item>
 
-                <Menu.Item as='a'>
+                <Menu.Item className="link-box" as='a'>
                     <h4><Link to="routine">Routine</Link></h4>
                 </Menu.Item>
             </Sidebar>

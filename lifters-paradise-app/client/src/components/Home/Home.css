@@ -1,8 +1,8 @@
 #intro {
     text-align: center;
-    width: 22vw;
-    height: 38vh;
-    margin: 10% 10%;
+    width: 29vw;
+    height: 55vh;
+    margin: 10% 15%;
     padding: 3vw;
     background-color: rgba(10, 101, 153, 0.918);
     border-radius: 15%;
@@ -17,14 +17,15 @@
 }
 
 #intro > button {
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     border-radius: 7%;
     background-color: rgba(145, 131, 131, 0.527);
     border: 2px solid rgba(145, 131, 131, 0.527);
     color: white;
-    height: 43px;
-    width: 8vw;
+    height: 53px;
+    width: 10vw;
     cursor: pointer;
+    margin-top: 5%;
 }
 
 #intro button:hover {
