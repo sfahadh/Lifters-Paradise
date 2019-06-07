@@ -26,7 +26,7 @@ class WorkloadsController < ApplicationController
 
     def update 
         @workload = Workload.find(params[:id])
-        @workload.update_attributes(workload_params)
+        @workload.update(workload_params)
         render json: @workload, status: :ok
     end
 

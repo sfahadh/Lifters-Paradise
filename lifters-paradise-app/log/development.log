@@ -37232,3 +37232,1255 @@ Processing by WorkloadsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/workloads" for ::1 at 2019-06-07 17:04:34 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (1.0ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:04:53 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/workloads/1" for ::1 at 2019-06-07 17:04:57 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.5ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:04:57 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-07 17:05:16 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-07 17:05:18 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:05:31 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-07 17:05:36 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:05:38 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:07:24 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>nil, "sets"=>nil, "reps"=>nil, "rpe"=>nil, "lift"=>nil, "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>nil, "sets"=>nil, "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>nil}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.8ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", nil], ["sets", nil], ["reps", nil], ["rpe", nil], ["lift", nil], ["updated_at", "2019-06-07 21:07:24.026390"], ["id", 3]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:07:24 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:15:46 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (1.0ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 31ms (Views: 19.3ms | ActiveRecord: 9.0ms)
+
+
+Started PUT "/workloads/2" for ::1 at 2019-06-07 17:15:55 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"2", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.6ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (1.0ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 4332], ["sets", 2431], ["reps", nil], ["rpe", nil], ["lift", "r"], ["updated_at", "2019-06-07 21:15:55.247342"], ["id", 2]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 48ms (Views: 0.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:15:55 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/4" for ::1 at 2019-06-07 17:17:02 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"4", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 4332], ["sets", 2431], ["reps", nil], ["rpe", nil], ["lift", "r"], ["updated_at", "2019-06-07 21:17:02.477386"], ["id", 4]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (36.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 48ms (Views: 0.5ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:02 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/2" for ::1 at 2019-06-07 17:17:05 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"2", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:05 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/4" for ::1 at 2019-06-07 17:17:08 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"4", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:08 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/4" for ::1 at 2019-06-07 17:17:13 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"4", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:13 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:17:16 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.3ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "lift" = $3, "updated_at" = $4 WHERE "workloads"."id" = $5[0m  [["weight", 4332], ["sets", 2431], ["lift", "r"], ["updated_at", "2019-06-07 21:17:16.454364"], ["id", 3]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:16 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:17:17 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:17 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:17:18 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:18 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:17:18 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:18 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.6ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:17:18 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:19 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/4" for ::1 at 2019-06-07 17:17:21 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"4", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:21 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/4" for ::1 at 2019-06-07 17:17:21 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"4", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:21 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/4" for ::1 at 2019-06-07 17:17:21 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "lift"=>"r", "exercise_id"=>1, "routine_id"=>1, "id"=>"4", "workload"=>{"weight"=>"4332", "sets"=>"2431", "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>"r"}}
+  [1m[36mWorkload Load (0.2ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:21 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (6713.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (211.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (423.7ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (425.0ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint, "lift" character varying)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:65
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190607194914)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190604163207),
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190607183640),
+(20190604084732),
+(20190607194705),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-07 21:17:46.673602"], ["updated_at", "2019-06-07 21:17:46.673602"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:49
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint, "lift" character varying)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (42.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:63
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:64
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:65
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190607194914)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190604163207),
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190603204040),
+(20190604085020),
+(20190607183640),
+(20190604084732),
+(20190607194705),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-07 21:17:46.840415"], ["updated_at", "2019-06-07 21:17:46.840415"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-07 21:17:46.843867"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (1.0ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-07 21:17:46.895351"], ["updated_at", "2019-06-07 21:17:46.895351"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-07 21:17:46.898995"], ["updated_at", "2019-06-07 21:17:46.898995"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-07 21:17:46.901176"], ["updated_at", "2019-06-07 21:17:46.901176"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (0.9ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-07 21:17:46.922051"], ["updated_at", "2019-06-07 21:17:46.922051"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+Started GET "/workloads" for ::1 at 2019-06-07 17:17:57 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (1.0ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:18:15 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"213", "sets"=>"123", "reps"=>"123", "rpe"=>"123", "lift"=>"squat", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"213", "sets"=>"123", "reps"=>"123", "rpe"=>"123", "routine_id"=>1, "exercise_id"=>1, "lift"=>"squat"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.6ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (1.4ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 213], ["sets", 123], ["reps", 123], ["rpe", 123], ["created_at", "2019-06-07 21:18:15.396665"], ["updated_at", "2019-06-07 21:18:15.396665"], ["routine_id", 1], ["exercise_id", 1], ["lift", "squat"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 73ms (Views: 0.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:15 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/1" for ::1 at 2019-06-07 17:18:30 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"9999", "sets"=>"999", "reps"=>"99", "rpe"=>"999", "lift"=>"shoulder press", "exercise_id"=>1, "routine_id"=>1, "id"=>"1", "workload"=>{"weight"=>"9999", "sets"=>"999", "reps"=>"99", "rpe"=>"999", "routine_id"=>1, "exercise_id"=>1, "lift"=>"shoulder press"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 9999], ["sets", 999], ["reps", 99], ["rpe", 999], ["lift", "shoulder press"], ["updated_at", "2019-06-07 21:18:30.520840"], ["id", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 47ms (Views: 0.5ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:30 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/1" for ::1 at 2019-06-07 17:18:31 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"9999", "sets"=>"999", "reps"=>"99", "rpe"=>"999", "lift"=>"shoulder press", "exercise_id"=>1, "routine_id"=>1, "id"=>"1", "workload"=>{"weight"=>"9999", "sets"=>"999", "reps"=>"99", "rpe"=>"999", "routine_id"=>1, "exercise_id"=>1, "lift"=>"shoulder press"}}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:31 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:18:41 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "lift"=>"asd", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "routine_id"=>1, "exercise_id"=>1, "lift"=>"asd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.9ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 12], ["sets", 312], ["reps", 132], ["rpe", 123], ["created_at", "2019-06-07 21:18:41.766156"], ["updated_at", "2019-06-07 21:18:41.766156"], ["routine_id", 1], ["exercise_id", 1], ["lift", "asd"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 62ms (Views: 0.5ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:41 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:18:43 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "lift"=>"asd", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "routine_id"=>1, "exercise_id"=>1, "lift"=>"asd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.6ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 12], ["sets", 312], ["reps", 132], ["rpe", 123], ["created_at", "2019-06-07 21:18:43.755192"], ["updated_at", "2019-06-07 21:18:43.755192"], ["routine_id", 1], ["exercise_id", 1], ["lift", "asd"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 9ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:43 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:18:43 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "lift"=>"asd", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "routine_id"=>1, "exercise_id"=>1, "lift"=>"asd"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.5ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 12], ["sets", 312], ["reps", 132], ["rpe", 123], ["created_at", "2019-06-07 21:18:43.913895"], ["updated_at", "2019-06-07 21:18:43.913895"], ["routine_id", 1], ["exercise_id", 1], ["lift", "asd"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:43 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:18:44 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "lift"=>"asd", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"12", "sets"=>"312", "reps"=>"132", "rpe"=>"123", "routine_id"=>1, "exercise_id"=>1, "lift"=>"asd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.5ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 12], ["sets", 312], ["reps", 132], ["rpe", 123], ["created_at", "2019-06-07 21:18:44.211131"], ["updated_at", "2019-06-07 21:18:44.211131"], ["routine_id", 1], ["exercise_id", 1], ["lift", "asd"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 8ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:44 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/2" for ::1 at 2019-06-07 17:18:53 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "lift"=>"ggggg", "exercise_id"=>1, "routine_id"=>1, "id"=>"2", "workload"=>{"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "routine_id"=>1, "exercise_id"=>1, "lift"=>"ggggg"}}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 999], ["sets", 999], ["reps", 999], ["rpe", 99], ["lift", "ggggg"], ["updated_at", "2019-06-07 21:18:53.489239"], ["id", 2]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 49ms (Views: 0.4ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:18:53 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/2" for ::1 at 2019-06-07 17:19:08 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "lift"=>"ggggg", "exercise_id"=>1, "routine_id"=>1, "id"=>"2", "workload"=>{"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "routine_id"=>1, "exercise_id"=>1, "lift"=>"ggggg"}}
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:19:08 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/5" for ::1 at 2019-06-07 17:19:12 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "lift"=>"ggggg", "exercise_id"=>1, "routine_id"=>1, "id"=>"5", "workload"=>{"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "routine_id"=>1, "exercise_id"=>1, "lift"=>"ggggg"}}
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 999], ["sets", 999], ["reps", 999], ["rpe", 99], ["lift", "ggggg"], ["updated_at", "2019-06-07 21:19:12.278232"], ["id", 5]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:19:12 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:19:18 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "lift"=>"ggggg", "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>"999", "sets"=>"999", "reps"=>"999", "rpe"=>"99", "routine_id"=>1, "exercise_id"=>1, "lift"=>"ggggg"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 999], ["sets", 999], ["reps", 999], ["rpe", 99], ["lift", "ggggg"], ["updated_at", "2019-06-07 21:19:18.131575"], ["id", 3]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:19:18 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:22:10 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:22:19 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:22:22 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.9ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:26:07 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.7ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:26:27 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/workloads/3" for ::1 at 2019-06-07 17:26:41 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>nil, "sets"=>nil, "reps"=>nil, "rpe"=>nil, "lift"=>nil, "exercise_id"=>1, "routine_id"=>1, "id"=>"3", "workload"=>{"weight"=>nil, "sets"=>nil, "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>nil}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", nil], ["sets", nil], ["reps", nil], ["rpe", nil], ["lift", nil], ["updated_at", "2019-06-07 21:26:41.795292"], ["id", 3]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 46ms (Views: 0.5ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:26:41 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/workloads/2" for ::1 at 2019-06-07 17:26:55 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>nil, "sets"=>nil, "reps"=>nil, "rpe"=>nil, "lift"=>nil, "exercise_id"=>1, "routine_id"=>1, "id"=>"2", "workload"=>{"weight"=>nil, "sets"=>nil, "reps"=>nil, "rpe"=>nil, "routine_id"=>1, "exercise_id"=>1, "lift"=>nil}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", nil], ["sets", nil], ["reps", nil], ["rpe", nil], ["lift", nil], ["updated_at", "2019-06-07 21:26:55.973023"], ["id", 2]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:26:55 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/workloads/1" for ::1 at 2019-06-07 17:27:03 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.3ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:03 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/workloads/2" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.3ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/workloads/3" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.3ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/workloads/5" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.3ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/workloads/4" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.4ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:04 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:27:15 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"1", "sets"=>"1", "reps"=>"1", "rpe"=>"1", "lift"=>"squat", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"1", "sets"=>"1", "reps"=>"1", "rpe"=>"1", "routine_id"=>1, "exercise_id"=>1, "lift"=>"squat"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.6ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 1], ["sets", 1], ["reps", 1], ["rpe", 1], ["created_at", "2019-06-07 21:27:15.335019"], ["updated_at", "2019-06-07 21:27:15.335019"], ["routine_id", 1], ["exercise_id", 1], ["lift", "squat"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 49ms (Views: 0.5ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:15 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:27:23 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"2", "sets"=>"2", "reps"=>"2", "rpe"=>"2", "lift"=>"squat", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"2", "sets"=>"2", "reps"=>"2", "rpe"=>"2", "routine_id"=>1, "exercise_id"=>1, "lift"=>"squat"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.5ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 2], ["sets", 2], ["reps", 2], ["rpe", 2], ["created_at", "2019-06-07 21:27:23.809449"], ["updated_at", "2019-06-07 21:27:23.809449"], ["routine_id", 1], ["exercise_id", 1], ["lift", "squat"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 18ms (Views: 0.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:23 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/workloads" for ::1 at 2019-06-07 17:27:32 -0400
+Processing by WorkloadsController#create as HTML
+  Parameters: {"weight"=>"3", "sets"=>"3", "reps"=>"3", "rpe"=>"3", "lift"=>"squat", "exercise_id"=>1, "routine_id"=>1, "workload"=>{"weight"=>"3", "sets"=>"3", "reps"=>"3", "rpe"=>"3", "routine_id"=>1, "exercise_id"=>1, "lift"=>"squat"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[36mWorkload Create (0.4ms)[0m  [1m[32mINSERT INTO "workloads" ("weight", "sets", "reps", "rpe", "created_at", "updated_at", "routine_id", "exercise_id", "lift") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["weight", 3], ["sets", 3], ["reps", 3], ["rpe", 3], ["created_at", "2019-06-07 21:27:32.032436"], ["updated_at", "2019-06-07 21:27:32.032436"], ["routine_id", 1], ["exercise_id", 1], ["lift", "squat"]]
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:14
+Completed 201 Created in 9ms (Views: 0.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:32 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/8" for ::1 at 2019-06-07 17:27:46 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"33", "sets"=>"33", "reps"=>"33", "rpe"=>"33", "lift"=>"3", "exercise_id"=>1, "routine_id"=>1, "id"=>"8", "workload"=>{"weight"=>"33", "sets"=>"33", "reps"=>"33", "rpe"=>"33", "routine_id"=>1, "exercise_id"=>1, "lift"=>"3"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 33], ["sets", 33], ["reps", 33], ["rpe", 33], ["lift", "3"], ["updated_at", "2019-06-07 21:27:46.946184"], ["id", 8]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 47ms (Views: 0.4ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:27:46 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/6" for ::1 at 2019-06-07 17:28:01 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"11", "sets"=>"11", "reps"=>"11", "rpe"=>"11", "lift"=>"1", "exercise_id"=>1, "routine_id"=>1, "id"=>"6", "workload"=>{"weight"=>"11", "sets"=>"11", "reps"=>"11", "rpe"=>"11", "routine_id"=>1, "exercise_id"=>1, "lift"=>"1"}}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mWorkload Update (0.4ms)[0m  [1m[33mUPDATE "workloads" SET "weight" = $1, "sets" = $2, "reps" = $3, "rpe" = $4, "lift" = $5, "updated_at" = $6 WHERE "workloads"."id" = $7[0m  [["weight", 11], ["sets", 11], ["reps", 11], ["rpe", 11], ["lift", "1"], ["updated_at", "2019-06-07 21:28:01.708508"], ["id", 6]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 47ms (Views: 0.4ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 17:28:01 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workloads/6" for ::1 at 2019-06-07 18:56:57 -0400
+Processing by WorkloadsController#update as HTML
+  Parameters: {"weight"=>"11", "sets"=>"11", "reps"=>"11", "rpe"=>"11", "lift"=>"1", "exercise_id"=>1, "routine_id"=>1, "id"=>"6", "workload"=>{"weight"=>"11", "sets"=>"11", "reps"=>"11", "rpe"=>"11", "routine_id"=>1, "exercise_id"=>1, "lift"=>"1"}}
+  [1m[36mWorkload Load (2.6ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mRoutine Load (0.6ms)[0m  [1m[34mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:29
+Completed 200 OK in 64ms (Views: 2.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 18:56:57 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-07 18:57:44 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+

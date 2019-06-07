@@ -77,6 +77,27 @@ class Routine extends React.Component {
         })
     }
 
+    showEntries = () => {
+        const {workloads} = this.state
+        let array = workloads.map(workload =>                              
+            <div key={workload.id} className="table-headers workload-header">
+                <div className="section weight workload-exercise">{workload.lift}</div>
+                <div className="section weight workload-weight">{workload.weight}</div>
+                <div className="section set workload-set">{workload.sets}</div>
+                <div className="section rep workload-rep">{workload.reps}</div>
+                <div className="section rpe workload-rpe">{workload.rpe}</div>
+                <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
+                    <Icon id="trash-icon" disabled name='trash alternate'/>
+                </button>
+            
+                <UpdateForm 
+                    handleChanges={ this.handleChanges } 
+                    updateWorkload={() => this.updateWorkload(workload.id)}
+                />
+            </div>)
+            return array.sort((a, b) => (a.id > b.id) ? 1 : -1)
+    }
+
     render() {
         const { workloads } = this.state
         let message = workloads.length === 0 ? 
@@ -98,22 +119,7 @@ class Routine extends React.Component {
                     </div>
 
                     <div>
-                        {workloads.map(workload =>                              
-                            <div key={workload.id} className="table-headers workload-header">
-                                <div className="section weight workload-exercise">{workload.lift}</div>
-                                <div className="section weight workload-weight">{workload.weight}</div>
-                                <div className="section set workload-set">{workload.sets}</div>
-                                <div className="section rep workload-rep">{workload.reps}</div>
-                                <div className="section rpe workload-rpe">{workload.rpe}</div>
-                                <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
-                                    <Icon id="trash-icon" disabled name='trash alternate'/>
-                                </button>
-                            
-                                <UpdateForm 
-                                    handleChanges={ this.handleChanges } 
-                                    updateWorkload={() => this.updateWorkload(workload.id)}
-                                />
-                            </div>)}
+                        {this.showEntries()}
                     </div>
                 </div>
                 <CreateForm 
