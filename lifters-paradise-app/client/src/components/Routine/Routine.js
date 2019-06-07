@@ -53,7 +53,8 @@ class Routine extends React.Component {
 
     async updateWorkload(id) {
         const { workload } = this.state
-        const res = await axios.put(`${url}/routines/1/workloads/${id}`, workload)
+        const res = await axios.put(`${url}/workloads/${id}`, workload)
+        console.log(res)
         this.renderWorkload() 
     }
 

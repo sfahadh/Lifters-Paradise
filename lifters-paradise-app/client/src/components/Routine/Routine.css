@@ -36,6 +36,11 @@ h1 {
     width: 505px;
 }
 
+#trash-icon, #edit-icon {
+    width: 90px;
+    font-size: 1.8em;
+}
+
 #delete-button {
     background-color: red;
     border-radius: 5%;
@@ -56,13 +61,10 @@ h1 {
     margin: 0;
 }
 
-#trash-icon, #edit-icon {
-    width: 90px;
-    font-size: 1.7em;
-}
-
 #edit-icon {
-    text-align: center;
+    text-align: left;
+    margin-left: 5px;
+    font-size: 1.3em;
 }
 
 
