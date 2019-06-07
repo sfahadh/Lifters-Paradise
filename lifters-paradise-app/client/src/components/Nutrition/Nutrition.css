@@ -37,9 +37,17 @@
 #intro button {
     background-color: gray;
     color: white;
+    width: 140px;
+    height: 50px;
     border: 3px solid orange;
+    margin-top: 3%;
+}
+
+#intro button:hover {
+    transform: scale(1.1);
 }
 
 #intro a {
     color: orange;
+    font-size: 1.3em;
 }

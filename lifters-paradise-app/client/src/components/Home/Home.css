@@ -1,4 +1,4 @@
-#intro {
+#home-intro {
     text-align: center;
     width: 29vw;
     height: 55vh;
@@ -8,7 +8,7 @@
     border-radius: 15%;
 }
   
-#intro > h1 {
+#home-intro > h1 {
     font-size: 2.8vw;
     color: rgba(145, 131, 131, 0.527);
     text-shadow: 2px 2px black;
@@ -16,7 +16,7 @@
     line-height: 1.4em;
 }
 
-#intro > button {
+#home-intro > button {
     font-size: 1.2vw;
     border-radius: 7%;
     background-color: rgba(145, 131, 131, 0.527);
@@ -28,7 +28,7 @@
     margin-top: 5%;
 }
 
-#intro button:hover {
+#home-intro button:hover {
     transform: scale(1.1); 
 }
 

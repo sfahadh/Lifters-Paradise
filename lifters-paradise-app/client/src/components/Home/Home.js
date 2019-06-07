@@ -21,7 +21,7 @@ class Home extends React.Component {
         return (
             <div className="home-background">
                 <Navbar />
-                <div id="intro">
+                <div id="home-intro">
                     <h1>Online Exercise Tracker and Programming (Prototype)</h1>
                     <button onClick={this.handleRedirect.bind(this)}>START NOW</button>
                 </div>
