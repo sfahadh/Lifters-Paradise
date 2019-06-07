@@ -22,7 +22,8 @@ class Routine extends React.Component {
                 rpe: 0,
                 exercise_id: 1,
                 routine_id: 1
-            } 
+            },
+            exercise: ''
         }
     this.handleChanges = this.handleChanges.bind(this)
     this.createWorkload = this.createWorkload.bind(this)
@@ -67,21 +68,24 @@ class Routine extends React.Component {
         const name = e.target.name
         const value = e.target.value
         await this.setState({
+            // exercise: value,
             workload: {
                 ...this.state.workload,
                 [name]: value
             }
         })
+        console.log('set', this.state.workload)
     }
 
     render() {
-        const { routines } = this.state
+        const { routines, exercise } = this.state
         return (
             <div className="App">
                 <Navbar />
                 <h1>My Workout Routine</h1>
                 <div id="whole-table">
                     <div className="column-load table-headers">
+                        <div className="section exercises">Exercises</div>
                         <div className="section weight">Weights</div>
                         <div className="section set">Sets</div>
                         <div className="section rep">Repetitions</div>
@@ -96,6 +100,7 @@ class Routine extends React.Component {
                             <div key={i} className="workload-data">
                                 {routine.workloads.map(workload =>                              
                                     <div key={workload.id} className="table-headers workload-header">
+                                        <div className="section weight workload-exercise">{exercise}</div>
                                         <div className="section weight workload-weight">{workload.weight}</div>
                                         <div className="section set workload-set">{workload.sets}</div>
                                         <div className="section rep workload-rep">{workload.reps}</div>

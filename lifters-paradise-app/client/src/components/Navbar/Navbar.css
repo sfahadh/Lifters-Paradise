@@ -1,6 +1,6 @@
 .side-drawer {
     height: 100%;
-    width: 230px;
+    width: 200px;
     position: fixed;
     top: 0;
     right: 0;
@@ -9,6 +9,7 @@
 
 .side-drawer img {
     margin-top: 9%;
+    width: 90%;
 }
 
 h4 {

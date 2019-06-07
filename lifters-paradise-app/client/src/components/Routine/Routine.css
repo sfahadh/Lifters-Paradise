@@ -10,8 +10,7 @@ h1 {
 
 .table-headers {
     display: flex;
-    justify-content: space-around;
-    width: 60vw;
+    width: 70vw;
     margin: 0 auto;
     background-color: gray;
 }
@@ -24,8 +23,18 @@ h1 {
     font-weight: 700;
 }
 
+.exercises {
+    border-right: none;
+}
+
 .weight, .set, .rep, .delete, .rpe {
     border-right: none;
+    width: 540px;
+}
+
+.workload-exercise {
+    background-color: gray;
+    width: 1120px;
 }
 
 .workload-header {
@@ -33,7 +42,7 @@ h1 {
 }
 
 .delete, .update {
-    width: 505px;
+    width: 360px;
 }
 
 #trash-icon, #edit-icon {

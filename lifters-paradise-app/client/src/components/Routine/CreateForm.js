@@ -20,6 +20,16 @@ class WorkloadForm extends React.Component {
                         <Grid columns={2} relaxed='very'>
                             <Grid.Column>
                             <Form onSubmit={createWorkload}>
+                                <Form.Field>
+                                    <label>Exercise</label>
+                                    <input onChange={handleChanges} type="text" name='exercise' placeholder='Enter Name of Exercise' />
+                                </Form.Field>
+
+                                <Form.Field required>
+                                    <label>Weights</label>
+                                    <input onChange={handleChanges} type="number" name="weight" placeholder='Enter Weight lifted'/>
+                                </Form.Field>
+
                                 <Form.Field required>
                                     <label>Sets</label>
                                     <input onChange={handleChanges} type="number" name='sets' placeholder='Enter Number of Sets' />
@@ -28,11 +38,6 @@ class WorkloadForm extends React.Component {
                                 <Form.Field required>
                                     <label>Repetition</label>
                                     <input onChange={handleChanges} type="number" name="reps" placeholder='Enter Number of Reps'/>
-                                </Form.Field>
-
-                                <Form.Field required>
-                                    <label>Weights</label>
-                                    <input onChange={handleChanges} type="number" name="weight" placeholder='Enter Weight lifted'/>
                                 </Form.Field>
 
                                 <Form.Field required>
