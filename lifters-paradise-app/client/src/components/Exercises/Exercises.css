@@ -1,5 +1,7 @@
 .exercise-row {
     display: flex;
+    width: 83vw;
+    margin: 0 0 3% 12%;
 }
 
 .exercise-row h1, .exercise-row h3 {
@@ -7,18 +9,26 @@
 }
 
 .exercise-images {
-    margin-left: 6%;
-    flex: 0.7;
+    /* border: 2px solid green; */
 }
 
-.exercise-images img{
-    padding: 3%;
+.exercise-images img {
+    width: 220px;
+    height: 300px;
+    margin: 0 15px;
+    border: 2px solid black;
 }
 
 .exercise-info {
     text-align: left;
+    margin-left: 2%;
 }
 
 .modal-form {
     width: 20vw;
+}
+
+#exercise-header {
+    font-size: 4em;
+    margin: 3%;
 }

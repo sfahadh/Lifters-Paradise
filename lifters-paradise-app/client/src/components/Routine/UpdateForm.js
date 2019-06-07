@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, Form, Grid, Segment } from 'semantic-ui-react'
 import { Icon } from 'semantic-ui-react'
+import './Routine.css'
 
 class WorkloadForm extends React.Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class WorkloadForm extends React.Component {
                             <Form onSubmit={updateWorkload}>
                                 <Form.Field>
                                     <label>Exercise</label>
-                                    <input onChange={handleChanges} type="text" name='exercise' placeholder='Enter Name of Exercise' />
+                                    <input onChange={handleChanges} type="text" placeholder='Enter Name of Exercise' />
                                 </Form.Field>
 
                                 <Form.Field required>

@@ -68,7 +68,7 @@ class Routine extends React.Component {
         const name = e.target.name
         const value = e.target.value
         await this.setState({
-            // exercise: value,
+            exercise: value,
             workload: {
                 ...this.state.workload,
                 [name]: value
