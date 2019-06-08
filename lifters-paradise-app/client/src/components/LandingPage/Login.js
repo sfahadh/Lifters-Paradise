@@ -19,7 +19,7 @@ class Login extends React.Component {
     }
 
     render() {
-        const { handleChange, handleLogin, formData, handleLoginButton } = this.props
+        const { handleChange, handleLogin } = this.props
         if(this.state.login) return <Redirect to="/register"/>
 
         return (

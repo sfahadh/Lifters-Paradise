@@ -19,7 +19,7 @@ class Register extends React.Component {
     }
 
     render() {
-        const { handleChange, handleRegister, formData } = this.props
+        const { handleChange, handleRegister } = this.props
         if(this.state.register) return <Redirect to="/" />
 
         return (
