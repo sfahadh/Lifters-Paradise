@@ -61,16 +61,16 @@ class App extends Component {
     this.handleLogin();
   }
 
-  handleLogout() {
+  async handleLogout() {
     localStorage.removeItem("jwt")
-    this.setState({
+    await this.setState({
       currentUser: null
     })
   }
 
-  authHandleChange(e) {
+  async authHandleChange(e) {
     const { name, value } = e.target;
-    this.setState(prevState => ({
+    await this.setState(prevState => ({
       authFormData: {
         ...prevState.authFormData,
         [name]: value
@@ -83,7 +83,6 @@ class App extends Component {
     e.preventDefault();
     this.handleLogin();
     this.props.history.push('/');
-    console.log(this.state.authFormData)
   }
 
   render() {
