@@ -7,64 +7,19 @@ class Login extends React.Component {
         super()
 
         this.state = {
-            username: "",
-            password: "",
-            myUsername: "fahad",
-            myPassword: "idk",
-            isUsername: false,
-            isPassword: false,
-            isLoggedIn: false,
-            login: true
+            login: false
         }
-        this.validatePassword = this.validatePassword.bind(this);
-        this.validateUsername = this.validateUsername.bind(this);
-        this.validateCredentials = this.validateCredentials.bind(this);
         this.showRegisterForm = this.showRegisterForm.bind(this);
-    }
-
-    validateUsername(e) {
-        if(e.target.value === this.state.myUsername) 
-            this.setState({
-                isUsername: true
-            })
-            this.validatePassword(e);
-    }
-
-    validatePassword(e) {
-        if(e.target.value === this.state.myPassword) 
-            this.setState({
-                isPassword: true
-            })
-    }
-
-    validateCredentials(e) {
-        e.preventDefault();
-        if(!!this.state.isUsername && !!this.state.isPassword) {
-            this.setState({
-                isLoggedIn: true
-            })
-        } else {
-            alert("WRONG");
-        }
-    }
-
-    loginButton(e) {
-        e.preventDefault();
     }
 
     showRegisterForm() {
         this.setState({
-            login: false
+            login: true
         })
     }
 
     render() {
-        const { isLoggedIn, login } = this.state
-        if(isLoggedIn) {
-            return <Redirect to="/home"/>
-        }
-
-        if(!login) return <Redirect to="/register"/>
+        if(this.state.login) return <Redirect to="/register"/>
 
         return (
             <div className='App'>
@@ -76,9 +31,9 @@ class Login extends React.Component {
                         </div>  
 
                         <div className="login-form">
-                            <input type="text" placeholder="Username" className="input" onChange={this.validateUsername}/>
-                            <input type="password" placeholder="Password" className="input" onChange={this.validatePassword}/>
-                            <div className="btn" onClick={this.validateCredentials}>log in</div>
+                            <input type="text" placeholder="Username" className="input"/>
+                            <input type="password" placeholder="Password" className="input"/>
+                            <div className="btn">log in</div>
                         </div>   
                     </div>
                 </div>          

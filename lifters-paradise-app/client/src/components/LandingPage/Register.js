@@ -19,12 +19,7 @@ class Register extends React.Component {
     }
 
     render() {
-        const { isLoggedIn, register } = this.state
-        if(isLoggedIn) {
-            return <Redirect to="/"/>
-        }
-
-        if(register) return <Redirect to="/" />
+        if(this.state.register) return <Redirect to="/" />
 
         return (
             <div className='App'>
@@ -35,7 +30,7 @@ class Register extends React.Component {
                             <div className="register">Register</div>
                         </div>  
 
-                        <div class="register-form">
+                        <div className="register-form">
                             <input type="text" placeholder="Your Name" className="input"/>
                             <input type="text" placeholder="Your Email Address" className="input"/>
                             <input type="password" placeholder="Choose a Password" className="input"/>
