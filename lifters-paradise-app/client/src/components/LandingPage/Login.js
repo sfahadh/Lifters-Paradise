@@ -19,7 +19,7 @@ class Login extends React.Component {
     }
 
     render() {
-        const { handleChange, handleLogin, authFormData, handleLoginButton } = this.props
+        const { handleChange, handleLogin, formData, handleLoginButton } = this.props
         if(this.state.login) return <Redirect to="/register"/>
 
         return (
@@ -31,13 +31,14 @@ class Login extends React.Component {
                             <div className="register" onClick={this.showRegisterForm}>Register</div>
                         </div>  
 
-                        <form className="login-form">
+                        <form onSubmit={handleLogin} className="login-form">
                             <input 
                                 type="text" 
                                 name="username" 
                                 placeholder="Username" 
                                 className="input"
-                                onChange={this.props.handleChange}
+                                onChange={handleChange}
+                                // value={formData.username}
                             />
 
                             <input 
@@ -45,6 +46,8 @@ class Login extends React.Component {
                                 name="password" 
                                 placeholder="Password" 
                                 className="input"
+                                onChange={handleChange}
+                                // value={formData.password}
                             />
                             <div className="btn">log in</div>
                         </form>   

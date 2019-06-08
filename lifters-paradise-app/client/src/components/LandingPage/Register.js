@@ -19,6 +19,7 @@ class Register extends React.Component {
     }
 
     render() {
+        const { handleChange, handleRegister, formData } = this.props
         if(this.state.register) return <Redirect to="/" />
 
         return (
@@ -30,12 +31,14 @@ class Register extends React.Component {
                             <div className="register">Register</div>
                         </div>  
 
-                        <form className="register-form">
-                            <input 
+                        <form onSubmit={handleRegister} className="register-form">
+                            {/* <input 
                                 type="text" 
                                 name="first_name" 
                                 placeholder="First Name" 
                                 className="input"
+                                onChange={handleChange}
+                                value={formData.first_name}
                             />
 
                             <input 
@@ -43,13 +46,17 @@ class Register extends React.Component {
                                 name="last_name" 
                                 placeholder="Last Name" 
                                 className="input"
-                            />
+                                onChange={handleChange}
+                                value={formData.last_name}
+                            /> */}
 
                             <input 
                                 type="text" 
                                 name="username" 
                                 placeholder="username" 
                                 className="input"
+                                onChange={handleChange}
+                                // value={formData.username}
                             />
 
                             <input 
@@ -57,6 +64,8 @@ class Register extends React.Component {
                                 name="email" 
                                 placeholder="Your Email Address" 
                                 className="input"
+                                onChange={handleChange}
+                                // value={formData.email}
                             />
 
                             <input 
@@ -64,6 +73,8 @@ class Register extends React.Component {
                                 name="password"
                                 placeholder="Choose a Password" 
                                 className="input"
+                                onChange={handleChange}
+                                // value={formData.password}
                             />
                             <div className="btn">Create account</div>
                         </form>  
