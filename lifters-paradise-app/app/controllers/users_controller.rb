@@ -1,9 +1,4 @@
 class UsersController < ApplicationController
-    # def new
-    #     @user = User.new
-    #     render json: @user, status: :ok
-    # end
-
     before_action :authorize_request, except: :create
 
     def index

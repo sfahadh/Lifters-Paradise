@@ -50,9 +50,8 @@ class Routine extends React.Component {
 
     async updateWorkload(id) {
         const { workload } = this.state
-        const res = await axios.put(`${url}/workloads/${id}`, workload)
+        await axios.put(`${url}/workloads/${id}`, workload)
         this.renderWorkload() 
-        console.log(id)
     }
 
     async deleteWorkload(id) {
@@ -78,7 +77,7 @@ class Routine extends React.Component {
     }
 
     showEntries = () => {
-        const {workloads} = this.state
+        const { workloads } = this.state
         let array = workloads.map(workload =>                              
             <div key={workload.id} className="table-headers workload-header">
                 <div className="section weight workload-exercise">{workload.lift}</div>
