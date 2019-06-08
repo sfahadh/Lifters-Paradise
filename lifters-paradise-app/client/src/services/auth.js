@@ -6,111 +6,120 @@ import Login from '../components/LandingPage/Login';
 import Register from '../components/LandingPage/Register';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+    constructor(props) {
+        super(props)
 
-    this.state = {
-        currentUser: null,
-        authFormData: {
-        username: "",
-        email: "",
-        password: ""
-      }
+        this.state = {
+            currentUser: null,
+            authFormData: {
+                username: "",
+                email: "",
+                password: ""
+            }
+        }
+        this.handleLogin = this.handleLogin.bind(this);
+        this.handleRegister = this.handleRegister.bind(this);
+        this.authHandleChange = this.authHandleChange.bind(this);
+        this.handleLoginButton = this.handleLoginButton.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
-    this.handleLogin = this.handleLogin.bind(this);
-    this.handleRegister = this.handleRegister.bind(this);
-    this.authHandleChange = this.authHandleChange.bind(this);
-    this.handleLoginButton = this.handleLoginButton.bind(this);
-    this.handleLogout = this.handleLogout.bind(this);
-  }
 
-  componentDidMount() {
-    const checkUser = localStorage.getItem("jwt")
-    if (checkUser) {
-      const user = decode(checkUser)
-      this.setState({
-        currentUser: user
-      })
+    componentDidMount() {
+        const checkUser = localStorage.getItem("jwt")
+        if (checkUser) {
+            const user = decode(checkUser)
+            this.setState({
+            currentUser: user
+            })
+        }
     }
-  }
 
-  async handleLogin() {
-    const userData = await loginUser(this.state.authFormData)
-    if (userData) {
-      this.setState({
-        currentUser: decode(userData.token)
-      })
-      localStorage.setItem("jwt", userData.token);
-    } else {
-      this.props.history.push('/auth/login');
+    async handleLogin() {
+        const userData = await loginUser(this.state.authFormData)
+        if (userData) {
+            this.setState({
+                currentUser: decode(userData.token)
+            })
+            localStorage.setItem("jwt", userData.token);
+        } else {
+            this.props.history.push('/auth/login');
+        }
     }
-  }
 
-  async handleRegister(e) {
-    e.preventDefault()
-    const userData = await registerUser({ "user": this.state.authFormData })
-    this.handleLogin();
-    console.log(userData)
-  }
+    async handleRegister(e) {
+        e.preventDefault()
+        const userData = await registerUser({ "user": this.state.authFormData })
+        this.handleLogin();
+        console.log(userData)
+    }
 
-  handleLogout() {
-    localStorage.removeItem("jwt")
-    this.setState({
-      currentUser: null
-    })
-  }
+    handleLogout() {
+        localStorage.removeItem("jwt")
+        this.setState({
+            currentUser: null
+        })
+    }
 
-  authHandleChange(e) {
-    const { name, value } = e.target;
-    this.setState(prevState => ({
-      authFormData: {
-        ...prevState.authFormData,
-        [name]: value
-      }
-    }))
-  }
+    authHandleChange(e) {
+        const { name, value } = e.target;
+        this.setState(prevState => ({
+            authFormData: {
+                ...prevState.authFormData,
+                [name]: value
+            }
+        }))
+    }
 
-  handleLoginButton(e) {
-    e.preventDefault();
-    this.handleLogin();
-    this.props.history.push('/');
-  }
+    handleLoginButton(e) {
+        e.preventDefault();
+        this.handleLogin();
+        this.props.history.push('/');
+    }
 
-  render() {
-      const { currentUser, authFormData } = this.state
-    return (
-      <div className="App">
-        <h1>Jeopardy Blog</h1>
-        { currentUser ? <p>Hello, {currentUser.username}</p> : null }
+    render() {
+        const { currentUser, authFormData } = this.state
+        return (
+        <div className="App">
+            <h1>Jeopardy Blog</h1>
+            { currentUser ? <p>Hello, {currentUser.username}</p> : null }
 
-        <Route exact path="/" 
-            render={() => currentUser ? 
-            <button 
-                className="button" 
-                type="button" 
-                onClick={this.handleLogout}>Log Out
-            </button> : 
-            <button 
-                className="button" 
-                type="button" 
-                onClick={() => this.props.history.push('/auth/login')}>Log In
-            </button>} 
-        />
+            <Route exact path="/" 
+                render={() => currentUser ? 
+                <button 
+                    className="button" 
+                    type="button" 
+                    onClick={this.handleLogout}>Log Out
+                </button> : 
+                <button 
+                    className="button" 
+                    type="button" 
+                    onClick={() => this.props.history.push('/auth/login')}>Log In
+                </button>} 
+            />
 
-        <Route 
-            exact path="/auth/login" 
-            render={() => <Login handleLogin={this.handleLogin} handleChange={this.authHandleChange} formData={authFormData} 
-            handleLoginButton={this.handleLoginButton} />} 
-        />
+            <Route 
+                exact path="/auth/login" 
+                render={() => 
+                <Login 
+                    handleLogin={this.handleLogin} 
+                    handleChange={this.authHandleChange} 
+                    formData={authFormData} 
+                    handleLoginButton={this.handleLoginButton} 
+                />} 
+            />
 
-        <Route 
-            exact path="/users" 
-            render={() => <Register handleRegister={this.handleRegister} 
-            handleChange={this.authHandleChange} formData={authFormData} />} 
-        />
-      </div>
-    );
-  }
+            <Route 
+                exact path="/users" 
+                render={() => 
+                <Register 
+                    handleRegister={this.handleRegister} 
+                    handleChange={this.authHandleChange} 
+                    formData={authFormData} 
+                />} 
+            />
+        </div>
+        );
+    }
 }
 
 export default withRouter(App);
