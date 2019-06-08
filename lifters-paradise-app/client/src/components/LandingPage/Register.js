@@ -31,7 +31,7 @@ class Register extends React.Component {
                             <div className="register">Register</div>
                         </div>  
 
-                        <form onSubmit={handleRegister} className="register-form">
+                        <div className="register-form">
                             {/* <input 
                                 type="text" 
                                 name="first_name" 
@@ -76,8 +76,12 @@ class Register extends React.Component {
                                 onChange={handleChange}
                                 // value={formData.password}
                             />
-                            <div className="btn">Create account</div>
-                        </form>  
+                            <button 
+                                onClick={(e) => {
+                                e.preventDefault();
+                                handleRegister();}}
+                                className="btn">Create account</button>
+                        </div>  
                     </div>
                 </div>
             </div>

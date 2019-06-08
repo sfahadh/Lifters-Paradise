@@ -42,20 +42,19 @@ class App extends Component {
   }
 
   async handleLogin() {
-    console.log("clicked")
     const userData = await loginUser(this.state.authFormData)
     if (userData) {
       this.setState({
         currentUser: decode(userData.token)
       })
       localStorage.setItem("jwt", userData.token);
-    } else {
-      this.props.history.push('/auth/login');
     }
+    // } else {
+    //   this.props.history.push('/auth/login');
+    // }
   }
 
-  async handleRegister(e) {
-    e.preventDefault()
+  async handleRegister() {
     const userData = await registerUser({ "user": this.state.authFormData })
     console.log("info", userData)
     this.handleLogin();
@@ -76,7 +75,6 @@ class App extends Component {
         [name]: value
       }
     }))
-    console.log(this.state.authFormData)
   }
 
   handleLoginButton(e) {
