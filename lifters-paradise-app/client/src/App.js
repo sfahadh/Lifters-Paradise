@@ -18,8 +18,8 @@ class App extends Component {
         currentUser: null,
         loggedIn: false,
         authFormData: {
-          // first_name: "",
-          // last_name: "",
+          first_name: "",
+          last_name: "",
           username: '',
           email: '',
           password: ''
@@ -51,27 +51,17 @@ class App extends Component {
     } catch (err) {console.log(err.message)}
   }
 
-  // async handleLogin() {
-  //   const userData = await loginUser(this.state.authFormData)
-  //   if (userData) {
-  //     this.setState({
-  //       currentUser: decode(userData.token),
-  //     })
-  //     localStorage.setItem("jwt", userData.token);
-  //   } 
-  //   else {
-  //     this.props.history.push('/auth/login'); null
-  //   }
-  // }
-
   async handleLogin() {
     const userData = await loginUser(this.state.authFormData)
     if (userData) {
-      localStorage.setItem("jwt", userData.token);
-      await this.checkLogin();
-      return true;
-    } else {
-      this.props.history.push('/login');
+      this.setState({
+        currentUser: decode(userData.token),
+      })
+      localStorage.setItem("jwt", userData.token)
+    } 
+    else {
+      this.props.history.push('/')
+      alert("failed to login or register")
     }
   }
 
@@ -79,6 +69,7 @@ class App extends Component {
     const userData = await registerUser({ "user": this.state.authFormData })
     console.log("info", userData)
     this.handleLogin();
+    this.props.history.push('/')
   }
 
   async handleLogout() {
@@ -100,16 +91,25 @@ class App extends Component {
 
   handleLoginButton(e) {
     e.preventDefault();
-    this.handleLogin();
-    this.props.history.push('/');
+    if (this.handleLogin()) {
+      this.props.history.push('/');
+    }
   }
+
+  // handleRegisterButton(e) {
+  //   e.preventDefault();
+  //   this.handleRegister();
+  //   if (this.handleLogin()) {
+  //     this.props.history.push('/');
+  //   }
+  // }
 
   render() {
 
     const { currentUser } = this.state
     return (
       <div className="App">
-        {/* { currentUser ? 
+        { currentUser ? 
         <div>
           <p>Hello, {currentUser.username}</p> 
           <button 
@@ -117,7 +117,7 @@ class App extends Component {
                 type="button" 
                 onClick={this.handleLogout}>Log Out
           </button> 
-        </div> : null } */}
+        </div> : null }
   
         <Switch>          
           <Route 

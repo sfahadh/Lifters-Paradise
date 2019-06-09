@@ -32,13 +32,13 @@ class Register extends React.Component {
                         </div>  
 
                         <div className="register-form">
-                            {/* <input 
+                            <input 
                                 type="text" 
                                 name="first_name" 
                                 placeholder="First Name" 
                                 className="input"
                                 onChange={handleChange}
-                                value={formData.first_name}
+                                // value={formData.first_name}
                             />
 
                             <input 
@@ -47,8 +47,8 @@ class Register extends React.Component {
                                 placeholder="Last Name" 
                                 className="input"
                                 onChange={handleChange}
-                                value={formData.last_name}
-                            /> */}
+                                // value={formData.last_name}
+                            />
 
                             <input 
                                 type="text" 
