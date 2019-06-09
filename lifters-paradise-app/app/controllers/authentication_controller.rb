@@ -8,10 +8,4 @@ class AuthenticationController < ApplicationController
           render json: { error: 'unauthorized' }, status: :unauthorized
         end
       end
-    
-    #   private
-    
-    #   def login_params
-    #     params.permit(:username, :password)
-    #   end
 end

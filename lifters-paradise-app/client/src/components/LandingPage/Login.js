@@ -38,7 +38,6 @@ class Login extends React.Component {
                                 placeholder="Username" 
                                 className="input"
                                 onChange={handleChange}
-                                // value={formData.username}
                             />
 
                             <input 
@@ -47,7 +46,6 @@ class Login extends React.Component {
                                 placeholder="Password" 
                                 className="input"
                                 onChange={handleChange}
-                                // value={formData.password}
                             />
                             <button 
                                 onClick={handleLoginButton}

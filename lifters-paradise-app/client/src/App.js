@@ -18,10 +18,8 @@ class App extends Component {
         currentUser: null,
         loggedIn: false,
         authFormData: {
-          first_name: "",
-          last_name: "",
+          name: '',
           username: '',
-          email: '',
           password: ''
         }
       }
@@ -41,7 +39,6 @@ class App extends Component {
       const checkUser = localStorage.getItem("jwt")
       if (checkUser) {
         const user = decode(checkUser);
-        console.log(user);
         await this.setState({
           currentUser: user
         });
@@ -66,8 +63,7 @@ class App extends Component {
   }
 
   async handleRegister() {
-    const userData = await registerUser({ "user": this.state.authFormData })
-    console.log("info", userData)
+    await registerUser({ "user": this.state.authFormData })
     this.handleLogin();
     this.props.history.push('/home')
   }
@@ -97,14 +93,6 @@ class App extends Component {
     }
   }
 
-  // handleRegisterButton(e) {
-  //   e.preventDefault();
-  //   this.handleRegister();
-  //   if (this.handleLogin()) {
-  //     this.props.history.push('/');
-  //   }
-  // }
-
   render() {
 
     const { currentUser } = this.state
@@ -112,7 +100,7 @@ class App extends Component {
       <div className="App">
         { currentUser ? 
         <div>
-          <p>Hello, {currentUser.username}</p> 
+          <p>Hello, {currentUser.first_name}</p> 
           <button 
                 className="button" 
                 type="button" 
@@ -144,19 +132,13 @@ class App extends Component {
 
           <Route 
             path="/home" 
-            render={() => currentUser ? 
+            render={() => 
             <Home
               handleLogout={this.handleLogout}
               currentUser={currentUser}  
-            /> : 
-            <button 
-                className="button" 
-                type="button" 
-                onClick={() => this.props.history.push('/')}>Log In
-            </button>} 
+            />} 
           />
-
-          {/* <Route path="/home" component={ Home }/>  */}
+          
           <Route path="/exercises" component={ Exercises }/>
           <Route path="/nutrition" component={ Nutrition }/>
           <Route path="/routine" component={ Routine }/>

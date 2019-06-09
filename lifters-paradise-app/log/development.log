@@ -40484,3 +40484,1022 @@ Processing by AuthenticationController#login as HTML
 Completed 200 OK in 76ms (Views: 0.2ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:56:50 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 70ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (42.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveFirstNameFromUsers (20190609021021)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (44.1ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "first_name"[0m
+  ↳ db/migrate/20190609021021_remove_first_name_from_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190609021021"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveLastNameFromUsers (20190609021050)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "last_name"[0m
+  ↳ db/migrate/20190609021050_remove_last_name_from_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190609021050"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to RemoveEmailFromUsers (20190609021115)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  ↳ db/migrate/20190609021115_remove_email_from_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190609021115"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddNameToUsers (20190609021150)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  ↳ db/migrate/20190609021150_add_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190609021150"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/users" for ::1 at 2019-06-08 22:18:30 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"fahad", "username"=>"savage", "email"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :name
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 5.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'email' for User.):
+  
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:18:31 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"fahad", "username"=>"savage", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"name"=>"fahad", "username"=>"savage", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started POST "/users" for ::1 at 2019-06-08 22:18:46 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"fahad", "username"=>"savage", "email"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :name
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'email' for User.):
+  
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:18:46 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"fahad", "username"=>"savage", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"name"=>"fahad", "username"=>"savage", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started POST "/users" for ::1 at 2019-06-08 22:19:21 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :name
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `first_name' for #<User:0x00007fd66db4f3e8>):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:19:21 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started GET "/users" for ::1 at 2019-06-08 22:19:49 -0400
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"first_name"=>"king", "last_name"=>"kong", "email"=>"kk@donkey.world", "username"=>"kk", "password"=>"[FILTERED]"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 22:20:19 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"user": {
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage"
+	}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+	"user": {
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage"
+	}
+}'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-06-08 22:21:12 -0400
+  
+SyntaxError (/Users/sayem/Documents/Fahad/General-Assembly/SEI/unit-04/project/Lifters-Paradise/lifters-paradise-app/app/controllers/users_controller.rb:26: syntax error, unexpected ':', expecting ')'
+...s.require(:user).permit(:name :username, :password, :passwor...
+...                              ^
+/Users/sayem/Documents/Fahad/General-Assembly/SEI/unit-04/project/Lifters-Paradise/lifters-paradise-app/app/controllers/users_controller.rb:26: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...mit(:name :username, :password, :password_confirmation)
+...                              ^):
+  
+app/controllers/users_controller.rb:26: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"user": {
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage"
+	}
+}
+Started POST "/users" for ::1 at 2019-06-08 22:21:31 -0400
+  
+SyntaxError (/Users/sayem/Documents/Fahad/General-Assembly/SEI/unit-04/project/Lifters-Paradise/lifters-paradise-app/app/controllers/users_controller.rb:26: syntax error, unexpected ':', expecting ')'
+...s.require(:user).permit(:name :username, :password, :passwor...
+...                              ^
+/Users/sayem/Documents/Fahad/General-Assembly/SEI/unit-04/project/Lifters-Paradise/lifters-paradise-app/app/controllers/users_controller.rb:26: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...mit(:name :username, :password, :password_confirmation)
+...                              ^):
+  
+app/controllers/users_controller.rb:26: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:26: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Error occurred while parsing request parameters.
+Contents:
+
+{
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage",
+}
+Started POST "/users" for ::1 at 2019-06-08 22:21:55 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage",
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage",
+}'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-06-08 22:22:19 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users": {
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage",
+	}
+}
+
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+	"users": {
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage",
+	}
+}
+'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-06-08 22:23:24 -0400
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/user.rb:5:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users": {
+		"name": "fahad"
+		"username": "savage",
+		"password": "savage",
+	}
+}
+
+Started POST "/users" for ::1 at 2019-06-08 22:24:00 -0400
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/user.rb:5:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users": {
+		"name": "fahad",
+		"username": "savage",
+		"password": "savage",
+	}
+}
+
+Started POST "/users" for ::1 at 2019-06-08 22:24:06 -0400
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/user.rb:5:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+Started POST "/users" for ::1 at 2019-06-08 22:24:41 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:28:14 -0400
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]", "user"=>{"username"=>"savage", "name"=>"fahad"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 22:28:36 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:28:56 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:28:57 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:30:07 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:30:53 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4635997408332736215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/users" for ::1 at 2019-06-08 22:31:18 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:32:01 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:32:25 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users": {
+		"name": "fahad",
+		"username": "savage",
+		"email": savage@me.com,
+		"password": "savage"
+	}
+}
+
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+	"users": {
+		"name": "fahad",
+		"username": "savage",
+		"email": savage@me.com,
+		"password": "savage"
+	}
+}
+'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-06-08 22:32:33 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "email"=>"savage@me.com", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:32:50 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:33:38 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:34:54 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 422 Unprocessable Entity in 22ms (Views: 0.3ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 22:35:08 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "savage"], ["created_at", "2019-06-09 02:35:08.961736"], ["updated_at", "2019-06-09 02:35:08.961736"], ["password_digest", "$2a$10$.30Bc21pgbrV5Pmdrv5.Lu3pABETwNJ7iXWpA5k24REfijj2C32sW"], ["name", "fahad"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 84ms (Views: 0.7ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 22:35:24 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 422 Unprocessable Entity in 82ms (Views: 0.2ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/auth/login?username=savage&password=[FILTERED]" for ::1 at 2019-06-08 22:35:54 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 75ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:37:11 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"", "username"=>"fahad", "password"=>"[FILTERED]", "authentication"=>{"name"=>"", "username"=>"fahad", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fahad"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (214.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (222.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lifters-paradise-app_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (612.9ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (456.9ms)[0m  [1m[35mCREATE DATABASE "lifters-paradise-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "name" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:46
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint, "lift" character varying)[0m
+  ↳ db/schema.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:46
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:60
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:61
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190609021150)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190609021021),
+(20190604163207),
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190607194914),
+(20190609021050),
+(20190603204040),
+(20190604085020),
+(20190609021115),
+(20190607183640),
+(20190604084732),
+(20190607194705),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-09 02:39:15.401766"], ["updated_at", "2019-06-09 02:39:15.401766"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "plane_of_motion" character varying, "joint_action" character varying, "muscles_involved" character varying, "start_image" character varying, "end_image" character varying, "type_of_exercise" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "routines" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "routines" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_routines_on_user_id" ON "routines"  ("user_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "name" character varying)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "workloads" CASCADE[0m
+  ↳ db/schema.rb:46
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "workloads" ("id" bigserial primary key, "weight" integer, "sets" integer, "reps" integer, "rpe" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "routine_id" bigint, "exercise_id" bigint, "lift" character varying)[0m
+  ↳ db/schema.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_exercise_id" ON "workloads"  ("exercise_id")[0m
+  ↳ db/schema.rb:46
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_workloads_on_routine_id" ON "workloads"  ("routine_id")[0m
+  ↳ db/schema.rb:46
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "routines" ADD CONSTRAINT "fk_rails_6d925cab08"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:60
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_d1a413b56c"
+FOREIGN KEY ("exercise_id")
+  REFERENCES "exercises" ("id")
+[0m
+  ↳ db/schema.rb:61
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "workloads" ADD CONSTRAINT "fk_rails_e4d63840ed"
+FOREIGN KEY ("routine_id")
+  REFERENCES "routines" ("id")
+[0m
+  ↳ db/schema.rb:62
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190609021150)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190609021021),
+(20190604163207),
+(20190603185926),
+(20190604155133),
+(20190604155405),
+(20190604085253),
+(20190607194914),
+(20190609021050),
+(20190603204040),
+(20190604085020),
+(20190609021115),
+(20190607183640),
+(20190604084732),
+(20190607194705),
+(20190603195341);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-09 02:39:15.546218"], ["updated_at", "2019-06-09 02:39:15.546218"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-09 02:39:15.549608"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mExercise Create (0.9ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bench Press"], ["plane_of_motion", "Tranverse Plane"], ["joint_action", "Shoulder Horizontal Adduction & Elbow Extension"], ["muscles_involved", "Pectoralis Major, Front Deltoid, & Triceps Brachii"], ["start_image", "https://i.imgur.com/LRkmHUe.jpg"], ["end_image", "https://i.imgur.com/EkfqTyq.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-09 02:39:15.600044"], ["updated_at", "2019-06-09 02:39:15.600044"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Squat"], ["plane_of_motion", "Sagittal Plane"], ["joint_action", "Hip Extension, Knee Extension, & Plantarflexion"], ["muscles_involved", "Quadriceps, Gluteus Maximus, Soleus, & Gastrocnemius"], ["start_image", "https://i.imgur.com/X3N9QvR.jpg"], ["end_image", "https://i.imgur.com/6vUjLPi.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-09 02:39:15.603185"], ["updated_at", "2019-06-09 02:39:15.603185"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mExercise Create (0.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "plane_of_motion", "joint_action", "muscles_involved", "start_image", "end_image", "type_of_exercise", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dumbbell Shoulder Press"], ["plane_of_motion", "Frontal Plane"], ["joint_action", "Shoulder Abduction & Elbow Extension"], ["muscles_involved", "Front Deltoids, Medial Deltoids, & Triceps Brachii"], ["start_image", "https://i.imgur.com/bdYDyih.jpg"], ["end_image", "https://i.imgur.com/9RIhfGW.jpg"], ["type_of_exercise", "Free Weight"], ["created_at", "2019-06-09 02:39:15.604906"], ["updated_at", "2019-06-09 02:39:15.604906"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRoutine Create (1.3ms)[0m  [1m[32mINSERT INTO "routines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "My First Program"], ["created_at", "2019-06-09 02:39:15.615493"], ["updated_at", "2019-06-09 02:39:15.615493"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+Started POST "/users" for ::1 at 2019-06-08 22:39:48 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-06-08 22:39:59 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-08 22:40:16 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "savage"], ["created_at", "2019-06-09 02:40:16.704881"], ["updated_at", "2019-06-09 02:40:16.704881"], ["password_digest", "$2a$10$D.DGfSzaUutLoeE0yJQlSON8B3rxJX6Vbn9PlIOOJ9vPPbruefdGK"], ["name", "fahad"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (39.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 128ms (Views: 0.7ms | ActiveRecord: 47.9ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 22:40:29 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: users):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:40:29 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:40:39 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"name"=>"fahad", "username"=>"savage", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 78ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 22:41:28 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"", "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"name"=>"", "username"=>"savage", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 76ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+

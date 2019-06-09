@@ -34,47 +34,26 @@ class Register extends React.Component {
                         <div className="register-form">
                             <input 
                                 type="text" 
-                                name="first_name" 
-                                placeholder="First Name" 
+                                name="name" 
+                                placeholder="What is your name newbie?" 
                                 className="input"
                                 onChange={handleChange}
-                                // value={formData.first_name}
-                            />
-
-                            <input 
-                                type="text" 
-                                name="last_name" 
-                                placeholder="Last Name" 
-                                className="input"
-                                onChange={handleChange}
-                                // value={formData.last_name}
                             />
 
                             <input 
                                 type="text" 
                                 name="username" 
-                                placeholder="username" 
+                                placeholder="Pick another name to be called by" 
                                 className="input"
                                 onChange={handleChange}
-                                // value={formData.username}
-                            />
-
-                            <input 
-                                type="text" 
-                                name="email" 
-                                placeholder="Your Email Address" 
-                                className="input"
-                                onChange={handleChange}
-                                // value={formData.email}
                             />
 
                             <input 
                                 type="password" 
                                 name="password"
-                                placeholder="Choose a Password" 
+                                placeholder="Choose a password" 
                                 className="input"
                                 onChange={handleChange}
-                                // value={formData.password}
                             />
                             <button 
                                 onClick={(e) => {
