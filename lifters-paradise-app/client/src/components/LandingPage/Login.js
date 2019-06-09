@@ -23,7 +23,7 @@ class Login extends React.Component {
         if(this.state.login) return <Redirect to="/register"/>
 
         return (
-            <div className='App'>
+            <div className='login-background'>
                 <h1>Welcome To Lifter's Paradise</h1>
                 <div className="bluto-vs-popeye">
                     <img id="popeye" src={require("./popeye2.png")} alt=""/>
