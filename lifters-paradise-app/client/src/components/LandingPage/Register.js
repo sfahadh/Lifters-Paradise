@@ -23,7 +23,7 @@ class Register extends React.Component {
         if(this.state.register) return <Redirect to="/" />
 
         return (
-            <div className='App'>
+            <div className='register-background'>
                 <h1>Welcome To Lifter's Paradise</h1>
                 <div className="bluto-vs-popeye">
                     <img id="popeye-face" src={require("./popeye.png")} alt=""/>
