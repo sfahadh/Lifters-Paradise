@@ -24,11 +24,16 @@ class Register extends React.Component {
 
         return (
             <div className='App'>
+                <h1>Welcome To Lifter's Paradise</h1>
+                <div className="bluto-vs-popeye">
+                    <img id="popeye-face" src={require("./popeye.png")} alt=""/>
+                    <img id="bluto-face" src={require("./bluto.png")} alt=""/>
+                </div>
                 <div className="wrapper">
                     <div className="container">    
                         <div className="login-register"> 
                             <div className="login" onClick={this.showLoginForm}>Log In</div>              
-                            <div className="register">Register</div>
+                            <div className="register" id="color-switch">Register</div>
                         </div>  
 
                         <div className="register-form">

@@ -5,7 +5,7 @@ body {
   
 .container {
     width: 450px;
-    margin: 5% auto;
+    margin: 3% auto;
     background: #fff;
 }
 
@@ -15,6 +15,9 @@ body {
 }
 
 .register, .login {
+    color: #34b3a0;
+    font-weight: 600;
+    font-size: 1.3em;
     margin-top: 10%;
     width: 44%;
     border: 1px solid rgba(128, 128, 128, 0.329);
@@ -73,15 +76,40 @@ body {
 
 #popeye {
     position: relative;
-    bottom: 235px;
+    bottom: 155px;
     width: 35%;
     height: 35%;
 }
 
 #bluto {
     position: relative;
-    bottom: 110px;
+    bottom: 30px;
     left: 460px;
     width: 37%;
     height: 37%;
+}
+
+#popeye-face {
+    position: relative;
+    left: 5px;
+    width: 44%;
+    height: 44%;
+}
+
+#bluto-face {
+    position: relative;
+    left: 180px;
+    bottom: 30px;
+    width: 45%;
+    height: 45%;
+}
+
+h1 {
+    font-family: 'Shojumaru', cursive;
+    font-size: 5em;
+    margin-top: 3% !important;
+}
+
+#color-switch {
+    background-color: rgba(127, 134, 139, 0.692);
 }

@@ -24,6 +24,7 @@ class Login extends React.Component {
 
         return (
             <div className='App'>
+                <h1>Welcome To Lifter's Paradise</h1>
                 <div className="bluto-vs-popeye">
                     <img id="popeye" src={require("./popeye2.png")} alt=""/>
                     <img id="bluto" src={require("./bluto2.png")} alt=""/>
@@ -31,7 +32,7 @@ class Login extends React.Component {
                 <div className="wrapper">
                     <div className="container"> 
                         <div className="login-register"> 
-                            <div className="login">Log In</div>            
+                            <div className="login" id="color-switch">Log In</div>            
                             <div className="register" onClick={this.showRegisterForm}>Register</div>
                         </div>  
 
