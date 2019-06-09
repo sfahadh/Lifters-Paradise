@@ -16,7 +16,7 @@ class WorkloadForm extends React.Component {
         return (
             <div className="App">
              <div className ="button-modal">
-                    <Modal trigger={<Button color="blue" size="huge" id ="add-button">
+                    <Modal trigger={<Button color="blue" size="huge" id ="update-button">
                         <Icon id="edit-icon" disabled name='write'/>
                         </Button>}>
                         <h1 className="modal-style">"Update Your Workout Routine"</h1>

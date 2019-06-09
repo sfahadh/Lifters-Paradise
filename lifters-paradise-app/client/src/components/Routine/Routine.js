@@ -94,7 +94,7 @@ class Routine extends React.Component {
                     updateWorkload={() => this.updateWorkload(workload.id)}
                 />
             </div>)
-            return array.sort((a, b) => (a.id > b.id) ? 1 : -1)
+            return array.sort()
     }
 
     render() {
@@ -104,7 +104,7 @@ class Routine extends React.Component {
         <div id="workload-message"></div> : null
 
         return (
-            <div className="App">
+            <div className="routine-background">
                 <Navbar handleLogout={handleLogout} currentUser={currentUser} />
                 <h1 id="routine-header">My Workout Routine</h1>
                 <div id="whole-table">

@@ -7,11 +7,6 @@
     background-color: rgba(12, 23, 29, 0.918);
 } 
 
-.side-drawer img {
-    margin-top: 9%;
-    width: 90%;
-}
-
 h4 {
     padding: 5px;
     width: 100%;
@@ -47,13 +42,12 @@ h4:hover {
 
 #logout-button {
     cursor: pointer;
-    position: relative;
-    bottom: 10px;
     width: 90px;
     height: 26px;
     font-weight: 700;
     background-color: rgba(4, 150, 235, 0.918);
     border: rgba(4, 150, 235, 0.918);
+    margin-bottom: 3%;
 }
 
 #logout-button:hover {
