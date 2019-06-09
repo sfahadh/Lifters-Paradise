@@ -24,7 +24,7 @@ class Register extends React.Component {
 
         return (
             <div className='register-background'>
-                <h1>Welcome To Lifter's Paradise</h1>
+                <h1 className="title">Welcome To Lifter's Paradise</h1>
                 <div className="bluto-vs-popeye">
                     <img id="popeye-face" src={require("./popeye.png")} alt=""/>
                     <img id="bluto-face" src={require("./bluto.png")} alt=""/>

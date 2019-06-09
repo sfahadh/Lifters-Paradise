@@ -8,4 +8,39 @@ body {
   text-align: center;
 }
 
+#welcome-user {
+  height: 120px;
+  background-color: rgba(10, 101, 153, 0.918);
+}
+
+#welcome-user button {
+  border: 2px solid green;
+  background-color: rgba(145, 131, 131, 0.527);
+  border: 2px solid black;
+  margin-left: 1%;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  bottom: 10px;
+  font-size: 2em;
+  font-family: 'Baloo', cursive;
+}
+
+#welcome-user button:hover {
+  transform: scale(1.1);
+}
+
+#welcome-user p {
+  font-family: 'Baloo', cursive;
+  display: inline-block;
+  font-size: 4em;
+  margin-top: 1%;
+  /* border: 2px solid blue; */
+}
+
+
+
+
+
 

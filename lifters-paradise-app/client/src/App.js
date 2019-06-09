@@ -99,12 +99,12 @@ class App extends Component {
     return (
       <div className="App">
         { currentUser ? 
-        <div>
-          <p>Hello, {currentUser.first_name}</p> 
+        <div id="welcome-user">
+          <p>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}, are ready to make some gainz? or </p> 
           <button 
-                className="button" 
+                className="logout-button" 
                 type="button" 
-                onClick={this.handleLogout}>Log Out
+                onClick={this.handleLogout}>Na 
           </button> 
         </div> : null }
   

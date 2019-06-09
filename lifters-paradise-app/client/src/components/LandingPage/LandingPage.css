@@ -102,7 +102,7 @@
     height: 45%;
 }
 
-h1 {
+.title {
     font-family: 'Shojumaru', cursive;
     font-size: 5em;
     margin-top: 3% !important;
@@ -111,7 +111,7 @@ h1 {
 }
 
 #color-switch {
-    background-color: rgba(127, 134, 139, 0.692);
+    background-color: rgba(20, 38, 56, 0.692);
 }
 
 .login-background {
@@ -120,4 +120,10 @@ h1 {
     border: 1px solid black;
     height: 100vh;
     z-index: -3;
+}
+
+.register-background {
+    background-color: rgb(20, 38, 56);
+    height: 100vh;
+    border: 1px solid black;
 }

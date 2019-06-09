@@ -24,7 +24,7 @@ class Login extends React.Component {
 
         return (
             <div className='login-background'>
-                <h1>Welcome To Lifter's Paradise</h1>
+                <h1 className="title">Welcome To Lifter's Paradise</h1>
                 <div className="bluto-vs-popeye">
                     <img id="popeye" src={require("./popeye2.png")} alt=""/>
                     <img id="bluto" src={require("./bluto2.png")} alt=""/>
