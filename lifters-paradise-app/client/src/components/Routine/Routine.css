@@ -1,5 +1,5 @@
 #whole-table {
-    margin-top: 3%;
+    margin-top: 2%;
     margin-bottom: 1.5%;
 }
 
@@ -75,25 +75,37 @@
     text-align: center;
 }
 
-#workload-message {
-    border: 2px solid black;
-    width: 31vw;
-    height: 500px;
-    margin: 2% 39%;
-    background-image: url('./do-you-even-lift.png');
+#workload-message img {
+    width: 15vw;
+    border: 2px solid rgb(206, 204, 204);
+    background-color: rgba(4, 150, 235, 0.541);
+}
+
+#workload-message  {
+    margin-left: 7%;
+}
+
+#workload-message h1 {
+    color: rgba(4, 150, 235, 0.918);
+    text-shadow: 3px 3px black;
+    font-size: 52px;
+    background-color: rgba(212, 209, 209, 0.685);
+    width: 33vw;
+    margin-left: 32%;
+    margin-top: 1%;
 }
 
 #routine-header {
     font-size: 3em;
     font-weight: 600;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-left: 8%;
-    color: white;
+    color: rgba(4, 150, 235, 0.945);
+    font-family: 'Bitter', serif;
 }
 
 #create-button {
     margin-left: 8%;
-    margin-top: 1%;
 }
 
 .routine-background {

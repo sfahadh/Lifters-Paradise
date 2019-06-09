@@ -101,7 +101,10 @@ class Routine extends React.Component {
         const { workloads } = this.state
         const { handleLogout, currentUser } = this.props
         let message = workloads.length === 0 ? 
-        <div id="workload-message"></div> : null
+        <div id="workload-message">
+            <h1>Bruh, do you even lift?</h1>
+            <img src={require("./popeye-meme.png")} alt=""/>
+        </div> : null
 
         return (
             <div className="routine-background">
