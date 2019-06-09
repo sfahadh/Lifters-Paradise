@@ -105,7 +105,7 @@ class Routine extends React.Component {
         return (
             <div className="App">
                 <Navbar />
-                <h1>My Workout Routine</h1>
+                <h1 id="routine-header">My Workout Routine</h1>
                 <div id="whole-table">
                     <div className="column-load table-headers">
                         <div className="section exercises">Exercises</div>

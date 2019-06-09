@@ -87,3 +87,7 @@ h1 {
     margin: 2% auto;
     background-image: url('./do-you-even-lift.png');
 }
+
+#routine-header {
+    margin-top: 9%;
+}

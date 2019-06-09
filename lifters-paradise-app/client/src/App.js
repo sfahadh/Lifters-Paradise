@@ -97,7 +97,7 @@ class App extends Component {
 
     const { currentUser } = this.state
     return (
-      <div className="App">
+      <div id="home-page">
         { currentUser ? 
         <div id="welcome-user">
           <p>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}, are ready to make some gainz? or </p> 
