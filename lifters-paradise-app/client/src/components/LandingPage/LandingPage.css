@@ -1,12 +1,11 @@
 body {
     background: #e9eaea;
     font-family: roboto;
-    user-select: none;
 }
   
 .container {
     width: 450px;
-    margin: 30px auto;
+    margin: 5% auto;
     background: #fff;
 }
 
@@ -64,4 +63,25 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     margin-bottom: 30px;
+}
+
+.bluto-vs-popeye {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+}
+
+#popeye {
+    position: relative;
+    bottom: 235px;
+    width: 35%;
+    height: 35%;
+}
+
+#bluto {
+    position: relative;
+    bottom: 110px;
+    left: 460px;
+    width: 37%;
+    height: 37%;
 }

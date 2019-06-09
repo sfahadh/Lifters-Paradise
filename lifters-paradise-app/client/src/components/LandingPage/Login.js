@@ -24,6 +24,10 @@ class Login extends React.Component {
 
         return (
             <div className='App'>
+                <div className="bluto-vs-popeye">
+                    <img id="popeye" src={require("./popeye2.png")} alt=""/>
+                    <img id="bluto" src={require("./bluto2.png")} alt=""/>
+                </div>
                 <div className="wrapper">
                     <div className="container"> 
                         <div className="login-register"> 
