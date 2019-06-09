@@ -24,3 +24,38 @@ h4:hover {
 .link-box {
     margin: 5%;
 }
+
+.link-box p {
+    color: rgba(4, 150, 235, 0.918)
+}
+
+#welcome-user {
+    color: rgba(4, 150, 235, 0.918);
+}
+
+#welcome-user span {
+    font-size: 1.5em;
+    display: block;
+    font-family: 'Shojumaru', cursive;
+    margin-top: 14%;
+    margin-bottom: 5%;
+}
+
+#welcome-user p {
+    font-size: 1.1em;
+}
+
+#logout-button {
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
+    width: 90px;
+    height: 26px;
+    font-weight: 700;
+    background-color: rgba(4, 150, 235, 0.918);
+    border: rgba(4, 150, 235, 0.918);
+}
+
+#logout-button:hover {
+    transform: scale(1.1);
+}

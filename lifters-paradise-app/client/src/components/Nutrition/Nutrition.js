@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import './Nutrition.css'
 
-function Nutrition() {
+function Nutrition(props) {
     return (
         <div id="home">
-            <Navbar />
+            <Navbar handleLogout={props.handleLogout} currentUser={props.currentUser} />
             <div id="intro">
                 <h1>Nutrition Tracker (Prototype)</h1>
                 <h3>Track your nutrient intake and set body composition goals</h3>

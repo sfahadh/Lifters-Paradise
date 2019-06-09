@@ -9,6 +9,7 @@ import decode from 'jwt-decode'
 import { loginUser, registerUser } from './services/apiHelper'
 import Login from './components/LandingPage/Login'
 import Register from './components/LandingPage/Register'
+import Modal2 from './components/Modal/Modal'
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class App extends Component {
           name: '',
           username: '',
           password: ''
-        }
+        },
+        openModal: false
       }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleRegister = this.handleRegister.bind(this);
@@ -71,7 +73,9 @@ class App extends Component {
   async handleLogout() {
     localStorage.removeItem("jwt")
     await this.setState({
-      currentUser: null
+      currentUser: null,
+      openModal: true
+
     })
     this.props.history.push('/')
   }
@@ -94,19 +98,20 @@ class App extends Component {
   }
 
   render() {
-
-    const { currentUser } = this.state
+    const { currentUser, openModal } = this.state
+    // let modal = openModal ? <Modal2 /> : null
     return (
       <div id="home-page">
-        { currentUser ? 
+        {/* { currentUser ? 
         <div id="welcome-user">
           <p>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}, are ready to make some gainz? or </p> 
+
           <button 
                 className="logout-button" 
                 type="button" 
                 onClick={this.handleLogout}>Na 
           </button> 
-        </div> : null }
+        </div> : null } */}
   
         <Switch>          
           <Route 
@@ -135,13 +140,36 @@ class App extends Component {
             render={() => 
             <Home
               handleLogout={this.handleLogout}
-              currentUser={currentUser}  
+              currentUser={currentUser} 
             />} 
           />
           
-          <Route path="/exercises" component={ Exercises }/>
-          <Route path="/nutrition" component={ Nutrition }/>
-          <Route path="/routine" component={ Routine }/>
+          <Route 
+            path="/exercises" 
+            render={() => 
+            <Exercises
+              handleLogout={this.handleLogout}
+              currentUser={currentUser} 
+            />} 
+          />
+
+          <Route 
+            path="/nutrition" 
+            render={() => 
+            <Nutrition
+              handleLogout={this.handleLogout}
+              currentUser={currentUser} 
+            />} 
+          />
+          
+          <Route 
+            path="/routine" 
+            render={() => 
+            <Routine
+              handleLogout={this.handleLogout}
+              currentUser={currentUser} 
+            />} 
+          />
         </Switch>
       </div>
     );

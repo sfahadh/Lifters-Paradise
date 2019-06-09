@@ -99,12 +99,13 @@ class Routine extends React.Component {
 
     render() {
         const { workloads } = this.state
+        const { handleLogout, currentUser } = this.props
         let message = workloads.length === 0 ? 
         <div id="workload-message"></div> : null
 
         return (
             <div className="App">
-                <Navbar />
+                <Navbar handleLogout={handleLogout} currentUser={currentUser} />
                 <h1 id="routine-header">My Workout Routine</h1>
                 <div id="whole-table">
                     <div className="column-load table-headers">

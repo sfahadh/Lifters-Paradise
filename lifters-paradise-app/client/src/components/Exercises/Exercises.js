@@ -22,6 +22,7 @@ class Exercises extends React.Component {
 
     render() {
         const { exercises } = this.state
+        const { handleLogout, currentUser } = this.props
 
         const showExercises = exercises.map((exercise, i) => {
           return <div key={i}>
@@ -44,7 +45,7 @@ class Exercises extends React.Component {
         return (
             <div className="App">
                 <h1 id="exercise-header">Kinesiology of Exercises</h1>
-                <Navbar />
+                <Navbar handleLogout={handleLogout} currentUser={currentUser}/>
                 {showExercises}
             </div> 
         );
