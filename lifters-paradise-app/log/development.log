@@ -40352,3 +40352,135 @@ Processing by AuthenticationController#login as HTML
 Completed 200 OK in 78ms (Views: 0.2ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:41:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"hello", "last_name"=>"world", "username"=>"helloworld", "email"=>"hello@world.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"hello", "last_name"=>"world", "username"=>"helloworld", "email"=>"hello@world.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "helloworld"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 76ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:47:52 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 76ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:48:45 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "username"=>"", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "username"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:49:05 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:50:25 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 74ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:50:38 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "username"=>"kk", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 21:52:00 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"test", "last_name"=>"again", "username"=>"testagain", "email"=>"test@again.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testagain"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@again.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "test"], ["last_name", "again"], ["email", "test@again.com"], ["username", "testagain"], ["created_at", "2019-06-09 01:52:00.745886"], ["updated_at", "2019-06-09 01:52:00.745886"], ["password_digest", "$2a$10$uj.0AF9WSG9LgC6VEA3IC.YAmnz6dLokX/4gT2oifGWTvlwDqBc9."]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 84ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:52:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"test", "last_name"=>"again", "username"=>"testagain", "email"=>"test@again.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"test", "last_name"=>"again", "username"=>"testagain", "email"=>"test@again.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testagain"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:52:09 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"test", "last_name"=>"again", "username"=>"test", "email"=>"test@again.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"test", "last_name"=>"again", "username"=>"test", "email"=>"test@again.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:52:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"test", "last_name"=>"again", "username"=>"test", "email"=>"test@again.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"test", "last_name"=>"again", "username"=>"test", "email"=>"test@again.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:52:23 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"test", "last_name"=>"again", "username"=>"testagain", "email"=>"test@again.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"test", "last_name"=>"again", "username"=>"testagain", "email"=>"test@again.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testagain"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2019-06-08 21:52:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"try", "last_name"=>"again", "username"=>"tryagain", "email"=>"try@again", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tryagain"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "try@again"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "try"], ["last_name", "again"], ["email", "try@again"], ["username", "tryagain"], ["created_at", "2019-06-09 01:52:47.159513"], ["updated_at", "2019-06-09 01:52:47.159513"], ["password_digest", "$2a$10$a2.1d5V8UBy/hnB025fW6.l07ODW9T2zlUpklujBXi04mIEW8kUVm"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 83ms (Views: 0.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-08 21:52:47 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"try", "last_name"=>"again", "username"=>"tryagain", "email"=>"try@again", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"try", "last_name"=>"again", "username"=>"tryagain", "email"=>"try@again", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tryagain"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 76ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+

@@ -69,7 +69,7 @@ class App extends Component {
     const userData = await registerUser({ "user": this.state.authFormData })
     console.log("info", userData)
     this.handleLogin();
-    this.props.history.push('/')
+    this.props.history.push('/home')
   }
 
   async handleLogout() {
@@ -77,6 +77,7 @@ class App extends Component {
     await this.setState({
       currentUser: null
     })
+    this.props.history.push('/')
   }
 
   async authHandleChange(e) {
@@ -92,7 +93,7 @@ class App extends Component {
   handleLoginButton(e) {
     e.preventDefault();
     if (this.handleLogin()) {
-      this.props.history.push('/');
+      this.props.history.push('/home');
     }
   }
 
