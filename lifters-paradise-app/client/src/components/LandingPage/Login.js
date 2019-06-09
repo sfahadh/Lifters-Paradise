@@ -19,7 +19,7 @@ class Login extends React.Component {
     }
 
     render() {
-        const { handleChange, handleLogin } = this.props
+        const { handleChange, handleLogin, formData } = this.props
         if(this.state.login) return <Redirect to="/register"/>
 
         return (
@@ -53,7 +53,8 @@ class Login extends React.Component {
                                 onClick={(e) => {
                                 e.preventDefault()
                                 handleLogin()}}
-                                className="btn">log in</button>
+                                className="btn">log in
+                            </button>
                         </div>   
                     </div>
                 </div>          

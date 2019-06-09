@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import './App.css';
 import Home from './components/Home/Home'
 import Exercises from './components/Exercises/Exercises'
@@ -16,6 +16,7 @@ class App extends Component {
 
       this.state = {
         currentUser: null,
+        loggedIn: false,
         authFormData: {
           // first_name: "",
           // last_name: "",
@@ -31,27 +32,47 @@ class App extends Component {
     this.handleLogout = this.handleLogout.bind(this);
   }
 
-  componentDidMount() {
-    const checkUser = localStorage.getItem("jwt")
-    if (checkUser) {
-      const user = decode(checkUser)
-      this.setState({
-          currentUser: user
-      })
-    }
+  async componentDidMount() {
+    await this.checkLogin()
   }
+
+  async checkLogin() {
+    try {
+      const checkUser = localStorage.getItem("jwt")
+      if (checkUser) {
+        const user = decode(checkUser);
+        console.log(user);
+        await this.setState({
+          currentUser: user
+        });
+      } else {
+        this.props.history.push('/')
+      }
+    } catch (err) {console.log(err.message)}
+  }
+
+  // async handleLogin() {
+  //   const userData = await loginUser(this.state.authFormData)
+  //   if (userData) {
+  //     this.setState({
+  //       currentUser: decode(userData.token),
+  //     })
+  //     localStorage.setItem("jwt", userData.token);
+  //   } 
+  //   else {
+  //     this.props.history.push('/auth/login'); null
+  //   }
+  // }
 
   async handleLogin() {
     const userData = await loginUser(this.state.authFormData)
     if (userData) {
-      this.setState({
-        currentUser: decode(userData.token)
-      })
       localStorage.setItem("jwt", userData.token);
+      await this.checkLogin();
+      return true;
+    } else {
+      this.props.history.push('/login');
     }
-    // } else {
-    //   this.props.history.push('/auth/login');
-    // }
   }
 
   async handleRegister() {
@@ -84,25 +105,21 @@ class App extends Component {
   }
 
   render() {
+
     const { currentUser } = this.state
     return (
       <div className="App">
-        { currentUser ? <p>Hello, {currentUser.username}</p> : null }
-        <Switch>
-          {/* <Route exact path="/" 
-            render={() => currentUser ? 
-            <button 
+        {/* { currentUser ? 
+        <div>
+          <p>Hello, {currentUser.username}</p> 
+          <button 
                 className="button" 
                 type="button" 
                 onClick={this.handleLogout}>Log Out
-            </button> : 
-            <button 
-                className="button" 
-                type="button" 
-                onClick={() => this.props.history.push('/auth/login')}>Log In
-            </button>} 
-          /> */}
-
+          </button> 
+        </div> : null } */}
+  
+        <Switch>          
           <Route 
             exact path="/" 
             render={() => 
@@ -113,9 +130,9 @@ class App extends Component {
               handleLoginButton={this.handleLoginButton} 
             />} 
           />
-                  
+
           <Route 
-            exact path="/register" 
+            path="/register" 
             render={() => 
             <Register 
               handleRegister={this.handleRegister} 
@@ -124,7 +141,21 @@ class App extends Component {
             />} 
           />
 
-          <Route path="/home" component={ Home }/>
+          <Route 
+            path="/home" 
+            render={() => currentUser ? 
+            <Home
+              handleLogout={this.handleLogout}
+              currentUser={currentUser}  
+            /> : 
+            <button 
+                className="button" 
+                type="button" 
+                onClick={() => this.props.history.push('/')}>Log In
+            </button>} 
+          />
+
+          {/* <Route path="/home" component={ Home }/>  */}
           <Route path="/exercises" component={ Exercises }/>
           <Route path="/nutrition" component={ Nutrition }/>
           <Route path="/routine" component={ Routine }/>
@@ -134,4 +165,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

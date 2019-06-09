@@ -7,7 +7,7 @@ function Navbar() {
     return (
         <div className="App">
             <nav className="side-drawer">
-                <img id="logo-image" src={require("./logo.png")} alt="profile"></img>
+                <img id="logo-image" src={require("./logo.png")} alt="profile"/>
             </nav> 
 
             <Sidebar as={Menu} animation='overlay' icon='labeled' inverted vertical visible width='thin'>
