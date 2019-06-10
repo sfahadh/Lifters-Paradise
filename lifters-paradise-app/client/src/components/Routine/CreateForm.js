@@ -15,9 +15,9 @@ class WorkloadForm extends React.Component {
         return (
             <div className="App">
              <div className ="button-modal">
-                    <Modal trigger={<Button color="blue" size="huge" id="create-button">Add Workload</Button>}>
+                    <Modal id="modal" trigger={<Button color="blue" size="huge" id="create-button">Add Workload</Button>}>
                         <h1 className="modal-style">Add to Your Workout Routine</h1>
-                        <Segment>
+                        <Segment id="modal-segment">
                         <Grid columns={2} relaxed='very'>
                             <Grid.Column>
                             <Form onSubmit={createWorkload}>
@@ -45,7 +45,7 @@ class WorkloadForm extends React.Component {
                                     <label>Rate of Percieved Exertion</label>
                                     <input onChange={handleChanges} type="number" name="rpe" placeholder='From 1-10 Difficulty'/>
                                 </Form.Field>
-                                <Button inverted color="blue" type='submit'>Submit</Button>
+                                <Button id="modal-submit" inverted color="blue" type='submit'>Submit</Button>
                             </Form>
                             </Grid.Column>
                         </Grid>

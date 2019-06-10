@@ -113,3 +113,43 @@
     background-image: url('./gym-background.jpeg');
     background-size: 100%;
 }
+
+.form-field {
+    margin-left: 26% !important;
+    width: 22vw;
+}
+
+.form-field input {
+    background-color: rgba(212, 209, 209, 0.685) !important;
+    font-weight: 700 !important;
+    font-size: 1.1em !important;
+}
+
+.form-field input::placeholder {
+    color: rgba(255, 255, 255, 0.527) !important;
+}
+
+#modal {
+    width: 30vw;
+    height: 60vh;
+    background-color: rgb(42, 46, 49);
+}
+
+#modal-segment {
+    background-color: rgb(42, 46, 49);
+}
+
+#modal-segment label {
+    color: rgba(4, 150, 235, 0.945);
+    font-size: 1.2em;
+}
+
+.modal-style {
+    margin-top: 3% !important;
+    color: rgba(4, 150, 235, 0.945);
+}
+
+#modal-submit {
+    margin-left: 90%;
+    margin-top: 5%;
+}
