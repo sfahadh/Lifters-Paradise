@@ -9,7 +9,6 @@ import decode from 'jwt-decode'
 import { loginUser, registerUser } from './services/apiHelper'
 import Login from './components/LandingPage/Login'
 import Register from './components/LandingPage/Register'
-import Modal2 from './components/Modal/Modal'
 
 class App extends Component {
   constructor(props) {
@@ -22,8 +21,7 @@ class App extends Component {
           name: '',
           username: '',
           password: ''
-        },
-        openModal: false
+        }
       }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleRegister = this.handleRegister.bind(this);
@@ -82,9 +80,7 @@ class App extends Component {
   async handleLogout() {
     localStorage.removeItem("jwt")
     await this.setState({
-      currentUser: null,
-      openModal: true
-
+      currentUser: null
     })
     this.props.history.push('/')
   }
@@ -114,8 +110,7 @@ class App extends Component {
   }
 
   render() {
-    const { currentUser, openModal } = this.state
-    // let modal = openModal ? <Modal2 /> : null
+    const { currentUser } = this.state
     return (
       <div id="home-page">
         <Switch>          

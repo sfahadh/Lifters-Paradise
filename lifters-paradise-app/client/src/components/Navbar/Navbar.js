@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import {  Menu, Sidebar } from 'semantic-ui-react'
+import Modal2 from '../Modal/Modal'
 
 function Navbar(props) {
     return (
@@ -29,7 +30,7 @@ function Navbar(props) {
                     <p><span>{(props.currentUser.username).charAt(0).toUpperCase() + props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
                 </div> : <p>did not work</p> } 
                 <div className="link-box" as='a'>
-                    <button id="logout-button" onClick={props.handleLogout}>Na</button>
+                    <Modal2 handleLogout={props.handleLogout}/>
                     <p>(logout)</p>
                 </div>
 

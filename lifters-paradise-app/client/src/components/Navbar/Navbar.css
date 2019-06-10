@@ -39,17 +39,3 @@ h4:hover {
 #welcome-user p {
     font-size: 1.1em;
 }
-
-#logout-button {
-    cursor: pointer;
-    width: 90px;
-    height: 26px;
-    font-weight: 700;
-    background-color: rgba(4, 150, 235, 0.918);
-    border: rgba(4, 150, 235, 0.918);
-    margin-bottom: 3%;
-}
-
-#logout-button:hover {
-    transform: scale(1.1);
-}
