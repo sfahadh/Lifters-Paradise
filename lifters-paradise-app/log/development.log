@@ -42009,3 +42009,87 @@ Processing by WorkloadsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
 
 
+Started DELETE "/workloads/10" for ::1 at 2019-06-09 21:41:31 -0400
+Processing by WorkloadsController#destroy as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT  "workloads".* FROM "workloads" WHERE "workloads"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/workloads_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[36mWorkload Destroy (0.2ms)[0m  [1m[31mDELETE FROM "workloads" WHERE "workloads"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/workloads_controller.rb:23
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/workloads_controller.rb:23
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-09 21:41:31 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-09 21:42:08 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-09 21:42:20 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-09 21:42:32 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-09 21:42:35 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-09 21:42:37 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.3ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-09 21:45:46 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises" for ::1 at 2019-06-09 21:46:09 -0400
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/controllers/exercises_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-09 21:46:13 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.5ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/workloads" for ::1 at 2019-06-09 21:46:15 -0400
+Processing by WorkloadsController#index as HTML
+  [1m[36mWorkload Load (0.4ms)[0m  [1m[34mSELECT "workloads".* FROM "workloads"[0m
+  ↳ app/controllers/workloads_controller.rb:4
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+

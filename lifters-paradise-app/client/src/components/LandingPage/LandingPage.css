@@ -3,7 +3,7 @@
     left: 36%;
     width: 450px;
     margin: 3% auto;
-    background: #fff;
+    background: rgb(42, 46, 49);
     z-index: 3;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .register, .login {
-    color: #34b3a0;
+    color: rgba(4, 150, 235, 0.945);
     font-weight: 600;
     font-size: 1.3em;
     margin-top: 10%;
@@ -28,7 +28,7 @@
 }
   
 .register-form, .login-form {
-    background: #fff;
+    background: rgb(42, 46, 49);
     padding: 40px;
     clear: both;
     width: 100%;
@@ -49,12 +49,12 @@
 }
   
 .input:focus {
-    border: 2px solid #34b3a0;
+    border: 2px solid rgba(4, 150, 235, 0.945);
 }
   
 .btn {
     width: 100%;
-    background: #34b3a0;
+    background: rgba(4, 150, 235, 0.945);
     height: 60px;
     text-align: center;
     line-height: 60px;
@@ -106,13 +106,13 @@
     font-family: 'Shojumaru', cursive;
     font-size: 5em;
     margin-top: 3% !important;
-    color: #34b3a0;
+    color: rgba(4, 150, 235, 0.945);
     text-shadow: 6px 3px 2px rgba(127, 134, 139, 0.692);
     text-align: center;
 }
 
 #color-switch {
-    background-color: rgba(20, 38, 56, 0.692);
+    background-color: rgba(212, 209, 209, 0.685);
 }
 
 .login-background {
@@ -124,7 +124,7 @@
 }
 
 .register-background {
-    background-color: rgb(20, 38, 56);
+    background-color: rgb(15, 22, 29);
     height: 100vh;
     border: 1px solid black;
 }
