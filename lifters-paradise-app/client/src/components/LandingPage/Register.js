@@ -19,7 +19,7 @@ class Register extends React.Component {
     }
 
     render() {
-        const { handleChange, handleRegister } = this.props
+        const { handleChange, handleRegisterButton } = this.props
         if(this.state.register) return <Redirect to="/" />
 
         return (
@@ -60,11 +60,7 @@ class Register extends React.Component {
                                 className="input"
                                 onChange={handleChange}
                             />
-                            <button 
-                                onClick={(e) => {
-                                e.preventDefault();
-                                handleRegister();}}
-                                className="btn">Create account</button>
+                            <button onClick={handleRegisterButton} className="btn">Create account</button>
                         </div>  
                     </div>
                 </div>

@@ -41598,3 +41598,197 @@ Processing by ExercisesController#index as HTML
 Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/auth/login?username=popeye&password=[FILTERED]" for ::1 at 2019-06-09 21:02:42 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sayem/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthenticationController#login as */*
+  Parameters: {"users"=>{"name"=>"Popeye", "username"=>"Popeye", "password"=>"[FILTERED]"}, "username"=>"popeye", "password"=>"[FILTERED]", "authentication"=>{"users"=>{"name"=>"Popeye", "username"=>"Popeye", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "popeye"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:4:in `login'
+Started POST "/auth/login?username=savage&password=[FILTERED]" for ::1 at 2019-06-09 21:02:54 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"users"=>{"name"=>"Popeye", "username"=>"Popeye", "password"=>"[FILTERED]"}, "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"users"=>{"name"=>"Popeye", "username"=>"Popeye", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 84ms (Views: 0.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users" for ::1 at 2019-06-09 21:03:53 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users" {
+		"name": "fahad",
+		"username": "science",
+		"password": "science"
+	}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+	"users" {
+		"name": "fahad",
+		"username": "science",
+		"password": "science"
+	}
+}'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-06-09 21:04:09 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"fahad", "username"=>"science", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: users):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-09 21:04:17 -0400
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"name"=>"fahad", "username"=>"science", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "science"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "science"], ["created_at", "2019-06-10 01:04:17.274624"], ["updated_at", "2019-06-10 01:04:17.274624"], ["password_digest", "$2a$10$jBMwTptTAgklG5gveGVY0ut414JSv4E2nxxdk3.GP1F18gGuLVJBu"], ["name", "fahad"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 77ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-09 21:05:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"", "username"=>"savage", "password"=>"[FILTERED]", "authentication"=>{"name"=>"", "username"=>"savage", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "savage"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 71ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2019-06-09 21:07:14 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"sfasdasdf", "username"=>"adsfasdfas", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: users):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-09 21:14:04 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"asdfasd", "username"=>"asdfasd", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: users):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-09 21:14:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"asdfasdf", "username"=>"asdfasdf", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: users):
+  
+app/controllers/users_controller.rb:26:in `user_params'
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for ::1 at 2019-06-09 21:15:29 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"users"=>{"name"=>"student", "username"=>"prayer", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "prayer"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "prayer"], ["created_at", "2019-06-10 01:15:29.766560"], ["updated_at", "2019-06-10 01:15:29.766560"], ["password_digest", "$2a$10$paEwsL3f/VlYFilzlGjUV.247QzU23k4Odp.8PZUE4tvvyPfu5m5O"], ["name", "student"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 77ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/auth/login/" for ::1 at 2019-06-09 21:15:40 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"name"=>"student", "username"=>"prayer", "password"=>"[FILTERED]", "authentication"=>{"name"=>"student", "username"=>"prayer", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "prayer"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:3
+Completed 200 OK in 74ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2019-06-09 21:16:06 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"users"=>{"name"=>"mohammad", "username"=>"momo", "password"=>"[FILTERED]"}, "user"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "momo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "momo"], ["created_at", "2019-06-10 01:16:07.057541"], ["updated_at", "2019-06-10 01:16:07.057541"], ["password_digest", "$2a$10$7oDuAIxrxqQErjI9Uz7huOsob9/XKsJD9TRjzA7fDUOZ1gS/F31/G"], ["name", "mohammad"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 201 Created in 74ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+

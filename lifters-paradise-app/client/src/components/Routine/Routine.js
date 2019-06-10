@@ -103,7 +103,7 @@ class Routine extends React.Component {
         let message = workloads.length === 0 ? 
         <div id="workload-message">
             <h1>Bruh, do you even lift?</h1>
-            <img src={require("./popeye-meme.png")} alt=""/>
+            <img src={require("./popeye-meme-color.png")} alt=""/>
         </div> : null
 
         return (

@@ -29,6 +29,7 @@ class App extends Component {
     this.handleRegister = this.handleRegister.bind(this);
     this.authHandleChange = this.authHandleChange.bind(this);
     this.handleLoginButton = this.handleLoginButton.bind(this);
+    this.handleRegisterButton = this.handleRegisterButton.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
@@ -50,7 +51,7 @@ class App extends Component {
     } catch (err) {console.log(err.message)}
   }
 
-  async handleLogin() {
+  async handleLogin(e) {
     const userData = await loginUser(this.state.authFormData)
     if (userData) {
       this.setState({
@@ -64,11 +65,19 @@ class App extends Component {
     }
   }
 
-  async handleRegister() {
-    await registerUser({ "user": this.state.authFormData })
-    this.handleLogin();
-    this.props.history.push('/home')
+  handleRegister = async () => {
+    const userData = await registerUser({"users": this.state.authFormData})
+    this.setState({
+      currentUser: userData
+    });
+    if (userData && userData.token) {
+      localStorage.setItem("jwt", userData.token);
+      await this.checkLogin();
+    } else {
+      this.props.history.push('/home');
+    }
   }
+
 
   async handleLogout() {
     localStorage.removeItem("jwt")
@@ -97,30 +106,24 @@ class App extends Component {
     }
   }
 
+  handleRegisterButton(e) {
+    e.preventDefault();
+    if (this.handleRegister()) {
+      this.props.history.push('/home');
+    }
+  }
+
   render() {
     const { currentUser, openModal } = this.state
     // let modal = openModal ? <Modal2 /> : null
     return (
       <div id="home-page">
-        {/* { currentUser ? 
-        <div id="welcome-user">
-          <p>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}, are ready to make some gainz? or </p> 
-
-          <button 
-                className="logout-button" 
-                type="button" 
-                onClick={this.handleLogout}>Na 
-          </button> 
-        </div> : null } */}
-  
         <Switch>          
           <Route 
             exact path="/" 
             render={() => 
-            <Login 
-              handleLogin={this.handleLogin} 
+            <Login  
               handleChange={this.authHandleChange} 
-              formData={this.authFormData} 
               handleLoginButton={this.handleLoginButton} 
             />} 
           />
@@ -129,9 +132,8 @@ class App extends Component {
             path="/register" 
             render={() => 
             <Register 
-              handleRegister={this.handleRegister} 
+              handleRegisterButton={this.handleRegisterButton} 
               handleChange={this.authHandleChange} 
-              formData={this.authFormData} 
             />} 
           />
 
