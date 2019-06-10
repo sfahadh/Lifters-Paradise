@@ -16,7 +16,7 @@ export default class Modal2 extends Component {
       <Modal
         trigger={<Button id="logout-button" onClick={this.handleOpen}><span>Na</span></Button>}
         open={this.state.modalOpen}
-        onClose={this.props.handleLogout}
+        onClose={this.handleClose}
         basic
         size='small'
       >
@@ -24,10 +24,10 @@ export default class Modal2 extends Component {
           <h3 id="logout-response">YOU AIN'T SHIT</h3>
         </Modal.Content>
         <Modal.Actions id="cancel-logout">
-          <Button color='blue' onClick={this.handleClose} inverted>
-            <Icon name='checkmark' /> Cancel, I am the shit
+          <Button color='blue' onClick={this.props.handleLogout} inverted>
+            <Icon name='checkmark' /> I know
           </Button>
-          <h4>*Click anywhere outside the text section to exit*</h4>
+          <h4>*Click anywhere outside the text section to cancel*</h4>
         </Modal.Actions>
       </Modal>
     )

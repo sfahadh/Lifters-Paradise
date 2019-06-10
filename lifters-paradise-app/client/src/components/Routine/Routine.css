@@ -129,9 +129,11 @@
     color: rgba(255, 255, 255, 0.527) !important;
 }
 
-#modal {
+#modal-routine {
     width: 30vw;
     height: 60vh;
+    margin-left: 35%;
+    margin-top: 5%;
     background-color: rgb(42, 46, 49);
 }
 
