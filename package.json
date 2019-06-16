@@ -14,8 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "cd client && npm install && npm run build && cd ..",
-    "deploy": "cp -a client/build/. public/",
+    "build": "cd lifters-paradise-app/client && npm install && npm run build && cd ..",
+    "deploy": "cp -a lifters-paradise-app/client/build/. public/",
     "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   },
   "author": "Fahad Hussain",
