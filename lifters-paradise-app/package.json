@@ -1,0 +1,23 @@
+{
+  "name": "lifters-paradise-app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "jwt-decode": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "cd lifters-paradise-app/client && npm install && npm run build && cd ..",
+    "deploy": "cp -a lifters-paradise-app/client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "author": "Fahad Hussain",
+  "license": "ISC"
+}
