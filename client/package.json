@@ -1,11 +1,6 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": {    
-    "/api": {      
-     "target": "http://localhost:3001"    
-    }  
-  },
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
