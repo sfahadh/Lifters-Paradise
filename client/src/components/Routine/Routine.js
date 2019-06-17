@@ -7,7 +7,7 @@ import UpdateForm from './UpdateForm'
 import { Icon } from 'semantic-ui-react'
 
 
-const url = 'http://localhost:3000'
+const url = 'https://lifters-paradise.herokuapp.com'
 class Routine extends React.Component {
     constructor(props) {
         super(props)

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:3000';
+const url = 'https://lifters-paradise.herokuapp.com';
 
 export const loginUser = async (loginData) => {
   try {

@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
 import './Exercises.css'
 
-const url = 'http://localhost:3000'
+const url = 'https://lifters-paradise.herokuapp.com'
 class Exercises extends React.Component {
     constructor() {
         super()
