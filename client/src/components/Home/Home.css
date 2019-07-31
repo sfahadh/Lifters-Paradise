@@ -40,6 +40,18 @@
     border: 1px solid gray;
 }
 
+.btn-group {
+    width: 450px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.semantic-btn {
+    background-color: rgba(10, 101, 153, 0.918) !important;
+}
+
 @media only screen and (max-width: 1300px) {
     .home-background {
         background-image: url('./home-background-medium.png');
@@ -49,7 +61,7 @@
         display: none;
     }
 }
-\
+
 @media only screen and (max-width: 850px) {
     .home-background {
         background-image: url('./home-background-medium.png');

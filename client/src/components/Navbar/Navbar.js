@@ -93,27 +93,23 @@ class Navbar extends Component {
     
         return (
           <div>
-            <Button.Group style={{ marginLeft: "300px"}}>
-              <Button active={direction === 'left'} onClick={this.handleDirectionChange('left')}>
-                Left
-              </Button>
-              <Button active={direction === 'right'} onClick={this.handleDirectionChange('right')}>
-                Right
-              </Button>
-              <Button active={direction === 'top'} onClick={this.handleDirectionChange('top')}>
-                Top
-              </Button>
-              <Button active={direction === 'bottom'} onClick={this.handleDirectionChange('bottom')}>
-                Bottom
-              </Button>
-            </Button.Group>
-    
-            <div style={{ marginLeft: "300px"}}>
-                <Button onClick={this.handleAnimationChange('push')}>Show Navbar</Button>
+            <div className="btn-group">
+                <Button.Group>
+                    <Button className="semantic-btn" active={direction === 'left'} onClick={this.handleDirectionChange('left')}>
+                        Left
+                    </Button>
+                    <Button className="semantic-btn" active={direction === 'right'} onClick={this.handleDirectionChange('right')}>
+                        Right
+                    </Button>
+                    <Button className="semantic-btn" active={direction === 'bottom'} onClick={this.handleDirectionChange('bottom')}>
+                        Bottom
+                    </Button>
+                </Button.Group>
+                <Button className="semantic-btn semantic-toggle" onClick={this.handleAnimationChange('push')}>Toggle Navbar</Button>
             </div>
     
               {vertical ? (
-                <HorizontalSidebar animation={animation} direction={direction} visible={visible} />
+                <VerticalSidebar animation={animation} direction={direction} visible={visible} />
               ) : null}
               {vertical ? null : (
                 <VerticalSidebar animation={animation} direction={direction} visible={visible} />
