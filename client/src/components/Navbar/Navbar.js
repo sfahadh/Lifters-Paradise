@@ -8,15 +8,14 @@ class Navbar extends Component {
     state = {
         direction: 'left',
         visible: false,
-      }
+    }
     
-      handleAnimationChange = animation => () =>
+    handleAnimationChange = animation => () =>
         this.setState(prevState => ({ animation, visible: !prevState.visible }))
 
+    handleDirectionChange = direction => () => this.setState({ direction, visible: false })
     
-      handleDirectionChange = direction => () => this.setState({ direction, visible: false })
-    
-      render() {
+    render() {
         const { animation, direction, visible } = this.state
         const { currentUser, handleLogout } = this.props
         const vertical = direction === 'bottom' || direction === 'left' || direction === 'right'
@@ -40,6 +39,7 @@ class Navbar extends Component {
     
               {vertical ? (
                     <Sidebar
+                    className="side-drawer"
                     as={Menu}
                     animation={animation}
                     direction={direction}
@@ -47,7 +47,6 @@ class Navbar extends Component {
                     inverted
                     vertical
                     visible={visible}
-                    width='thin'
                   >
                     <Link className="link" to='home'>
                       <Icon name='home' />
@@ -67,12 +66,13 @@ class Navbar extends Component {
                     </Link>
               
                     { currentUser ? 
-                        <div id="welcome-user">
-                            <p><span>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
-                        </div> : <p>Want to make some Gainz</p> } 
-                        <div className="link-box" as='a'>
+                        <div style={{ height: "200px", border: "2px solid red"}}>
+                            <p style={{ color: "white"}}><span>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
+                        </div> : <p style={{ marginTop: "12px", color: "white"}}>Want to make some Gainz</p> } 
+
+                        <div style={{ marginTop: "-5px"}} className="link-box" as='a'>
                             <Modal2 handleLogout={handleLogout}/>
-                            <p>(logout)</p>
+                            <p style={{ marginTop: "-33px"}}>(logout)</p>
                         </div>
                   </Sidebar>
               ) : null}

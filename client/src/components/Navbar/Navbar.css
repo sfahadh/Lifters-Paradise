@@ -1,6 +1,6 @@
 .side-drawer {
     height: 100%;
-    width: 200px;
+    width: 210px !important;
     position: fixed;
     top: 0;
     right: 0;
@@ -22,21 +22,4 @@ h4:hover {
 
 .link-box p {
     color: rgba(4, 150, 235, 0.918)
-}
-
-#welcome-user {
-    color: rgba(4, 150, 235, 0.918);
-    border: 2px solid red;
-}
-
-#welcome-user span {
-    font-size: 1.5em;
-    display: block;
-    font-family: 'Shojumaru', cursive;
-    margin-top: 14%;
-    margin-bottom: 5%;
-}
-
-#welcome-user p {
-    font-size: 1.1em;
 }
