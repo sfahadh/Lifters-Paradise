@@ -127,4 +127,17 @@
     #popeye, #bluto, #popeye-face, #bluto-face {
         display: none;
     }
+
+    .border-page {
+        width: 90vw;
+    }
+
+    .container {
+        margin: 1% auto;
+    }
+
+    .title {
+        margin-top: 4% !important;
+        font-size: 4.5em;
+    }
 }
