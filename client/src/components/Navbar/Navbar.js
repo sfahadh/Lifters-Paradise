@@ -17,9 +17,9 @@ class Navbar extends Component {
       handleDirectionChange = direction => () => this.setState({ direction, visible: false })
     
       render() {
-        const { handleLogout, currentUser } = this.props
         const { animation, direction, visible } = this.state
-        const vertical = direction === 'bottom' || direction === 'top'
+        const { currentUser, handleLogout } = this.props
+        const vertical = direction === 'bottom' || direction === 'left' || direction === 'right'
     
         return (
           <div>
@@ -28,8 +28,11 @@ class Navbar extends Component {
                     <Button className="semantic-btn" active={direction === 'bottom'} onClick={this.handleDirectionChange('bottom')}>
                         Bottom
                     </Button>
-                    <Button className="semantic-btn" active={direction === 'top'} onClick={this.handleDirectionChange('top')}>
-                        Top
+                    <Button className="semantic-btn" active={direction === 'left'} onClick={this.handleDirectionChange('left')}>
+                        Left
+                    </Button>
+                    <Button className="semantic-btn" active={direction === 'right'} onClick={this.handleDirectionChange('right')}>
+                        Right
                     </Button>
                 </Button.Group>
                 <Button className="semantic-btn semantic-toggle" onClick={this.handleAnimationChange('push')}>Toggle Navbar</Button>
@@ -63,12 +66,12 @@ class Navbar extends Component {
                       Routine
                     </Link>
               
-                    { this.props.currentUser ? 
+                    { currentUser ? 
                         <div id="welcome-user">
-                            <p><span>{(this.props.currentUser.username).charAt(0).toUpperCase() + this.props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
+                            <p><span>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
                         </div> : <p>Want to make some Gainz</p> } 
                         <div className="link-box" as='a'>
-                            <Modal2 handleLogout={this.props.handleLogout}/>
+                            <Modal2 handleLogout={handleLogout}/>
                             <p>(logout)</p>
                         </div>
                   </Sidebar>

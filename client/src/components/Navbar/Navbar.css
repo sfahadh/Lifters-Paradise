@@ -26,6 +26,7 @@ h4:hover {
 
 #welcome-user {
     color: rgba(4, 150, 235, 0.918);
+    border: 2px solid red;
 }
 
 #welcome-user span {
