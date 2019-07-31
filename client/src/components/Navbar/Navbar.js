@@ -16,15 +16,22 @@ import Modal2 from '../Modal/Modal'
       visible={visible}
       width='thin'
     >
-      <Menu.Item as='a'>
+      <Link className="link" to='home'>
+        <Icon name='home' />
         Home
-      </Menu.Item>
-      <Menu.Item as='a'>
-        Games
-      </Menu.Item>
-      <Menu.Item as='a'>
-        Channels
-      </Menu.Item>
+      </Link>
+      <Link className="link" to='exercises'>
+        <Icon name='heart' />
+        Exercises
+      </Link>
+      <Link className="link" to='nutrition'>
+        <Icon name='nutritionix' />
+        Nutrition
+      </Link>
+      <Link className="link" to='routine'>
+        <Icon name='table' />
+        Routine
+      </Link>
     </Sidebar>
   )
   
