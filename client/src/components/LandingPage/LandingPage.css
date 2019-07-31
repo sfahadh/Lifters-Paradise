@@ -1,7 +1,7 @@
 .container {
     width: 450px;
     background: rgb(42, 46, 49);
-    margin: 0 1%;
+    margin: 1%;
 }
 
 .login-register {
@@ -137,6 +137,19 @@
 
     .title {
         margin-top: 4% !important;
-        font-size: 4.5em;
+        font-size: 4.39em;
     }
+}
+
+@media only screen and (max-width: 790px) {
+    .title {
+        font-size: 3.6em;
+    }
+
+    .container {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
 }
