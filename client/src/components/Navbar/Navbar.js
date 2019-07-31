@@ -64,14 +64,13 @@ class Navbar extends Component {
                     </Link>
               
                     { this.props.currentUser ? 
-                              <div id="welcome-user">
-                                  <p><span>{(this.props.currentUser.username).charAt(0).toUpperCase() + this.props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
-                              </div> : <p>did not work</p> } 
-                              <div className="link-box" as='a'>
-                                  <Modal2 handleLogout={this.props.handleLogout}/>
-                                  <p>(logout)</p>
-                              </div>
-              
+                        <div id="welcome-user">
+                            <p><span>{(this.props.currentUser.username).charAt(0).toUpperCase() + this.props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
+                        </div> : <p>Want to make some Gainz</p> } 
+                        <div className="link-box" as='a'>
+                            <Modal2 handleLogout={this.props.handleLogout}/>
+                            <p>(logout)</p>
+                        </div>
                   </Sidebar>
               ) : null}
           </div>
