@@ -28,7 +28,6 @@ class Login extends React.Component {
                     <h1 className="title">Welcome To Lifter's Paradise</h1>
                     <div className="wrapper">
                         <img id="popeye" src={require("./popeye2.png")} alt=""/>
-                        <img id="bluto" src={require("./bluto2.png")} alt=""/>
                         <div className="container"> 
                             <div className="login-register"> 
                                 <div className="login" id="color-switch">Log In</div>            
@@ -57,6 +56,7 @@ class Login extends React.Component {
                                 </button>
                             </div>   
                         </div>
+                        <img id="bluto" src={require("./bluto2.png")} alt=""/>
                     </div>      
                 </div>    
             </div>
