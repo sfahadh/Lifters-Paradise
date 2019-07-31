@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import './Navbar.css'
 import {
     Button,
-    Checkbox,
     Grid,
     Header,
     Icon,
@@ -79,24 +78,21 @@ class Navbar extends Component {
     state = {
         animation: 'overlay',
         direction: 'left',
-        dimmed: false,
         visible: false,
       }
     
       handleAnimationChange = animation => () =>
         this.setState(prevState => ({ animation, visible: !prevState.visible }))
-    
-      handleDimmedChange = (e, { checked }) => this.setState({ dimmed: checked })
+
     
       handleDirectionChange = direction => () => this.setState({ direction, visible: false })
     
       render() {
-        const { animation, dimmed, direction, visible } = this.state
+        const { animation, direction, visible } = this.state
         const vertical = direction === 'bottom' || direction === 'top'
     
         return (
           <div>
-            <Header as='h5'>Direction</Header>
             <Button.Group style={{ marginLeft: "300px"}}>
               <Button active={direction === 'left'} onClick={this.handleDirectionChange('left')}>
                 Left
@@ -112,24 +108,8 @@ class Navbar extends Component {
               </Button>
             </Button.Group>
     
-            <Header as='h5'>All Direction Animations</Header>
             <div style={{ marginLeft: "300px"}}>
-                <Button onClick={this.handleAnimationChange('overlay')}>Overlay</Button>
-                <Button onClick={this.handleAnimationChange('push')}>Push</Button>
-                <Button onClick={this.handleAnimationChange('scale down')}>Scale Down</Button>
-            </div>
-    
-            <Header as='h5'>Vertical-Only Animations</Header>
-            <div style={{ marginLeft: "300px"}}>
-                <Button disabled={vertical} onClick={this.handleAnimationChange('uncover')}>
-                Uncover
-                </Button>
-                <Button disabled={vertical} onClick={this.handleAnimationChange('slide along')}>
-                Slide Along
-                </Button>
-                <Button disabled={vertical} onClick={this.handleAnimationChange('slide out')}>
-                Slide Out
-                </Button>
+                <Button onClick={this.handleAnimationChange('push')}>Show Navbar</Button>
             </div>
     
               {vertical ? (
