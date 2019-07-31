@@ -78,7 +78,6 @@
 }
 
 .border-page {
-    border: 2px solid red;
     height: 100vh;
     width: 1300px;
     margin: 0 auto;
@@ -90,14 +89,15 @@
 }
 
 #popeye {
-    width: 410px;
-    height: 410px;
-    margin-top: 35px;
+    width: 420px;
+    height: 420px;
+    margin-top: 70px;
 }
 
 #bluto {
-    width: 440px;
-    height: 440px;
+    width: 450px;
+    height: 450px;
+    margin-top: 28px;
 }
 
 #popeye-face {
