@@ -2,7 +2,7 @@
     position: absolute;
     left: 36%;
     width: 450px;
-    margin: 3% auto;
+    margin: 1% auto;
     background: rgb(42, 46, 49);
     z-index: 3;
 }
@@ -66,23 +66,16 @@
     margin-bottom: 30px;
 }
 
-.bluto-vs-popeye {
+.wrapper {
     display: flex;
-    position: absolute;
-    z-index: 1;
 }
 
 #popeye {
-    position: relative;
-    bottom: -30px;
     width: 35%;
     height: 35%;
 }
 
 #bluto {
-    position: relative;
-    bottom: 30px;
-    left: 460px;
     width: 37%;
     height: 37%;
 }
@@ -127,4 +120,11 @@
     background-color: rgb(15, 22, 29);
     height: 100vh;
     border: 1px solid black;
+}
+
+.border-page {
+    border: 2px solid red;
+    height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
 }
