@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Header, Icon, Modal } from 'semantic-ui-react'
+import { Button, Icon, Modal } from 'semantic-ui-react'
 import './Modal.css'
 
 export default class Modal2 extends Component {
