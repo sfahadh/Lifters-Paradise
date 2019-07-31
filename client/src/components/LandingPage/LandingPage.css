@@ -1,6 +1,5 @@
 .container {
     width: 450px;
-    margin: 1% auto;
     background: rgb(42, 46, 49);
 }
 
@@ -85,7 +84,6 @@
 
 .wrapper {
     display: flex;
-    justify-content: space-between;
 }
 
 #popeye {
@@ -95,25 +93,21 @@
 }
 
 #bluto {
-    width: 450px;
+    width: 420px;
     height: 450px;
     margin-top: 28px;
 }
 
-#popeye-face {
-    position: relative;
-    left: 5px;
-    width: 44%;
-    height: 44%;
+#popeye-face, #bluto-face {
+    width: 420px;
+    height: 320px;
+    margin-top: 30px;
 }
 
 #bluto-face {
-    position: relative;
-    left: 180px;
-    bottom: 30px;
-    width: 45%;
-    height: 45%;
+    margin-top: 50px;
 }
+
 
 .title {
     font-family: 'Shojumaru', cursive;
