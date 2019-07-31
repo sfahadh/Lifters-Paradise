@@ -8,7 +8,6 @@ function Navbar(props) {
     return (
         <div className="App">
             <Sidebar style={ { width: "200px" } } as={Menu} animation='overlay' icon='labeled' inverted vertical visible width='thin'>
-                {/* <img id="bluto-flex" src={require("./bluto-flex.gif")} style={ { width: "200px" } } alt=""/> */}
                 <Menu.Item className="link-box">
                     <h4><Link to="home">Home</Link></h4>
                 </Menu.Item>
@@ -28,7 +27,7 @@ function Navbar(props) {
                 { props.currentUser ? 
                 <div id="welcome-user">
                     <p><span>{(props.currentUser.username).charAt(0).toUpperCase() + props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
-                </div> : <p>did not work</p> } 
+                </div> : <p style={{ color: "white"}}>Ready to make some Gainz or</p> } 
                 <div className="link-box" as='a'>
                     <Modal2 handleLogout={props.handleLogout}/>
                     <p>(logout)</p>
