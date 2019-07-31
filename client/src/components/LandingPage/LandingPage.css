@@ -67,18 +67,17 @@
     background-image: url('./gym-background.jpg');
     background-size: 100% 100%;
     border: 1px solid black;
-    height: 100vh;
     z-index: -2;
 }
 
 .register-background {
     background-color: rgb(15, 22, 29);
-    height: 100vh;
     border: 1px solid black;
 }
 
 .border-page {
     height: 100vh;
+    border: 1px solid rgb(0, 0, 0);
     width: 1300px;
     margin: 0 auto;
 }
