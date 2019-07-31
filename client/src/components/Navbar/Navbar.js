@@ -96,10 +96,8 @@ class Navbar extends Component {
     
         return (
           <div>
-            <Checkbox checked={dimmed} label='Dim Page' onChange={this.handleDimmedChange} toggle />
-    
             <Header as='h5'>Direction</Header>
-            <Button.Group>
+            <Button.Group style={{ marginLeft: "300px"}}>
               <Button active={direction === 'left'} onClick={this.handleDirectionChange('left')}>
                 Left
               </Button>
@@ -115,20 +113,24 @@ class Navbar extends Component {
             </Button.Group>
     
             <Header as='h5'>All Direction Animations</Header>
-            <Button onClick={this.handleAnimationChange('overlay')}>Overlay</Button>
-            <Button onClick={this.handleAnimationChange('push')}>Push</Button>
-            <Button onClick={this.handleAnimationChange('scale down')}>Scale Down</Button>
+            <div style={{ marginLeft: "300px"}}>
+                <Button onClick={this.handleAnimationChange('overlay')}>Overlay</Button>
+                <Button onClick={this.handleAnimationChange('push')}>Push</Button>
+                <Button onClick={this.handleAnimationChange('scale down')}>Scale Down</Button>
+            </div>
     
             <Header as='h5'>Vertical-Only Animations</Header>
-            <Button disabled={vertical} onClick={this.handleAnimationChange('uncover')}>
-              Uncover
-            </Button>
-            <Button disabled={vertical} onClick={this.handleAnimationChange('slide along')}>
-              Slide Along
-            </Button>
-            <Button disabled={vertical} onClick={this.handleAnimationChange('slide out')}>
-              Slide Out
-            </Button>
+            <div style={{ marginLeft: "300px"}}>
+                <Button disabled={vertical} onClick={this.handleAnimationChange('uncover')}>
+                Uncover
+                </Button>
+                <Button disabled={vertical} onClick={this.handleAnimationChange('slide along')}>
+                Slide Along
+                </Button>
+                <Button disabled={vertical} onClick={this.handleAnimationChange('slide out')}>
+                Slide Out
+                </Button>
+            </div>
     
               {vertical ? (
                 <HorizontalSidebar animation={animation} direction={direction} visible={visible} />
@@ -136,9 +138,7 @@ class Navbar extends Component {
               {vertical ? null : (
                 <VerticalSidebar animation={animation} direction={direction} visible={visible} />
               )}
-    
-              <Sidebar.Pusher dimmed={dimmed && visible}>
-              </Sidebar.Pusher>
+
           </div>
         )
       }
