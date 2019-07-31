@@ -1,42 +1,72 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import {  Menu, Sidebar } from 'semantic-ui-react'
+import { Button, Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
 import Modal2 from '../Modal/Modal'
 
-function Navbar(props) {
-    return (
-        <div className="App">
-            <Sidebar style={ { width: "200px" } } as={Menu} animation='overlay' icon='labeled' inverted vertical visible width='thin'>
-                <Menu.Item className="link-box">
-                    <h4><Link to="home">Home</Link></h4>
-                </Menu.Item>
+class Navbar extends Component {
+    state = { visible: false }
 
-                <Menu.Item className="link-box">
-                    <h4><Link to="exercises">Exercises</Link></h4>
-                </Menu.Item>
+    handleHideClick = () => this.setState({ visible: false })
+    handleShowClick = () => this.setState({ visible: true })
+    handleSidebarHide = () => this.setState({ visible: false })
 
-                <Menu.Item className="link-box">
-                    <h4><Link to="nutrition">Nutrition</Link></h4>
-                </Menu.Item>
+    render() {
+        const { visible } = this.state
+        return (
+            <div className="App">
+                        <Button.Group>
+          <Button disabled={visible} onClick={this.handleShowClick}>
+            Show sidebar
+          </Button>
+          <Button disabled={!visible} onClick={this.handleHideClick}>
+            Hide sidebar
+          </Button>
+        </Button.Group>
 
-                <Menu.Item className="link-box">
-                    <h4><Link to="routine">Routine</Link></h4>
-                </Menu.Item>
+        <Sidebar.Pushable as={Segment}>
+          <Sidebar
+            as={Menu}
+            animation='overlay'
+            icon='labeled'
+            inverted
+            onHide={this.handleSidebarHide}
+            vertical
+            visible={visible}
+            width='thin'
+          >
+            <Menu.Item as='a'>
+              <Icon name='home' />
+              Home
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Icon name='gamepad' />
+              Games
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Icon name='camera' />
+              Channels
+            </Menu.Item>
+          </Sidebar>
 
-                { props.currentUser ? 
-                <div id="welcome-user">
-                    <p><span>{(props.currentUser.username).charAt(0).toUpperCase() + props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
-                </div> : <p style={{ color: "white"}}>Ready to make some Gainz or</p> } 
-                <div className="link-box" as='a'>
-                    <Modal2 handleLogout={props.handleLogout}/>
-                    <p>(logout)</p>
-                </div>
+          <Sidebar.Pusher dimmed={visible}>
+            <Segment basic>
+            { this.props.currentUser ? 
+                    <div id="welcome-user">
+                        <p><span>{(this.props.currentUser.username).charAt(0).toUpperCase() + this.props.currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
+                    </div> : <p style={{ color: "white"}}>Ready to make some Gainz ori</p> } 
+                    <div className="link-box" as='a'>
+                        <Modal2 handleLogout={this.props.handleLogout}/>
+                        <p>(logout)</p>
+                    </div>
+            </Segment>
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
 
-            </Sidebar>
-
-      </div>
-    );
+    
+          </div>
+        );
+    }
 }
 
 export default Navbar
