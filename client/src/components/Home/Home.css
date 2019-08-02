@@ -73,6 +73,23 @@
     .home-background {
         background-image: url('./home-background-mobile.png');
     }
+
+    .semantic-btn {
+        width: 100px !important;
+        border: 1px solid rgba(120, 184, 236, 0.746) !important;
+    }
+
+    .btn-group {
+        display: block;
+        width: 305px;
+    }
+
+    .semantic-toggle {
+        display: block !important;
+        margin: 0 auto !important;
+        width: 250px !important;
+    }
+
 }
 
 @media only screen and (max-width: 550px) {
