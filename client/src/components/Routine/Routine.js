@@ -80,11 +80,11 @@ class Routine extends React.Component {
         const { workloads } = this.state
         let array = workloads.map(workload =>                              
             <div key={workload.id} className="table-headers workload-header">
-                <div className="section weight workload-exercise">{workload.lift}</div>
-                <div className="section weight workload-weight">{workload.weight}</div>
-                <div className="section set workload-set">{workload.sets}</div>
-                <div className="section rep workload-rep">{workload.reps}</div>
-                <div className="section rpe workload-rpe">{workload.rpe}</div>
+                <div className="section workload-exercise">{workload.lift}</div>
+                <div className="section workload-weight">{workload.weight}</div>
+                <div className="section workload-set">{workload.sets}</div>
+                <div className="section workload-rep">{workload.reps}</div>
+                <div className="section workload-rpe">{workload.rpe}</div>
                 <button id="delete-button"onClick={() => this.deleteWorkload(workload.id)}>
                     <Icon id="trash-icon" disabled name='trash alternate'/>
                 </button>
@@ -111,7 +111,7 @@ class Routine extends React.Component {
                 <Navbar handleLogout={handleLogout} currentUser={currentUser} />
                 <h1 id="routine-header">My Workout Routine</h1>
                 <div id="whole-table">
-                    <div className="column-load table-headers">
+                    <div className="table-headers column-load">
                         <div className="section exercises">Exercises</div>
                         <div className="section weight">Weights</div>
                         <div className="section set">Sets</div>
