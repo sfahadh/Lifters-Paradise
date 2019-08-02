@@ -106,7 +106,6 @@
     .exercise-images {
         width: 450px;
         margin: auto;
-        margin-top: 
     }
     
     .exercise-info {
@@ -123,5 +122,70 @@
         font-size: 3em;
         margin-top: 5%;
         margin-bottom: 7%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .exercise-row h1 {
+        font-size: 1.5em;
+    }
+
+    .exercise-row h3 {
+        font-size: 1.08em;
+    }
+    
+    .exercise-images {
+        width: 380px;
+    }
+
+    .exercise-images img {
+        width: 170px;
+        height: 240px;
+        margin-left: 0;
+    }
+
+    .exercise-info {
+        width: 400px;
+    }
+    
+    #exercise-header {
+        font-size: 2.5em;
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .exercise-row {
+        margin-bottom: 12%;
+    }
+
+    .exercise-row h1 {
+        font-size: 1.2em;
+    }
+
+    .exercise-row h3 {
+        font-size: 0.97em;
+    }
+    
+    .exercise-images {
+        width: 300px;
+        margin: auto;
+    }
+
+    .exercise-images img {
+        width: 140px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .exercise-info {
+        width: 95vw;
+    }
+    
+    #exercise-header {
+        font-size: 2em;
+        margin-top: 6%;
+        margin-bottom: 8%;
     }
 }
