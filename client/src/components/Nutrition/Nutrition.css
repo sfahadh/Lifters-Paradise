@@ -7,14 +7,14 @@
 
 #intro {
     text-align: center;
-    margin: 10% 0 0 36%;
-    padding: 3vw;
+    margin: 10% auto;
+    padding: 25px;
     width: 40%;
     background-color: rgba(4, 150, 235, 0.712);
 }
   
 #intro > h1 {
-    font-size: 4.3vw;
+    font-size: 4em;
     color: rgb(42, 46, 49);
     text-shadow: 2px 2px black;
 }
@@ -23,15 +23,6 @@
     font-size: 1.7vw;
     color: rgb(42, 46, 49);
     text-shadow: 2px 2px black;
-}
-
-#credit {
-    position: fixed;
-    bottom: 15px;
-    left: 230px;
-    font-size: 1.5vw;
-    color: rgb(42, 46, 49);
-    text-shadow: 1px 1px rgba(4, 150, 235, 0.911);
 }
 
 #intro button {
