@@ -85,14 +85,11 @@
     }
 
     .btn-group {
-        display: block;
-        width: 305px;
+        width: 455px;
     }
 
     .semantic-toggle {
-        display: block !important;
-        margin: 0 auto !important;
-        width: 250px !important;
+        width: 170px !important;
     }
 
 }
