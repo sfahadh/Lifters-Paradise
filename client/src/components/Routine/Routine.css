@@ -1,6 +1,6 @@
 #whole-table {
-    margin-top: 2%;
-    margin-bottom: 1.5%;
+    border: 2px solid red;
+    /* margin: 2% auto; */
 }
 
 .table-headers {
@@ -18,13 +18,9 @@
     font-weight: 700;
 }
 
-.exercises {
-    border-right: none;
-}
 
-.weight, .set, .rep, .delete, .rpe {
+.weight, .set, .rep, .delete, .rpe, .exercises {
     border-right: none;
-    width: 540px;
 }
 
 .workload-exercise {
