@@ -45,19 +45,42 @@
 @media only screen and (max-width: 1150px) {
     .exercise-row {
         width: 90vw;
-        display: flex;
-        margin: 0 auto;
-        margin-bottom: 3%;
+        margin-bottom: 6%;
+    }
+
+    .exercise-row h1, .exercise-row h3 {
+        margin-top: 1%;
     }
     
     .exercise-images img {
         width: 200px;
         height: 280px;
-        margin: 0 15px;
     }
     
     #exercise-header {
-        font-size: 4em;
+        font-size: 3.7em;
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .exercise-row {
+        width: 90vw;
+        margin-bottom: 6%;
+    }
+
+    .exercise-row h1, .exercise-row h3 {
+        margin-top: 1%;
+    }
+    
+    .exercise-images img {
+        width: 200px;
+        height: 280px;
+    }
+    
+    #exercise-header {
+        font-size: 3.7em;
         margin-top: 2%;
         margin-bottom: 4%;
     }
