@@ -57,6 +57,11 @@
     border: 1px solid rgba(42, 39, 39, 0.808);
     padding: 20px;
     font-size: 1.2em;
+    background-color: rgb(12, 20, 27);
+}
+
+.link:nth-child(1) {
+    margin-top: 40px;
 }
 
 @media only screen and (max-width: 1300px) {

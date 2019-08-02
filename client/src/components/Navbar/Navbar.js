@@ -66,10 +66,9 @@ class Navbar extends Component {
                     </Link>
               
                     { currentUser ? 
-                        <div style={{ height: "200px", border: "2px solid red"}}>
+                        <div>
                             <p style={{ color: "white"}}><span>{(currentUser.username).charAt(0).toUpperCase() + currentUser.username.slice(1)}</span> Are ready to make some gainz? or </p> 
-                        </div> : <p style={{ marginTop: "12px", color: "white"}}>Ready to make some Gainz</p> } 
-
+                        </div> : <p style={{ marginTop: "12px", color: "white"}}>Want to make some Gainz</p> } 
                         <div style={{ marginTop: "-5px"}} className="link-box" as='a'>
                             <Modal2 handleLogout={handleLogout}/>
                         </div>

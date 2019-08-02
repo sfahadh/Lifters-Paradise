@@ -1,10 +1,6 @@
 .side-drawer {
-    height: 100%;
     width: 210px !important;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(12, 23, 29, 0.918);
+    background-color: rgba(12, 20, 27, 0) !important;
 } 
 
 h4 {
