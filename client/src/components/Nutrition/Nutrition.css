@@ -80,3 +80,32 @@
         font-size: 1.1em;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    #home {
+        background-image: url("./meEating-sm.png");
+    }
+
+    #intro {
+        padding: 10px;
+        width: 280px;
+        background-color: rgba(4, 150, 235, 0.712);
+    }
+
+    #intro > h1 {
+        font-size: 1.9em;
+    }
+
+    #intro > h3 {
+        font-size: 0.97em;
+    }
+
+    #intro button {
+        width: 110px;
+        height: 40px;
+    }
+
+    #intro button a {
+        font-size: 1em;
+    }
+}
