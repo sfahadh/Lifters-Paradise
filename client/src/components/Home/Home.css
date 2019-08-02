@@ -61,7 +61,7 @@
 }
 
 .link:nth-child(1) {
-    margin-top: 40px;
+    margin-top: 54px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -97,5 +97,19 @@
 @media only screen and (max-width: 550px) {
     .home-background {
         background-image: url('./home-background-xs.png');
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .home-background {
+        background-image: url('./home-background-xxs.png');
+    }
+
+    .btn-group {
+        width: 100vw;
+    }
+
+    .semantic-btn {
+        width: 25vw !important;
     }
 }

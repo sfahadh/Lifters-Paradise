@@ -73,7 +73,7 @@ class Navbar extends Component {
                             <Modal2 handleLogout={handleLogout}/>
                         </div>
                   </Sidebar>
-              ) : null}
+              ) : null }
           </div>
         )
       }
