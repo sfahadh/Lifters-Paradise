@@ -7,20 +7,20 @@
 
 #intro {
     text-align: center;
-    margin: 10% auto;
+    margin: 20vh auto;
     padding: 25px;
     width: 40%;
     background-color: rgba(4, 150, 235, 0.712);
 }
   
 #intro > h1 {
-    font-size: 4em;
+    font-size: 3.6em;
     color: rgb(42, 46, 49);
     text-shadow: 2px 2px black;
 }
   
 #intro > h3 {
-    font-size: 1.7vw;
+    font-size: 1.6em;
     color: rgb(42, 46, 49);
     text-shadow: 2px 2px black;
 }
@@ -41,4 +41,42 @@
 #intro a {
     color: rgba(4, 150, 235, 0.911);
     font-size: 1.3em;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #home {
+        background-image: url("./meEating-lg.png");
+        background-size: cover;
+    }
+
+    #intro {
+        padding: 15px;
+        width: 480px;
+        background-color: rgba(4, 150, 235, 0.712);
+    }
+
+    #intro > h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #home {
+        background-image: url("./meEating-md.png");
+    }
+
+    #intro {
+        padding: 15px;
+        width: 400px;
+        background-color: rgba(4, 150, 235, 0.712);
+    }
+
+    #intro > h1 {
+        font-size: 2.4em;
+    }
+
+    #intro > h3 {
+        font-size: 1.1em;
+    }
 }
