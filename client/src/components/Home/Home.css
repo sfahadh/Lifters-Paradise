@@ -50,6 +50,7 @@
 
 .semantic-btn {
     background-color: rgba(10, 101, 153, 0.918) !important;
+    border: 1px solid rgba(120, 184, 236, 0.746) !important;
 }
 
 .link {
@@ -81,7 +82,6 @@
 
     .semantic-btn {
         width: 100px !important;
-        border: 1px solid rgba(120, 184, 236, 0.746) !important;
     }
 
     .btn-group {

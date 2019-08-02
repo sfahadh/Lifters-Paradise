@@ -1,7 +1,8 @@
 .exercise-row {
     display: flex;
     width: 83vw;
-    margin: 0 0 3% 16%;
+    margin: 0 auto;
+    margin-bottom: 3%;
 }
 
 .exercise-row h1, .exercise-row h3 {
@@ -28,7 +29,7 @@
 #exercise-header {
     font-size: 4em;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     color: white;
 }
 

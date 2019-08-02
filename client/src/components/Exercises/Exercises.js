@@ -44,8 +44,8 @@ class Exercises extends React.Component {
 
         return (
             <div className="App">
-                <h1 id="exercise-header">Kinesiology of Exercises</h1>
                 <Navbar handleLogout={handleLogout} currentUser={currentUser}/>
+                <h1 id="exercise-header">Kinesiology of Exercises</h1>
                 {showExercises}
             </div> 
         );
