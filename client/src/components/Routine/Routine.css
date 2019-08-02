@@ -15,11 +15,11 @@
     padding: 10px;
     font-size: 1.4em;
     font-weight: 700;
+    border-right: none;
 }
 
-
-.weight, .set, .rep, .delete, .rpe, .exercises {
-    border-right: none;
+.x {
+    padding-top: 16px;
 }
 
 .workload-exercise {
@@ -37,6 +37,7 @@
 
 #delete-button {
     border-radius: 5%;
+    background-color: red;
 }
 
 #delete-button, #update-button {
