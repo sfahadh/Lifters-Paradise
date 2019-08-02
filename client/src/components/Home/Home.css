@@ -71,10 +71,14 @@
 
 @media only screen and (max-width: 850px) {
     .home-background {
-        background-image: url('./home-background-medium.png');
+        background-image: url('./home-background-mobile.png');
     }
 
     #home-intro {
         display: none;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
 }

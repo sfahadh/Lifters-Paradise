@@ -23,3 +23,7 @@ h4:hover {
 .link-box p {
     color: rgba(4, 150, 235, 0.918)
 }
+
+.semantic-btn {
+    width: 110px;
+}
