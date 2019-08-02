@@ -1,6 +1,6 @@
 .exercise-row {
+    width: 1140px;
     display: flex;
-    width: 83vw;
     margin: 0 auto;
     margin-bottom: 3%;
 }
@@ -8,6 +8,10 @@
 .exercise-row h1, .exercise-row h3 {
     margin-top: 4%;
     color: white;
+}
+
+.exercise-images {
+    display: flex;
 }
 
 .exercise-images img {
@@ -36,4 +40,25 @@
 .exercise-info span {
     font-weight: 800;
     color: rgba(4, 150, 235, 0.918);
+}
+
+@media only screen and (max-width: 1150px) {
+    .exercise-row {
+        width: 90vw;
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+    
+    .exercise-images img {
+        width: 200px;
+        height: 280px;
+        margin: 0 15px;
+    }
+    
+    #exercise-header {
+        font-size: 4em;
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
 }
