@@ -38,8 +38,7 @@
 }
 
 #logout-modal-content {
-  border: 2px solid red;
-  width: 70vw;
+  width: 900px;
   height: 40vh;
   position: absolute;
   top: 50%;
@@ -48,12 +47,16 @@
 }
 
 #cancel-logout {
-  
+  width: 400px;
+  margin: 0 auto;
 }
-
 
 #cancel-logout h4 {
   color: rgba(4, 150, 235, 0.918);
+}
+
+#cancel-logout button {
+  margin-right: 120px;
 }
 
 #logout-button {
@@ -67,4 +70,59 @@
 
 #logout-button:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 900px) { 
+
+  #logout-response {
+    font-size: 5em;
+    margin-bottom: -3%;
+  }
+
+  #logout-modal-content {
+    border: 2px solid red;
+    width: 600px;
+    height: 30vh;
+  }
+
+  #cancel-logout {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 900px) { 
+
+  #logout-response {
+    font-size: 5em;
+    margin-bottom: -3%;
+  }
+
+  #logout-modal-content {
+    border: 2px solid red;
+    width: 600px;
+    height: 30vh;
+  }
+
+  #cancel-logout {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  #cancel-logout h4 {
+    color: rgba(4, 150, 235, 0.918);
+  }
+
+  #cancel-logout button {
+    margin-right: 120px;
+  }
+
+  #logout-button {
+    cursor: pointer;
+    width: 90px;
+    height: 26px;
+    background-color: rgba(4, 150, 235, 0.918);
+    border: rgba(4, 150, 235, 0.918);
+    margin-bottom: 3%;
+  }
 }
