@@ -18,6 +18,10 @@
     border-right: none;
 }
 
+.update {
+    border-right: 2px solid black;
+}
+
 .x {
     padding-top: 16px;
 }
@@ -149,22 +153,60 @@
     }
 
     .table-headers {
-        grid-template-columns: 210px repeat(4, 100px) 75px 75px;
+        grid-template-columns: 210px repeat(4, 100px) 75px 78px;
     }
 
     #whole-table {
-        width: 760px;
+        width: 762px;
         margin: 2% auto;
     }
 
     #delete-button, #update-button {
-        width: 75px;
+        width: 77px;
     }
 
     #edit-icon {
         text-align: left;
         margin-left: -5px;
         font-size: 1.3em;
+    }
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .routine-background {
+        background-image: url('./gym-background-lg.png');
+        background-size: cover;
+    }
+
+    .section {
+        height: 50px;
+    }
+
+    .table-headers {
+        grid-template-columns: 170px repeat(4, 85px) 65px 65px;
+    }
+
+    #whole-table {
+        width: 650px;
+        margin: 2% auto;
+    }
+
+    #delete-button, #update-button {
+        width: 75px;
+        height: 50px;
+    }
+
+    #edit-icon {
+        font-size: 1em;
+    }
+
+    #trash-icon {
+        font-size: 1.4em;
+    }
+
+    .y span {
+        font-size: 0.8em;
     }
     
 }

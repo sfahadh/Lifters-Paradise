@@ -112,13 +112,13 @@ class Routine extends React.Component {
                 <h1 id="routine-header">My Workout Routine</h1>
                 <div id="whole-table">
                     <div className="table-headers column-load">
-                        <div className="section exercises">Exercises</div>
-                        <div className="section weight">Weights</div>
-                        <div className="section set">Sets</div>
-                        <div className="section rep">Reps</div>
-                        <div className="section rpe">RPE</div>
-                        <div className="section delete">Delete</div>
-                        <div className="section update">Update</div>
+                        <div className="section y"><span>Exercises</span></div>
+                        <div className="section y"><span>Weights</span></div>
+                        <div className="section y"><span>Sets</span></div>
+                        <div className="section y"><span>Reps</span></div>
+                        <div className="section y"><span>RPE</span></div>
+                        <div className="section y"><span>Delete</span></div>
+                        <div className="section y update"><span>Update</span></div>
                     </div>
 
                     <div>
