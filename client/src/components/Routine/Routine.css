@@ -270,7 +270,7 @@
 
 @media only screen and (max-width: 380px) {
     .y {
-        height: 35px;
+        height: 30px;
     }
 
     .x {
@@ -286,8 +286,12 @@
     .x span {
         font-size: 0.6em;
         position: relative;
-        bottom: 12px;
+        bottom: 3px;
     } 
+
+    .section {
+        padding: 5px;
+    }
     
     .workload-exercise span {
         padding-bottom: 10px;
@@ -295,22 +299,21 @@
         bottom: 10;
     }
 
-    .table-headers {
-        grid-template-columns: 100px repeat(4, 37px) 45px 45px;
+    #whole-table {
+        width: 327px; 
     }
 
-    #whole-table {
-        width: 370px;
-        margin: 2% auto;
+    .table-headers {
+        grid-template-columns: 100px repeat(4, 37px) 40px 40px;
     }
 
     #delete-button, #update-button {
-        width: 45px;
+        width: 40px;
         height: 45px;
     }
 
     #trash-icon, #edit-icon {
-        font-size: 1.1em;
+        font-size: 0.95em;
     } 
 
     #routine-header {
