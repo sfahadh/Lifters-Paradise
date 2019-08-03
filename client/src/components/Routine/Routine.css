@@ -73,16 +73,17 @@
     text-shadow: 3px 3px black;
     font-size: 42px;
     background-color: rgba(212, 209, 209, 0.685);
-    width: 33vw;
+    width: 470px;
     margin: 1% auto;
 }
 
 #routine-header {
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 800;
+    text-shadow: 2px 2px rgb(143, 138, 138);
     margin-top: 2%;
     margin-left: 8%;
-    color: rgba(4, 150, 235, 0.945);
+    color: rgb(4, 150, 235);
     font-family: 'Bitter', serif;
 }
 
@@ -95,7 +96,7 @@
     text-align: center;
     height: 100vh;
     background-image: url('./gym-background.jpeg');
-    background-size: 100%;
+    background-size: cover;
 }
 
 .form-field {
@@ -138,4 +139,15 @@
 #modal-submit {
     margin-left: 90%;
     margin-top: 5%;
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .routine-background {
+        border: 1px solid black;
+        text-align: center;
+        height: 100vh;
+        background-image: url('./gym-background-lg.png');
+        background-size: cover;
+    }
 }
