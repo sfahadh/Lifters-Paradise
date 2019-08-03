@@ -211,65 +211,31 @@
 
 @media only screen and (max-width: 600px) {
     .y {
-        height: 50px;
-    }
-
-    .workload-exercise span {
-        padding-bottom: 10px;
-        position: relative;
-        bottom: 0;
-    }
-
-    .table-headers {
-        grid-template-columns: 110px repeat(4, 60px) 55px 55px;
-    }
-
-    #whole-table {
-        width: 460px;
-        margin: 2% auto;
-    }
-
-    #delete-button, #update-button {
-        width: 55px;
-        height: 60px;
-    }
-
-    #trash-icon, #edit-icon {
-        font-size: 1.1em;
-    }
-
-    .y span {
-        font-size: 0.6em;
-        position: relative;
-        bottom: 3px;
-    }
-
-    .x span {
-        font-size: 0.8em;
-        position: relative;
-        bottom: 5px;
-    }  
-}
-
-@media only screen and (max-width: 600px) {
-    .routine-background {
-        background-image: url('./gym-background-lg.png');
-        background-size: cover;
-    }
-
-    .y {
-        height: 50px;
+        height: 40px;
     }
 
     .x {
         height: 50px;
     }
 
-    
-    .workload-exercise span {
-        padding-bottom: 10px;
+    .y span {
+        font-size: 0.4em;
         position: relative;
-        bottom: 0;
+        bottom: 3px;
+    }
+
+    .x span {
+        font-size: 0.6em;
+        margin-top: 5px;
+    } 
+
+    .section {
+        padding: 8px;
+    }
+
+    .workload-exercise span {
+        padding-bottom: 0;
+        line-height: 1px;
     }
 
     .table-headers {
@@ -288,19 +254,64 @@
 
     #trash-icon, #edit-icon {
         font-size: 1.1em;
+    } 
+
+    #routine-header {
+        margin-top: 8%;
+        font-size: 2.5em;
+    }
+
+    #create-button {
+        width: 150px;
+        font-size: 1em;
+        margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .y {
+        height: 35px;
+    }
+
+    .x {
+        height: 45px;
     }
 
     .y span {
         font-size: 0.4em;
         position: relative;
-        bottom: 3px;
+        bottom: 8px;
     }
 
     .x span {
         font-size: 0.6em;
         position: relative;
         bottom: 12px;
-    }  
+    } 
+    
+    .workload-exercise span {
+        padding-bottom: 10px;
+        position: relative;
+        bottom: 10;
+    }
+
+    .table-headers {
+        grid-template-columns: 100px repeat(4, 37px) 45px 45px;
+    }
+
+    #whole-table {
+        width: 370px;
+        margin: 2% auto;
+    }
+
+    #delete-button, #update-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    #trash-icon, #edit-icon {
+        font-size: 1.1em;
+    } 
 
     #routine-header {
         margin-top: 12%;
