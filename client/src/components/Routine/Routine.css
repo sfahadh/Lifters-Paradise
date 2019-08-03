@@ -153,7 +153,7 @@
     }
 
     .table-headers {
-        grid-template-columns: 210px repeat(4, 100px) 75px 78px;
+        grid-template-columns: 210px repeat(4, 100px) 75px 80px;
     }
 
     #whole-table {
@@ -163,6 +163,10 @@
 
     #delete-button, #update-button {
         width: 77px;
+    }
+
+    #update-button {
+        height: 68px;
     }
 
     #edit-icon {
@@ -179,8 +183,14 @@
         background-size: cover;
     }
 
-    .section {
-        height: 50px;
+    .X {
+        height: 60px;
+    }
+    
+    .workload-exercise span {
+        padding-bottom: 10px;
+        position: relative;
+        bottom: 4px;
     }
 
     .table-headers {
@@ -194,11 +204,12 @@
 
     #delete-button, #update-button {
         width: 65px;
-        height: 50px;
+        height: 60px;
     }
 
     #edit-icon {
         font-size: 1em;
+        margin-left: -10px;
     }
 
     #trash-icon {
