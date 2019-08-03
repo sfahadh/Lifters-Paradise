@@ -73,14 +73,12 @@
 }
 
 @media only screen and (max-width: 900px) { 
-
   #logout-response {
     font-size: 5em;
     margin-bottom: -3%;
   }
 
   #logout-modal-content {
-    border: 2px solid red;
     width: 600px;
     height: 30vh;
   }
@@ -91,38 +89,27 @@
   }
 }
 
-@media only screen and (max-width: 900px) { 
-
+@media only screen and (max-width: 600px) { 
   #logout-response {
-    font-size: 5em;
-    margin-bottom: -3%;
+    font-size: 3.5em;
+    margin-bottom: 0;
   }
 
   #logout-modal-content {
-    border: 2px solid red;
-    width: 600px;
+    width: 300px;
     height: 30vh;
   }
 
   #cancel-logout {
-    width: 400px;
-    margin: 0 auto;
-  }
-
-  #cancel-logout h4 {
-    color: rgba(4, 150, 235, 0.918);
+    width: 300px;
   }
 
   #cancel-logout button {
-    margin-right: 120px;
+    margin-right: 80px;
   }
 
-  #logout-button {
-    cursor: pointer;
-    width: 90px;
-    height: 26px;
-    background-color: rgba(4, 150, 235, 0.918);
-    border: rgba(4, 150, 235, 0.918);
-    margin-bottom: 3%;
+  #cancel-logout h4 {
+    text-align: center;
+    margin-top: 4px;
   }
 }
