@@ -210,6 +210,20 @@
     .y span {
         font-size: 0.8em;
     } 
+
+    .form-field {
+        margin-left: 40px !important;
+        width: 260px;
+    }
+    
+    .modal-style {
+        font-size: 2em;
+        margin-bottom: -3%;
+    }
+    
+    #modal-routine {
+        width: 370px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -268,6 +282,36 @@
         width: 150px;
         font-size: 1em;
         margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .form-field {
+        margin-left: 20px !important;
+        width: 220px;
+    }
+    
+    .form-field input {
+        font-weight: 700 !important;
+        font-size: 1.1em !important;
+        margin-bottom: 3% !important;
+        margin-top: 1% !important;
+    }
+
+
+    .modal-style {
+        font-size: 1.8em;
+        margin-bottom: -3%;
+    }
+    
+    #modal-routine {
+        width: 290px;
+        height: 68vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(42, 46, 49);
     }
 }
 
