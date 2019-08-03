@@ -7,9 +7,9 @@ const WorkloadForm = ({ updateWorkload, handleChanges }) => {
     return (
         <div className="App">
             <div className ="button-modal">
-                <Modal id="modal-routine" trigger={<Button color="blue" size="huge" id ="update-button">
+                <Modal id="modal-routine" trigger={<button id ="update-button">
                     <Icon id="edit-icon" disabled name='write'/>
-                    </Button>}>
+                    </button>}>
                     <h1 className="modal-style">Update Your Workout Routine</h1>
                     <Segment id="modal-segment">
                     <Grid columns={2} relaxed='very'>
