@@ -68,6 +68,7 @@
 }
 
 #workload-message  {
+    margin-top: 4%;
     margin-left: 7%;
 }
 
@@ -312,6 +313,22 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgb(42, 46, 49);
+    }
+
+    #workload-message img {
+        margin-top: 2%;
+        width: 15em;
+    }
+    
+    #workload-message  {
+        margin-top: 8%;
+        margin-right: 8%;
+    }
+    
+    #workload-message h1 {
+        font-size: 38px;
+        background-color: rgba(212, 209, 209, 0.322);
+        width: 300px;
     }
 }
 
