@@ -184,16 +184,16 @@
     }
 
     .table-headers {
-        grid-template-columns: 170px repeat(4, 85px) 65px 65px;
+        grid-template-columns: 160px repeat(4, 75px) 65px 65px;
     }
 
     #whole-table {
-        width: 650px;
+        width: 590px;
         margin: 2% auto;
     }
 
     #delete-button, #update-button {
-        width: 75px;
+        width: 65px;
         height: 50px;
     }
 
