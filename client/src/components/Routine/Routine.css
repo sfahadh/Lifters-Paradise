@@ -240,17 +240,7 @@
         height: 60px;
     }
 
-    #update-button {
-        border: 2px solid red;
-        width: 40px !important;
-    }
-
-    #edit-icon {
-        font-size: 0.8em;
-        margin-left: -10px;
-    }
-
-    #trash-icon {
+    #trash-icon, #edit-icon {
         font-size: 1.1em;
     }
 
