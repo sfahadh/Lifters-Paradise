@@ -144,10 +144,27 @@
 
 @media only screen and (max-width: 1050px) {
     .routine-background {
-        border: 1px solid black;
-        text-align: center;
-        height: 100vh;
         background-image: url('./gym-background-lg.png');
         background-size: cover;
     }
+
+    .table-headers {
+        grid-template-columns: 210px repeat(4, 100px) 75px 75px;
+    }
+
+    #whole-table {
+        width: 760px;
+        margin: 2% auto;
+    }
+
+    #delete-button, #update-button {
+        width: 75px;
+    }
+
+    #edit-icon {
+        text-align: left;
+        margin-left: -5px;
+        font-size: 1.3em;
+    }
+    
 }

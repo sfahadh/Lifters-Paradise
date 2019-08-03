@@ -115,7 +115,7 @@ class Routine extends React.Component {
                         <div className="section exercises">Exercises</div>
                         <div className="section weight">Weights</div>
                         <div className="section set">Sets</div>
-                        <div className="section rep">Repetitions</div>
+                        <div className="section rep">Reps</div>
                         <div className="section rpe">RPE</div>
                         <div className="section delete">Delete</div>
                         <div className="section update">Update</div>
