@@ -19,16 +19,19 @@ export default class Modal2 extends Component {
         onClose={this.handleClose}
         basic
         size='small'
+        id="logout-modal-content"
       >
-        <Modal.Content id="logout-modal-content">
+        <Modal.Content>
           <h3 id="logout-response">YOU AIN'T SHIT</h3>
         </Modal.Content>
+
         <Modal.Actions id="cancel-logout">
           <Button color='blue' onClick={this.props.handleLogout} inverted>
             <Icon name='checkmark' /> I know
           </Button>
           <h4>*Click anywhere outside the text section to cancel*</h4>
         </Modal.Actions>
+
       </Modal>
     )
   }

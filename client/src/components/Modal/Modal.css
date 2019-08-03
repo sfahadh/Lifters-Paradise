@@ -31,6 +31,31 @@
   text-align: center;
 }
 
+#logout-button span {
+  font-size: 1.2em;
+  position: relative;
+  bottom: 5px;
+}
+
+#logout-modal-content {
+  border: 2px solid red;
+  width: 70vw;
+  height: 40vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#cancel-logout {
+  
+}
+
+
+#cancel-logout h4 {
+  color: rgba(4, 150, 235, 0.918);
+}
+
 #logout-button {
   cursor: pointer;
   width: 90px;
@@ -42,26 +67,4 @@
 
 #logout-button:hover {
   transform: scale(1.1);
-}
-
-#logout-button span {
-  font-size: 1.2em;
-  position: relative;
-  bottom: 5px;
-}
-
-#logout-modal-content {
-  width: 70vw;
-  margin-left: 32%;
-  margin-top: 30%;
-}
-
-#cancel-logout {
-  position: relative;
-  left: 20%;
-}
-
-#cancel-logout h4{
-  color: rgba(4, 150, 235, 0.918);
-  margin-left: 16%;
 }
